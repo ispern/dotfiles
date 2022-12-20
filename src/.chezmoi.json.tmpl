@@ -1,0 +1,13 @@
+{{- $name := promptStringOnce . "name" "Github Username" -}}
+{{- $email := promptStringOnce . "email" "Email address" -}}
+{{- $workspaceRoot := promptStringOnce . "workspaceRoot" "Workspace Root Directory" -}}
+{{- $editor := promptStringOnce . "editor" "Git Editor" -}}
+
+{
+  "data": {
+    "name": {{ $name | quote }},
+    "email": {{ $email | quote }},
+    "workspaceRoot": {{ $workspaceRoot | quote }},
+    "editor": {{ $editor | quote }}
+  }
+}
