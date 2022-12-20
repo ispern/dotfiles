@@ -1,0 +1,42 @@
+{{ if and (eq .chezmoi.os "linux") (contains .chezmoi.osRelease.idLike "debian") }}
+#!/bin/bash
+WORKING_DIR = {{ .chezmoi.workingTree }}
+
+sudo apt update && \
+     apt install -y tree build-essential procps curl file git language-pack-ja xdg-utils zsh
+
+{{   if (.chezmoi.kernel.osrelease | lower | contains "microsoft") }}
+# HomeBrew Setup
+NONINTERACTIVE=1 /bin/bash -c "sudo $(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+test -d ~/.linuxbrew && eval "$(~/.linuxbrew/bin/brew shellenv)"
+test -d /home/linuxbrew/.linuxbrew && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+[ -e ${WORKING_DIR}/Brewfile ] HOMEBREW_BUNDLE_FILE=${WORKING_DIR}/Brewfile brew bundle
+
+# fzf
+$(brew --prefix)/opt/fzf/install
+
+# git initialize
+sudo chmod +x /usr/share/doc/git/contrib/diff-highlight/diff-highlight
+sudo ln -s /usr/share/doc/git/contrib/diff-highlight/diff-highlight /usr/local/bin/diff-highlight
+
+# Azure CLI
+curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+{{   else }}
+sudo apt-add-repository ppa:fish-shell/release-3 && \
+     apt update && \
+     apt install fzf fish tmux bat exa fd-find neovim
+
+curl -O https://github.com/dandavison/delta/releases/download/{{ .deltaVersion }}/git-delta_{{ .deltaVersion }}_amd64.deb
+sudo dpkg -i git-delta_{{ .deltaVersion }}_amd64.deb
+
+{{   end }}
+
+# fisher
+curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
+
+# tpm
+git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm
+
+{{ end }} 
