@@ -1,0 +1,26 @@
+snippet     touch
+abbr        Sencha Touch Extensions
+prev_word   '^'
+    @import 'sencha-touch/default/all';
+
+    @include sencha-panel;
+    @include sencha-buttons;
+    @include sencha-sheet;
+    @include sencha-picker;
+    @include sencha-tabs;
+    @include sencha-toolbar;
+    @include sencha-toolbar-forms;
+    @include sencha-carousel;
+    @include sencha-indexbar;
+    @include sencha-list;
+    @include sencha-layout;
+    @include sencha-form;
+    @include sencha-msgbox;
+
+snippet     boxalign
+abbr        box allign
+prev_word   '^'
+    @include display-box;
+    @include box-orient(${1:vertical});
+    @include box-align(${2:center});
+    @include box-pack(${3:center});

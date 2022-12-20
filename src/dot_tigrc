@@ -1,0 +1,62 @@
+set line-graphics = utf-8       # グラフ描画時の種別
+set ignore-space = all          # 空白無視
+set split-view-width = 60%      # 垂直分割時の比a率
+
+# メインビューの表示設定
+set main-view = id date author:email-user commit-title:graph=yes,refs=yes
+
+set blame-view  = date:default author:email-user id:yes,color line-number:yes,interval=1 text
+
+# ステータスビューで V 押下すると、差分表示モードでコミットログ入力画面を開く
+bind status V !git commit -v
+
+# Untracked Fileを表示する
+set status-show-untracked-files = yes
+
+# マージ diff を表示する
+set diff-options = -m --first-parent
+
+# マウスを有効にする
+set mouse = true
+
+# '+行数' の形で Editor に行番号を引数として渡すか
+set editor-line-number = yes
+
+# リフレッシュするタイミング
+set refresh-mode = auto
+
+set diff-highlight = true
+
+color  diff-header       default magenta
+color  diff-chunk        black   white
+
+# key mapping
+# F で fetch (default: :toggle file-name / :toggle commit-title-refs)
+bind generic F      ?git fetch %(remote) --prune
+bind main    F      ?git fetch %(remote) --prune
+
+
+bind generic U      ?git pull %(remote) # U で pull
+bind generic P      ?git push -u %(remote) %(repo:head) # P で remote への push
+bind generic +      !git commit --amend --allow-empty # + でcommit --amend
+
+bind main    !      ?git revert %(commit) # !でrevert
+
+bind branch b none
+bind branch bd !?git branch -d %(branch)
+bind branch bD !?git branch -D %(branch)
+bind branch ba !?git delete-merged-branch %(branch)
+bind branch bM ?git merge %(branch)
+
+bind branch bC !git checkout -b %(prompt) %(branch)
+
+#bind main    M      ?git merge %(branch)
+#bind diff    M      ?git merge %(branch)
+#bind refs    M      ?git merge %(branch)
+
+
+source ~/.dotfiles/.tigrc.vim
+
+
+# Github関連
+bind status gr ?gh pr create --fill --web --assignee "@me"

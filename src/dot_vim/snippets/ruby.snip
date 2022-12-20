@@ -1,0 +1,21 @@
+snippet     :o
+abbr        hash
+prev_word   '^'
+    :${1} => ${2:'$\{3\}'}
+
+snippet     bt
+abbr        belongs_to
+prev_word   '^'
+    belongs_to :${1}
+
+snippet     ho
+abbr        has_one
+prev_word   '^'
+    has_one :${1}
+
+snippet     unless
+abbr        unless
+prev_word   '^'
+    unless ${1}
+        ${2}
+    end

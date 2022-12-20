@@ -1,0 +1,42 @@
+"-------------------------------------------------------------------------------
+" 表示
+"-------------------------------------------------------------------------------
+set showmatch         " 括弧の対応をハイライト
+set number            " 行番号表示
+set list              " 不可視文字表示
+set listchars=tab:>.,trail:_,extends:>,precedes:< " 不可視文字の表示形式
+set display=uhex      " 印字不可能文字を16進数で表示
+set cursorline        " カーソル行をハイライト
+set lazyredraw        " コマンド実行中は再描画しない
+set ttyfast           " 高速ターミナル接続を行う
+
+" 全角スペースの表示
+highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=darkgray
+match ZenkakuSpace /　/
+
+" カレントウィンドウにのみ罫線を引く
+augroup cch
+  autocmd! cch
+  autocmd WinLeave * set nocursorline
+  autocmd WinEnter,BufRead * set cursorline
+augroup END
+
+hi clear CursorLine
+hi CursorLine gui=underline
+highlight CursorLine ctermbg=black guibg=black
+
+" Cursor in terminal
+" https://vim.fandom.com/wiki/Configuring_the_cursor
+" 1 or 0 -> blinking block
+" 2 solid block
+" 3 -> blinking underscore
+" 4 solid underscore
+" Recent versions of xterm (282 or above) also support
+" 5 -> blinking vertical bar
+" 6 -> solid vertical bar
+if &term =~ '^xterm'
+  " normal mode
+  let &t_EI .= "\<Esc>[0 q"
+  " insert mode
+  let &t_SI .= "\<Esc>[6 q"
+endif

@@ -1,0 +1,45 @@
+#          _
+#  _______| |__  _ __ ___
+# |_  / __| '_ \| '__/ __|
+#  / /\__ \ | | | | | (__
+# /___|___/_| |_|_|  \___|
+#
+#
+umask 022
+limit coredumpsize 0
+bindkey -d
+
+if type "fish" > /dev/null 2>&1; then
+  exec fish
+else
+  if [ ! -f ~/.zshrc.zwc -o ~/.zshrc -nt ~/.zshrc.zwc ]; then
+    zcompile ~/.zshrc
+  fi
+  if [ ! -f ~/.zsh/zinit.zsh.zwc -o ~/.zsh/zinit.zsh -nt ~/.zsh/zinit.zsh.zwc ]; then
+    zcompile ~/.zsh/zinit.zsh
+  fi
+  if [ ! -f ~/.zsh/common.zsh.zwc -o ~/.zsh/common.zsh -nt ~/.zsh/common.zsh.zwc ]; then
+    zcompile ~/.zsh/common.zsh
+  fi
+
+  source "$HOME/.zsh/util.zsh"
+  uname=`uname | tr '[:upper:]' '[:lower:]'`
+  [ -f $HOME/.zsh/os/$uname.zsh ] && . $HOME/.zsh/os/$uname.zsh
+  if [[ "$(uname -r)" == *microsoft* ]]; then
+  source "$HOME/.zsh/os/wsl2.zsh"
+  fi
+
+  source "$HOME/.zsh/zinit.zsh"
+  source "$HOME/.zsh/common.zsh"
+  source "$HOME/.zsh/functions.zsh"
+  source "$HOME/.zsh/completion.zsh"
+
+  if has "brew"; then
+  source "$HOME/.zsh/.fzf.zsh"
+  fi
+
+  autoload bashcompinit && bashcompinit
+  autoload -Uz compinit && compinit
+
+  printf "\n$fg_bold[cyan]This is ZSH $fg_bold[red]${ZSH_VERSION}\n\n"
+fi

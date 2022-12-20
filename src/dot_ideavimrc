@@ -1,0 +1,67 @@
+let mapleader="<Space>"
+set easymotion
+set surround
+
+set iminsert=0
+set clipboard=unnamed
+set clipboard+=ideaput
+
+nnoremap / :<C-u>action Find<CR>
+nnoremap <Space>/ :<C-u>action Replace<CR>
+vnoremap / :<C-u>action Find<CR>
+vnoremap <Space>/ :<C-u>action Replace<CR>
+nnoremap <C-o> :<C-u>action Back<CR>
+nnoremap <C-i> :<C-u>action Forward<CR>
+nnoremap <C-S-o> <C-o>
+nnoremap <C-S-i> <C-i>
+nnoremap [m :<C-u>action MethodUp<CR>
+nnoremap ]m :<C-u>action MethodDown<CR>
+nnoremap [c :<C-u>action VcsShowPrevChangeMarker<CR>
+nnoremap ]c :<C-u>action VcsShowNextChangeMarker<CR>
+nnoremap gjB :<C-u>action GotoTypeDeclaration<CR>
+nnoremap gjb :<C-u>action GotoImplementation<CR>
+nnoremap gju :<C-u>action GotoSuperMethod<CR>
+nnoremap gjt :<C-u>action GotoTest<CR>
+nnoremap <Space><Tab> :<C-u>action Switcher<CR>
+nnoremap <Space>e :<C-u>action RecentFiles<CR>
+nnoremap <Space>1 :<C-u>action ProjectViewChangeView<CR>
+
+nnoremap <Space>B :<C-u>action BuildMenu<CR>
+nnoremap <Space>r :<C-u>action Run<CR>
+nnoremap <Space>R :<C-u>action RunMenu<CR>
+
+nnoremap <Space>cr :<C-u>action ReformatCode<CR>
+
+inoremap <ESC> <ESC>:set iminsert=0<CR>
+
+sethandler <C-S-2> a:ide
+sethandler <C-S-6> a:ide
+sethandler <C-A> a:ide
+sethandler <C-B> a:vim
+sethandler <C-C> a:ide
+sethandler <C-D> a:ide
+sethandler <C-E> a:vim
+sethandler <C-F> a:vim
+sethandler <C-G> a:vim
+sethandler <C-H> a:ide
+sethandler <C-I> a:vim
+sethandler <C-S-I> a:ide
+sethandler <C-J> a:ide
+sethandler <C-K> a:ide
+sethandler <C-L> a:vim
+sethandler <C-M> a:vim
+sethandler <C-N> a:ide
+sethandler <C-O> a:vim
+sethandler <C-S-O> a:ide
+sethandler <C-P> a:ide
+sethandler <C-Q> a:ide
+sethandler <C-R> a:ide
+sethandler <C-S> a:ide
+sethandler <C-T> a:ide
+sethandler <C-U> a:ide
+sethandler <C-V> a:idea
+sethandler <C-W> a:ide
+sethandler <C-X> a:vim
+sethandler <C-Y> a:vim
+sethandler <C-[> a:vim
+sethandler <C-]> a:vim

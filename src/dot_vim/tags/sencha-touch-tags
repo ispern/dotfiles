@@ -1,0 +1,1116 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+"M$"	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^            "M$": function() {$/;"	m
+"M$"	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^            "M$": function(input, strict) {$/;"	m
+* c	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^         * c = {String} calculation method (required for group 1. null for group 0. {0} = currentGroup - position in regex result array)$/;"	o
+* g	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^         * g = {Number} calculation group (0 or 1. only group 1 contributes to date calculations.)$/;"	o
+* s	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^         * s = {String} regex pattern. all matches are stored in results[], and are accessible by the calculation mapped to 'c'$/;"	o
+// if its not a function, it must be an object like click: {fn	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^                \/\/ if its not a function, it must be an object like click: {fn: function(){}, scope: this}$/;"	m
+// if the value is a function it must be something like click	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^                \/\/ if the value is a function it must be something like click: function(){}, scope: this$/;"	m
+D	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^            D: function() {$/;"	m
+Date.monthNumbers	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Date.monthNumbers = {$/;"	o
+Date.patterns	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Date.patterns = {$/;"	o
+El.Flyweight	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^El.Flyweight.prototype = new F;$/;"	p
+El._flyweights	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^El._flyweights = {};$/;"	o
+Employee	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Employee = Ext.extend(Ext.util.Observable, {$/;"	o
+Ext	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext = {$/;"	o
+Ext.AbstractManager	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.AbstractManager = Ext.extend(Object, {$/;"	o
+Ext.Anim	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.Anim = Ext.extend(Object, {$/;"	o
+Ext.Audio	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.Audio = Ext.extend(Ext.Container, {$/;"	o
+Ext.Button	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.Button = Ext.extend(Ext.Component, {$/;"	o
+Ext.Carousel	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.Carousel = Ext.extend(Ext.Container, {$/;"	o
+Ext.Carousel.Indicator	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.Carousel.Indicator = Ext.extend(Ext.Component, {$/;"	o
+Ext.Component	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.Component = Ext.extend(Ext.util.Observable, {$/;"	o
+Ext.CompositeElement	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.CompositeElement.prototype = {$/;"	p
+Ext.CompositeElement.prototype	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.CompositeElement.prototype = {$/;"	o
+Ext.Container	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.Container = Ext.extend(Ext.Component, {$/;"	o
+Ext.DataPanel	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.DataPanel = Ext.extend(Ext.Panel, {$/;"	o
+Ext.DataView	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.DataView = Ext.extend(Ext.DataPanel, {$/;"	o
+Ext.DatePicker	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.DatePicker = Ext.extend(Ext.Picker, {$/;"	o
+Ext.DomHelper	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.DomHelper = {$/;"	o
+Ext.DomObserver	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^ Ext.DomObserver = Ext.extend(Object, {$/;"	o
+Ext.DomQuery	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.DomQuery = {$/;"	o
+Ext.Element	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.Element = Ext.extend(Object, {$/;"	o
+Ext.Element.classReCache	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.Element.classReCache = {};$/;"	o
+Ext.EventManager	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.EventManager = {$/;"	o
+Ext.EventObjectImpl	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.EventObjectImpl = Ext.extend(Object, {$/;"	o
+Ext.IndexBar	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.IndexBar = Ext.extend(Ext.DataPanel, {$/;"	o
+Ext.List	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.List = Ext.extend(Ext.DataView, {$/;"	o
+Ext.Map	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.Map = Ext.extend(Ext.Component, {$/;"	o
+Ext.NestedList	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.NestedList = Ext.extend(Ext.Panel, {$/;"	o
+Ext.Panel	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.Panel = Ext.extend(Ext.Container, {$/;"	o
+Ext.Picker	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.Picker = Ext.extend(Ext.Panel, {$/;"	o
+Ext.Spacer	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.Spacer = Ext.extend(Ext.Component, {$/;"	o
+Ext.SplitButton	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.SplitButton = Ext.extend(Ext.Container, {$/;"	o
+Ext.Tab	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.Tab = Ext.extend(Ext.Button, {$/;"	o
+Ext.TabBar	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.TabBar = Ext.extend(Ext.Panel, {$/;"	o
+Ext.TabPanel	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.TabPanel = Ext.extend(Ext.Panel, {$/;"	o
+Ext.Template	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.Template.prototype = {$/;"	p
+Ext.Template.prototype	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.Template.prototype = {$/;"	o
+Ext.Toolbar	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.Toolbar = Ext.extend(Ext.Container, {$/;"	o
+Ext.TouchEventObjectImpl	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.TouchEventObjectImpl = Ext.extend(Object, {$/;"	o
+Ext.Video	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.Video = Ext.extend(Ext.Container, {$/;"	o
+Ext.anims	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.anims = {$/;"	o
+Ext.apply	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^};$/;"	f
+Ext.cache[dom.id].events	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^        Ext.cache[dom.id].events = {};$/;"	o
+Ext.cache[id]	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    Ext.cache[id] = {$/;"	o
+Ext.data.AjaxProxy	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.data.AjaxProxy = Ext.extend(Ext.data.ServerProxy, {$/;"	o
+Ext.data.ArrayReader	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.data.ArrayReader = Ext.extend(Ext.data.JsonReader, {$/;"	o
+Ext.data.ArrayStore	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.data.ArrayStore = Ext.extend(Ext.data.Store, {$/;"	o
+Ext.data.Batch	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.data.Batch = Ext.extend(Ext.util.Observable, {$/;"	o
+Ext.data.ClientProxy	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.data.ClientProxy = Ext.extend(Ext.data.Proxy, {$/;"	o
+Ext.data.Connection	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.data.Connection = Ext.extend(Ext.util.Observable, {$/;"	o
+Ext.data.Field	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.data.Field = Ext.extend(Object, {$/;"	o
+Ext.data.JsonPStore	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.data.JsonPStore = Ext.extend(Ext.data.Store, {$/;"	o
+Ext.data.JsonReader	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.data.JsonReader = Ext.extend(Ext.data.Reader, {$/;"	o
+Ext.data.JsonStore	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.data.JsonStore = Ext.extend(Ext.data.Store, {$/;"	o
+Ext.data.JsonWriter	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.data.JsonWriter = Ext.extend(Ext.data.Writer, {$/;"	o
+Ext.data.LocalStorageProxy	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.data.LocalStorageProxy = Ext.extend(Ext.data.WebStorageProxy, {$/;"	o
+Ext.data.MemoryProxy	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.data.MemoryProxy = Ext.extend(Ext.data.ClientProxy, {$/;"	o
+Ext.data.Model	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.data.Model = Ext.extend(Ext.util.Observable, {$/;"	o
+Ext.data.Node	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.data.Node = Ext.extend(Ext.util.Observable, {$/;"	o
+Ext.data.Operation	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.data.Operation = Ext.extend(Object, {$/;"	o
+Ext.data.Proxy	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.data.Proxy = Ext.extend(Ext.util.Observable, {$/;"	o
+Ext.data.Reader	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.data.Reader = Ext.extend(Object, {$/;"	o
+Ext.data.Request	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.data.Request = Ext.extend(Object, {$/;"	o
+Ext.data.RestProxy	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.data.RestProxy = Ext.extend(Ext.data.HttpProxy, {$/;"	o
+Ext.data.ResultSet	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.data.ResultSet = Ext.extend(Object, {$/;"	o
+Ext.data.ScriptTagProxy	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.data.ScriptTagProxy = Ext.extend(Ext.data.ServerProxy, {$/;"	o
+Ext.data.ServerProxy	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.data.ServerProxy = Ext.extend(Ext.data.Proxy, {$/;"	o
+Ext.data.SessionStorageProxy	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.data.SessionStorageProxy = Ext.extend(Ext.data.WebStorageProxy, {$/;"	o
+Ext.data.SortTypes	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.data.SortTypes = {$/;"	o
+Ext.data.Store	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.data.Store = Ext.extend(Ext.util.Observable, {$/;"	o
+Ext.data.Tree	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.data.Tree = Ext.extend(Ext.util.Observable, {$/;"	o
+Ext.data.Types.VELATLONG	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.data.Types.VELATLONG = {$/;"	o
+Ext.data.WebStorageProxy	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.data.WebStorageProxy = Ext.extend(Ext.data.ClientProxy, {$/;"	o
+Ext.data.Writer	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.data.Writer = Ext.extend(Object, {$/;"	o
+Ext.data.XmlReader	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.data.XmlReader = Ext.extend(Ext.data.Reader, {$/;"	o
+Ext.data.XmlStore	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.data.XmlStore = Ext.extend(Ext.data.Store, {$/;"	o
+Ext.form.Checkbox	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.form.Checkbox = Ext.extend(Ext.form.Field, {$/;"	o
+Ext.form.EmailField	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.form.EmailField = Ext.extend(Ext.form.TextField, {$/;"	o
+Ext.form.Field	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.form.Field = Ext.extend(Ext.Component,  {$/;"	o
+Ext.form.FieldSet	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.form.FieldSet = Ext.extend(Ext.Panel, {$/;"	o
+Ext.form.FormPanel	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.form.FormPanel = Ext.extend(Ext.Panel, {$/;"	o
+Ext.form.HiddenField	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.form.HiddenField = Ext.extend(Ext.form.Field, {$/;"	o
+Ext.form.NumberField	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.form.NumberField = Ext.extend(Ext.form.Field, {$/;"	o
+Ext.form.PasswordField	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.form.PasswordField = Ext.extend(Ext.form.Field, {$/;"	o
+Ext.form.Radio	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.form.Radio = Ext.extend(Ext.form.Checkbox, {$/;"	o
+Ext.form.SearchField	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.form.SearchField = Ext.extend(Ext.form.Field, {$/;"	o
+Ext.form.Select	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.form.Select = Ext.extend(Ext.form.Field, {$/;"	o
+Ext.form.Slider	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.form.Slider = Ext.extend(Ext.form.Field, {$/;"	o
+Ext.form.Slider.Thumb	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.form.Slider.Thumb = Ext.extend(Ext.form.Field, {$/;"	o
+Ext.form.SpinnerField	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.form.SpinnerField = Ext.extend(Ext.form.NumberField, {$/;"	o
+Ext.form.TextArea	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.form.TextArea = Ext.extend(Ext.form.Field, {$/;"	o
+Ext.form.TextField	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.form.TextField = Ext.extend(Ext.form.Field, {$/;"	o
+Ext.form.Toggle	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.form.Toggle = Ext.extend(Ext.form.Slider, {$/;"	o
+Ext.form.UrlField	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.form.UrlField = Ext.extend(Ext.form.TextField, {$/;"	o
+Ext.layout.AutoComponentLayout	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.layout.AutoComponentLayout = Ext.extend(Ext.layout.ComponentLayout, {$/;"	o
+Ext.layout.AutoContainerLayout	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.layout.AutoContainerLayout = Ext.extend(Ext.layout.ContainerLayout, {$/;"	o
+Ext.layout.BoxLayout	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.layout.BoxLayout = Ext.extend(Ext.layout.ContainerLayout, {$/;"	o
+Ext.layout.CardLayout	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.layout.CardLayout = Ext.extend(Ext.layout.FitLayout, {$/;"	o
+Ext.layout.ComponentLayout	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.layout.ComponentLayout = Ext.extend(Ext.layout.Layout, {$/;"	o
+Ext.layout.ContainerLayout	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.layout.ContainerLayout = Ext.extend(Ext.layout.Layout, {$/;"	o
+Ext.layout.DockLayout	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.layout.DockLayout = Ext.extend(Ext.layout.ComponentLayout, {$/;"	o
+Ext.layout.FieldLayout	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.layout.FieldLayout = Ext.extend(Ext.layout.ComponentLayout, {$/;"	o
+Ext.layout.FitLayout	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^ Ext.layout.FitLayout = Ext.extend(Ext.layout.ContainerLayout, {$/;"	o
+Ext.layout.Layout	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.layout.Layout = Ext.extend(Object, {$/;"	o
+Ext.layout.TYPES	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.layout.TYPES = {};$/;"	o
+Ext.layout.TYPES['hbox'] = Ext.layout.HBoxLayout	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.layout.TYPES['hbox'] = Ext.layout.HBoxLayout = Ext.extend(Ext.layout.BoxLayout, {$/;"	o
+Ext.layout.TYPES['vbox'] = Ext.layout.VBoxLayout	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.layout.TYPES['vbox'] = Ext.layout.VBoxLayout = Ext.extend(Ext.layout.BoxLayout, {$/;"	o
+Ext.platform	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.platform = {$/;"	o
+Ext.setup	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^};$/;"	f
+Ext.util.Draggable	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.util.Draggable = Ext.extend(Ext.util.Observable, {$/;"	o
+Ext.util.Droppable	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.util.Droppable = Ext.extend(Ext.util.Observable, {$/;"	o
+Ext.util.GeoLocation	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.util.GeoLocation = Ext.extend(Ext.util.Observable, {$/;"	o
+Ext.util.JSON	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.util.JSON = {$/;"	o
+Ext.util.JSONP	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.util.JSONP = {$/;"	o
+Ext.util.Observable	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.util.Observable = Ext.extend(Object, {$/;"	o
+Ext.util.Region	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.util.Region = Ext.extend(Object, {$/;"	o
+Ext.util.Scroller	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.util.Scroller = Ext.extend(Ext.util.Observable, {$/;"	o
+Ext.util.Scroller.Scrollbar	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.util.Scroller.Scrollbar = Ext.extend(Object, {$/;"	o
+Ext.util.Sortable	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.util.Sortable = Ext.extend(Ext.util.Observable, {$/;"	o
+Ext.util.TapRepeater	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext.util.TapRepeater = Ext.extend(Ext.util.Observable, {$/;"	o
+Ext.version	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^Ext = {$/;"	p
+Ext.versionDetail	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    version : '0.9.0',$/;"	p
+F	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^            F.prototype = El.prototype;$/;"	p
+F	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^            F.prototype = superclassProto;$/;"	p
+F	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^            F: function() {$/;"	m
+F	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^F.prototype = El.prototype;$/;"	p
+M	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^            M: function() {$/;"	m
+MyGridPanel	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^MyGridPanel = Ext.extend(Ext.grid.GridPanel, {$/;"	o
+_sort	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    _sort : function(property, dir, fn){$/;"	m
+abort	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    abort : function(r) {$/;"	m
+abort	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    abort: function() {$/;"	m
+activate	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    activate : function() {$/;"	m
+add	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    add : function() {$/;"	m
+add	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    add : function(els, root) {$/;"	m
+add	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    add : function(key, o){$/;"	m
+add	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    add: function() {$/;"	m
+add	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    add: function(interval, value) {$/;"	m
+add	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    add: function(operation) {$/;"	m
+addAll	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    addAll : function(objs){$/;"	m
+addClass	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    addClass : function(cls) {$/;"	m
+addClass	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    addClass: function(className) {$/;"	m
+addDocked	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    addDocked : function(items, pos) {$/;"	m
+addElements	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    addElements : function(els, root){$/;"	m
+addEventListener	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    addEventListener : function(dom, ename, fn, o) {$/;"	m
+addEvents	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    addEvents : function(o){$/;"	m
+addListener	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^            addListener : function(fn, scope, options){$/;"	m
+addListener	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    addListener : function(element, eventName, fn, scope, o){$/;"	m
+addListener	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    addListener : function(ename) {$/;"	m
+addListener	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    addListener : function(ename, fn, scope, o) {$/;"	m
+addListener	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    addListener : function(eventName, fn, scope, options){$/;"	m
+addListener	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    addListener : function(eventName, handler, scope, opt) {$/;"	m
+addUnits	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    addUnits : function(size) {$/;"	m
+adjust	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    adjust : function(t, r, b, l) {$/;"	m
+adjustPosition	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    adjustPosition : function(x, y) {$/;"	m
+adjustSize	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    adjustSize : function(w, h) {$/;"	m
+adjustSizedBox	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    adjustSizedBox : function(box, index) {$/;"	m
+after	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^                after : function() {$/;"	m
+afterCommit	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    afterCommit: function() {$/;"	m
+afterComponentLayout	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    afterComponentLayout : function() {$/;"	m
+afterEdit	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    afterEdit : function() {$/;"	m
+afterEdit	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    afterEdit : function(record) {$/;"	m
+afterLayout	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    afterLayout : function() {$/;"	m
+afterLayout	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    afterLayout : function(layout) {$/;"	m
+afterLayout	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    afterLayout: function() {$/;"	m
+afterLayout	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    afterLayout: function(layout) {$/;"	m
+afterReject	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    afterReject : function(){$/;"	m
+afterRemove	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    afterRemove : function(item) {$/;"	m
+afterRender	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    afterRender : function() {$/;"	m
+afterRender	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    afterRender : function(){$/;"	m
+afterRender	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    afterRender : function(ct, position) {$/;"	m
+afterRender	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    afterRender: function() {$/;"	m
+afterRender	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    afterRender: function(){$/;"	m
+afterRender	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    afterRender: function(ct) {$/;"	m
+afterRequest	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    afterRequest: function() {$/;"	m
+afterrender	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^                    afterrender: function() {$/;"	m
+append	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    append : function(el, o, returnElement) {$/;"	m
+append	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    append: function(el, values, returnElement) {$/;"	m
+appendChild	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    appendChild : function(el) {$/;"	m
+appendChild	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    appendChild : function(node){$/;"	m
+appendTo	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    appendTo : function(el) {$/;"	m
+applyDefaults	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    applyDefaults : function(c) {$/;"	m
+applyIf	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    applyIf : function(object, config) {$/;"	m
+applyRefs	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    applyRefs: function(el) {$/;"	m
+applyStyles	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    applyStyles : function(el, styles) {$/;"	m
+applyStyles	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    applyStyles: function(styles) {$/;"	m
+applySubTemplate	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    applySubTemplate: function(id, values, parent, xindex, xcount) {$/;"	m
+applyTemplate	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    applyTemplate: function(values) {$/;"	m
+asDate	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    asDate : function(s) {$/;"	m
+asFloat	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    asFloat : function(s) {$/;"	m
+asInt	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    asInt : function(s) {$/;"	m
+asText	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    asText : function(s){$/;"	m
+asUCString	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    asUCString : function(s) {$/;"	m
+asUCText	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    asUCText : function(s){$/;"	m
+batch	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    batch: function(operations, listeners) {$/;"	m
+before	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^        before: function(el) {$/;"	m
+beforeDestroy	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    beforeDestroy : function() {$/;"	m
+between	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    between: function(start, end) {$/;"	m
+bindStore	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    bindStore: function(store, initial) {$/;"	m
+box	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^            box = {$/;"	o
+bubble	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    bubble : function(fn, scope, args){$/;"	m
+bufferRender	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    bufferRender: function(records) {$/;"	m
+buildExtractors	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    buildExtractors : function() {$/;"	m
+buildExtractors	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    buildExtractors: function() {$/;"	m
+buildRequest	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    buildRequest: function(operation) {$/;"	m
+buildUrl	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    buildUrl: function(request) {$/;"	m
+c	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^            c: function() {$/;"	m
+c	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^        c: function() { \/\/ ISO-8601 -- UTC format$/;"	m
+c[c.length]	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^            c[c.length] = {$/;"	o
+calculateBoxes	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    calculateBoxes : function() {$/;"	m
+calculateDockBoxes	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    calculateDockBoxes : function(items, autoBoxes) {$/;"	m
+call	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    call: function(fnName, value, allValues) {$/;"	m
+callStore	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    callStore: function(fn) {$/;"	m
+callback	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    callback: function(){ this.{@link #update}("finished"); }$/;"	m
+callback	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    callback: function(json) {$/;"	m
+camelReplaceFn	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    camelReplaceFn : function(m, a) {$/;"	m
+cascade	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    cascade : function(fn, scope, args){$/;"	m
+cfg	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^            cfg = {$/;"	o
+cfg	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^        var cfg = {$/;"	o
+change	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    change: function() {$/;"	m
+changeName	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    changeName: function() {$/;"	m
+changes	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^            changes  = {},$/;"	o
+child	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    child : function(selector, returnDom) {$/;"	m
+clear	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    clear : function() {$/;"	m
+clear	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    clear : function(){$/;"	m
+clear	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    clear : function(destroy){$/;"	m
+clear	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    clear: function() {$/;"	m
+clearData	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    clearData: function(){$/;"	m
+clearFilter	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    clearFilter : function(suppressEvent){$/;"	m
+clearListeners	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^            clearListeners : function(){$/;"	m
+clearMons	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    clearMons : function() {$/;"	m
+clearSelections	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    clearSelections: function(suppressEvent, skipUpdate) {$/;"	m
+clearTime	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    clearTime: function(clone) {$/;"	m
+click	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^         click: function(evt, comp) {$/;"	m
+clone	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    clone : function(){$/;"	m
+clone	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    clone: function() {$/;"	m
+collectData	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    collectData : function(records, startIndex) {$/;"	m
+collectData	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    collectData: function(records, startIndex) {$/;"	m
+commit	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    commit : function(silent) {$/;"	m
+compile	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    compile: function() {$/;"	m
+compileTpl	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    compileTpl: function(tpl) {$/;"	m
+config	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^            config = {name: config};$/;"	o
+configureItem	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    configureItem : function(item, pos) {$/;"	m
+configureItem	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    configureItem: function(item, position) {$/;"	m
+constrain	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    constrain : function(min, max) {$/;"	m
+constrain	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    constrain: function(value) {$/;"	m
+constrainTo	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    constrainTo : function(r) {$/;"	m
+constrainToBounds	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    constrainToBounds : function(pos) {$/;"	m
+constructor	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^                constructor : function(observable, name) {$/;"	m
+constructor	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^        constructor : function(config) {$/;"	m
+constructor	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^     constructor: function(config) {$/;"	m
+constructor	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    constructor : function(config) {$/;"	m
+constructor	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    constructor : function(e) {$/;"	m
+constructor	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    constructor : function(el, config) {$/;"	m
+constructor	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    constructor : function(element, forceNew) {$/;"	m
+constructor	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    constructor : function(scroller, direction) {$/;"	m
+constructor	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    constructor : function(t, r, b, l) {$/;"	m
+constructor	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    constructor: function(attributes){$/;"	m
+constructor	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    constructor: function(config) {$/;"	m
+constructor	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    constructor: function(config){$/;"	m
+constructor	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    constructor: function(data, id) {$/;"	m
+constructor	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    constructor: function(el, config) {$/;"	m
+constructor	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    constructor: function(root){$/;"	m
+constructor	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^constructor: function(config) {$/;"	m
+contains	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    contains : function(el) {$/;"	m
+contains	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    contains : function(el){$/;"	m
+contains	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    contains : function(node){$/;"	m
+contains	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    contains : function(o){$/;"	m
+contains	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    contains : function(region) {$/;"	m
+containsKey	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    containsKey : function(key){$/;"	m
+convert	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^            convert: function(v){ return (v === undefined || v === null) ? '' : String(v); },$/;"	m
+convert	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^            convert: function(v){ return v === true || v === 'true' || v == 1; },$/;"	m
+convert	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^            convert: function(v){ return v; },$/;"	m
+convert	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^            convert: function(v){$/;"	m
+convert	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    convert: function(v, data) {$/;"	m
+copy	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    copy : function(newId) {$/;"	m
+create	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    create : function(config, defaultType){$/;"	m
+create	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    create: function() {$/;"	m
+create	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    create: function(config, defaultType) {$/;"	m
+create	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    create: function(config, name) {$/;"	m
+create	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    create: function(operation, callback, scope) {$/;"	m
+create	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    create: function(options) {$/;"	m
+createAccessor	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    createAccessor : function() {$/;"	m
+createAccessor	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    createAccessor: function() {$/;"	m
+createChild	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    createChild : function(config, insertBefore, returnDom) {$/;"	m
+createComponent	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    createComponent : function(config, defaultType){$/;"	m
+createDelegate	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    createDelegate : function(obj, args, appendArgs) {$/;"	m
+createException	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    createException : function(r) {$/;"	m
+createFilterFn	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    createFilterFn : function(property, value, anyMatch, caseSensitive, exactMatch) {$/;"	m
+createFormat	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^        createFormat: function(format) {$/;"	m
+createHandler	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^     createHandler: function(fn, c) {$/;"	m
+createIndicator	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    createIndicator: function() {$/;"	m
+createInterceptor	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    createInterceptor : function(fn, scope) {$/;"	m
+createListener	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^            createListener: function(fn, scope, o){$/;"	m
+createListenerWrap	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    createListenerWrap : function(dom, ename, fn, scope, o, touch) {$/;"	m
+createMultipleFilterFn	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    createMultipleFilterFn: function(filters) {$/;"	m
+createParser	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^        createParser: function() {$/;"	m
+createRequestCallback	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    createRequestCallback: function(request, operation, callback, scope) {$/;"	m
+createResponse	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    createResponse : function(r) {$/;"	m
+createSortFunction	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    createSortFunction: function(field, direction) {$/;"	m
+createTimeoutHandler	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    createTimeoutHandler: function(request) {$/;"	m
+createValueMatcher	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    createValueMatcher : function(value, anyMatch, caseSensitive, exactMatch) {$/;"	m
+data	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^            data    = {},$/;"	o
+data	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^var data = {$/;"	o
+date	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^        date: function(v, format) {$/;"	m
+dateFormat	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    dateFormat: function(format) {$/;"	m
+deactivate	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    deactivate : function() {$/;"	m
+decode	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    decode : function(s) {$/;"	m
+defaultData	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^var defaultData = {$/;"	o
+defer	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    defer : function(millis, obj, args, appendArgs) {$/;"	m
+deselect	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    deselect: function(node) {$/;"	m
+destroy	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    destroy : function() {$/;"	m
+destroy	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    destroy : function(\/* private *\/ silent){$/;"	m
+destroy	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    destroy: function() {$/;"	m
+destroy	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    destroy: function(operation, callback, scope) {$/;"	m
+destroy	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    destroy: function(options) {$/;"	m
+destroyStore	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    destroyStore: function() {$/;"	m
+disable	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    disable : function() {$/;"	m
+disable	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    disable : function(silent) {$/;"	m
+doComponentLayout	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    doComponentLayout : function(w, h) {$/;"	m
+doInsert	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    doInsert : function(el, o, returnElement, pos, sibling, append) {$/;"	m
+doInsert	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    doInsert: function(where, el, values, returnEl) {$/;"	m
+doLayout	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    doLayout : function() {$/;"	m
+doMultiSelection	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    doMultiSelection: function(item, index, e) {$/;"	m
+doRemove	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    doRemove : function(component, autoDestroy) {$/;"	m
+doRequest	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    doRequest: function(operation, callback, scope) {$/;"	m
+doSingleSelection	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    doSingleSelection: function(item, index, e) {$/;"	m
+dockItems	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    dockItems : function(items, autoBoxes) {$/;"	m
+down	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    down : function(selector, returnDom) {$/;"	m
+dragend	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^                dragend: function() {$/;"	m
+e	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^                    e = {$/;"	o
+e	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^            e = {$/;"	o
+e = pinch = me.pinch	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^                            e = pinch = me.pinch = {$/;"	o
+each	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^     each : function(array, fn, scope) {$/;"	m
+each	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    each : function(fn, scope) {$/;"	m
+each	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    each : function(fn, scope){$/;"	m
+eachChild	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    eachChild : function(fn, scope, args){$/;"	m
+eachKey	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    eachKey : function(fn, scope){$/;"	m
+easeOutExpo	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    easeOutExpo: function(t, b, c, d) {$/;"	m
+ellipsis	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^        ellipsis: function(value, len, word) {$/;"	m
+emptyFn	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    emptyFn : function(){},$/;"	m
+enable	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    enable : function() {$/;"	m
+enable	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    enable : function(silent) {$/;"	m
+enableBubble	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    enableBubble : function(events){$/;"	m
+encode	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    encode : function(o) {$/;"	m
+encodeRecords	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    encodeRecords: function(records) {$/;"	m
+escape	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    escape : function(string) {$/;"	m
+escapeRe	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    escapeRe : function(s) {$/;"	m
+eventOptions	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    eventOptions: function(e) {$/;"	m
+extend	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    extend : function() {$/;"	m
+extractData	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    extractData : function(root, returnRecords) {$/;"	m
+extractValues	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    extractValues: function(data) {$/;"	m
+failure	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^   failure: function(response, opts) {$/;"	m
+fields	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^        var fields = {};$/;"	o
+fill	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    fill : function(els) {$/;"	m
+filter	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    filter : function(property, value, anyMatch, caseSensitive, exactMatch) {$/;"	m
+filter	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    filter : function(selector) {$/;"	m
+filter	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    filter: function(filters, suppressEvent) {$/;"	m
+filterBy	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    filterBy : function(fn, scope){$/;"	m
+find	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    find : function(fn, scope){$/;"	m
+find	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    find : function(property, value, start, anyMatch, caseSensitive){$/;"	m
+findBy	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    findBy : function(fn, scope, start){$/;"	m
+findByType	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    findByType: function(type, defaultsOnly) {$/;"	m
+findChild	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    findChild : function(attribute, value, deep){$/;"	m
+findChildBy	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    findChildBy : function(fn, scope, deep){$/;"	m
+findExact	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    findExact: function(property, value, start){$/;"	m
+findIndex	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    findIndex : function(property, value, start, anyMatch, caseSensitive){$/;"	m
+findIndexBy	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    findIndexBy : function(fn, scope, start){$/;"	m
+findItemFromChild	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    findItemFromChild: function(node) {$/;"	m
+findListener	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^            findListener : function(fn, scope){$/;"	m
+findParent	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    findParent : function(simpleSelector, maxDepth, returnEl) {$/;"	m
+findParentNode	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    findParentNode : function(simpleSelector, maxDepth, returnEl) {$/;"	m
+fire	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^            fire : function() {$/;"	m
+fireEvent	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    fireEvent : function() {$/;"	m
+fireEvent	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    fireEvent : function(evtName){$/;"	m
+fireListeners	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    fireListeners : function(ename, track, e) {$/;"	m
+first	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    first : function() {$/;"	m
+first	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    first : function(){$/;"	m
+first	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    first : function(selector, returnDom) {$/;"	m
+fn	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^                fn: function(r) {$/;"	m
+format	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    format : function(format){$/;"	m
+fromPoint	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    fromPoint: function(x, y) {$/;"	m
+g	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^            g: function() {$/;"	m
+get	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    get : function(id){$/;"	m
+get	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    get: function(field) {$/;"	m
+getActionEl	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getActionEl : function() {$/;"	m
+getActive	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getActive : function() {$/;"	m
+getActiveGroupNode	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getActiveGroupNode : function() {$/;"	m
+getActiveItem	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getActiveItem : function() {$/;"	m
+getActiveItem	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getActiveItem: function() {$/;"	m
+getAllResponseHeaders	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^            getAllResponseHeaders : function(){ return headers; },$/;"	m
+getAt	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getAt : function(index) {$/;"	m
+getAttribute	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getAttribute : function(name, ns) {$/;"	m
+getBadgeText	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getBadgeText : function() {$/;"	m
+getBatchListeners	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getBatchListeners: function() {$/;"	m
+getBody	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getBody : function(){$/;"	m
+getBorderWidth	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getBorderWidth: function(side) {$/;"	m
+getBottom	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getBottom : function(local) {$/;"	m
+getBox	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getBox : function(contentBox, local) {$/;"	m
+getBubbleTarget	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getBubbleTarget : function() {$/;"	m
+getBubbleTarget	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^getBubbleTarget : function() {$/;"	m
+getById	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getById : function(id) {$/;"	m
+getCard	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getCard : function() {$/;"	m
+getCardLayout	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getCardLayout : function() {$/;"	m
+getChanges	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getChanges : function(){$/;"	m
+getCheckEl	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getCheckEl: function() {$/;"	m
+getCmp	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getCmp : function(id){$/;"	m
+getComponent	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getComponent : function(comp) {$/;"	m
+getComponentId	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getComponentId : function(comp){$/;"	m
+getContentTarget	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getContentTarget : function() {$/;"	m
+getCount	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getCount : function() {$/;"	m
+getCount	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getCount : function(){$/;"	m
+getData	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getData: function(data) {$/;"	m
+getDayOfYear	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getDayOfYear: function() {$/;"	m
+getDaysInMonth	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getDaysInMonth: function() {$/;"	m
+getDaysInMonth	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getDaysInMonth: function(month, year) {$/;"	m
+getDepth	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getDepth : function(){$/;"	m
+getDoc	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getDoc : function(){$/;"	m
+getDockedItems	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getDockedItems : function() {$/;"	m
+getDocumentHeight	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getDocumentHeight: function() {$/;"	m
+getDocumentWidth	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getDocumentWidth: function() {$/;"	m
+getDom	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getDom : function(el) {$/;"	m
+getEl	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getEl : function() {$/;"	m
+getElapsed	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getElapsed: function(date) {$/;"	m
+getElement	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getElement : function(el) {$/;"	m
+getElementEventCache	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getElementEventCache : function(element) {$/;"	m
+getError	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getError: function() {$/;"	m
+getEventListenerCache	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getEventListenerCache : function(element, eventName) {$/;"	m
+getFields	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getFields: function() {$/;"	m
+getFirstDateOfMonth	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getFirstDateOfMonth: function() {$/;"	m
+getFirstDayOfMonth	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getFirstDayOfMonth: function() {$/;"	m
+getFormatCode	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^        getFormatCode: function(character) {$/;"	m
+getGMTOffset	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getGMTOffset: function(colon) {$/;"	m
+getGroupString	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getGroupString: function(instance) {$/;"	m
+getGroupValue	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getGroupValue: function() {$/;"	m
+getGroups	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getGroups: function() {$/;"	m
+getHTML	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getHTML : function() {$/;"	m
+getHead	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getHead : function() {$/;"	m
+getHeight	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getHeight : function() {$/;"	m
+getHeight	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getHeight: function(contentHeight) {$/;"	m
+getId	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getId : function() {$/;"	m
+getId	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getId : function(element) {$/;"	m
+getId	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getId: function() {$/;"	m
+getIds	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getIds: function() {$/;"	m
+getItemId	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getItemId : function() {$/;"	m
+getKey	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getKey : function(o) {$/;"	m
+getKey	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getKey : function(o){$/;"	m
+getLastDateOfMonth	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getLastDateOfMonth: function() {$/;"	m
+getLastDayOfMonth	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getLastDayOfMonth: function() {$/;"	m
+getLayout	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getLayout : function() {$/;"	m
+getLayoutItems	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getLayoutItems : function() {$/;"	m
+getLayoutTarget	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getLayoutTarget : function(){$/;"	m
+getLeft	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getLeft : function(local) {$/;"	m
+getLocation	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getLocation : function(callback, scope) {$/;"	m
+getMargin	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getMargin: function(side) {$/;"	m
+getMethod	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getMethod: function(request) {$/;"	m
+getMonthNumber	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^        getMonthNumber: function(name) {$/;"	m
+getName	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getName : function() {$/;"	m
+getNearest	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getNearest: function(value) {$/;"	m
+getNewRecords	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getNewRecords: function() {$/;"	m
+getNext	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getNext : function(wrap) {$/;"	m
+getNextId	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getNextId: function() {$/;"	m
+getNode	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getNode: function(nodeInfo) {$/;"	m
+getNodeById	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getNodeById : function(id){$/;"	m
+getNodes	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getNodes: function(start, end) {$/;"	m
+getOffsetsTo	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getOffsetsTo : function(el){$/;"	m
+getOrientation	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getOrientation : function() {$/;"	m
+getOrientation	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getOrientation: function() {$/;"	m
+getOuterHeight	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getOuterHeight: function() {$/;"	m
+getOuterSize	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getOuterSize : function() {$/;"	m
+getOuterWidth	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getOuterWidth: function() {$/;"	m
+getOwnerTree	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getOwnerTree : function(){$/;"	m
+getPadding	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getPadding: function(side) {$/;"	m
+getPageBox	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getPageBox : function(getRegion) {$/;"	m
+getPageX	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getPageX : function(){$/;"	m
+getPageY	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getPageY : function(){$/;"	m
+getPath	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getPath : function(attr){$/;"	m
+getPixelValue	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getPixelValue: function(value, thumb) {$/;"	m
+getPositionEl	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getPositionEl : function() {$/;"	m
+getPrev	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getPrev : function(wrap) {$/;"	m
+getProxyEl	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getProxyEl: function() {$/;"	m
+getRange	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getRange : function(start, end) {$/;"	m
+getRange	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getRange : function(start, end){$/;"	m
+getReader	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getReader: function() {$/;"	m
+getRecord	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getRecord: function(id) {$/;"	m
+getRecord	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getRecord: function(node) {$/;"	m
+getRecordCounterKey	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getRecordCounterKey: function() {$/;"	m
+getRecordKey	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getRecordKey: function(id) {$/;"	m
+getRecords	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getRecords: function() {$/;"	m
+getRecords	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getRecords: function(nodes) {$/;"	m
+getRemovedRecords	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getRemovedRecords: function() {$/;"	m
+getRenderedItems	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getRenderedItems: function() {$/;"	m
+getResizeEl	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getResizeEl : function() {$/;"	m
+getResponseData	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getResponseData: function(response) {$/;"	m
+getResponseHeader	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^            getResponseHeader : function(header){ return headers[header.toLowerCase()]; },$/;"	m
+getResultSet	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getResultSet: function() {$/;"	m
+getRight	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getRight : function(local) {$/;"	m
+getRoot	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getRoot: function(data) {$/;"	m
+getRootNode	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getRootNode : function(){$/;"	m
+getSelectedEls	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getSelectedEls: function() {$/;"	m
+getSelectedIndexes	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getSelectedIndexes: function() {$/;"	m
+getSelectedNodes	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getSelectedNodes: function() {$/;"	m
+getSelectedRecords	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getSelectedRecords: function() {$/;"	m
+getSelectionCount	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getSelectionCount: function() {$/;"	m
+getShortDayName	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^        getShortDayName: function(day) {$/;"	m
+getShortMonthName	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^        getShortMonthName: function(month) {$/;"	m
+getSize	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getSize : function() {$/;"	m
+getSize	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getSize: function(contentSize) {$/;"	m
+getSliderValue	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getSliderValue: function(pixelValue, thumb) {$/;"	m
+getSortState	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getSortState : function() {$/;"	m
+getStorageObject	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getStorageObject: function() {$/;"	m
+getStore	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getStore: function(){$/;"	m
+getStyle	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getStyle: function(prop) {$/;"	m
+getSuffix	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getSuffix: function() {$/;"	m
+getTabBar	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getTabBar : function() {$/;"	m
+getTarget	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getTarget : function() {$/;"	m
+getTarget	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getTarget : function(selector, maxDepth, returnEl) {$/;"	m
+getTargetBox	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getTargetBox : function() {$/;"	m
+getTargetSize	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getTargetSize : function() {$/;"	m
+getTemplateTarget	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getTemplateTarget: function() {$/;"	m
+getText	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getText : function() {$/;"	m
+getThumb	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getThumb: function() {$/;"	m
+getTime	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getTime : function() {$/;"	m
+getTimezone	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getTimezone: function() {$/;"	m
+getTop	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getTop : function(local) {$/;"	m
+getUpdatedRecords	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getUpdatedRecords: function() {$/;"	m
+getValue	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getValue : function(){$/;"	m
+getValue	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getValue : function(asNumber){$/;"	m
+getValue	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getValue: function() {$/;"	m
+getValues	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getValues: function() {$/;"	m
+getViewSize	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getViewSize : function() {$/;"	m
+getViewSize	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getViewSize: function() {$/;"	m
+getViewportHeight	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getViewportHeight: function(){$/;"	m
+getViewportWidth	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getViewportWidth : function() {$/;"	m
+getVisibilityEl	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getVisibilityEl : function() {$/;"	m
+getVisibilityMode	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getVisibilityMode: function() {$/;"	m
+getVisibleItems	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getVisibleItems: function() {$/;"	m
+getWeekOfYear	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getWeekOfYear: function() {$/;"	m
+getWidth	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getWidth : function() {$/;"	m
+getWidth	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getWidth: function(contentWidth) {$/;"	m
+getWriter	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getWriter: function() {$/;"	m
+getX	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getX : function(el) {$/;"	m
+getXY	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getXY : function(){$/;"	m
+getY	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    getY : function(el) {$/;"	m
+group	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^                group = {$/;"	o
+h	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^            h: function() {$/;"	m
+handleBoxes	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    handleBoxes : function(target) {$/;"	m
+handleLabel	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    handleLabel : function() {$/;"	m
+handleListenerConfig	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    handleListenerConfig : function(element, config, remove) {$/;"	m
+hasChildNodes	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    hasChildNodes : function(){$/;"	m
+hasClass	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    hasClass: function(className) {$/;"	m
+hasException	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    hasException: function() {$/;"	m
+hasListener	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    hasListener : function(ename){$/;"	m
+hash	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^        var hash = {},$/;"	o
+headers	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^            headers = {},$/;"	o
+hide	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    hide : function() {$/;"	m
+hide	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    hide : function(animation) {$/;"	m
+hideTitle	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    hideTitle : function() {$/;"	m
+htmlDecode	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^        htmlDecode: function(value) {$/;"	m
+htmlDecode	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    htmlDecode : function(value){$/;"	m
+htmlEncode	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^        htmlEncode: function(value) {$/;"	m
+htmlEncode	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    htmlEncode : function(value){$/;"	m
+id	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    id : function(el, prefix) {$/;"	m
+inConfig	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^                var inConfig = {}, inAnim;$/;"	o
+indexOf	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    indexOf : function(child){$/;"	m
+indexOf	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    indexOf : function(el) {$/;"	m
+indexOf	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    indexOf : function(o){$/;"	m
+indexOf	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    indexOf : function(o, from) {$/;"	m
+indexOf	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    indexOf : function(record) {$/;"	m
+indexOf	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    indexOf: function(node) {$/;"	m
+indexOfId	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    indexOfId : function(id) {$/;"	m
+indexOfKey	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    indexOfKey : function(key){$/;"	m
+info = this.info	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^        var info = this.info = {$/;"	o
+init	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^     init: function(c) {$/;"	m
+init	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    init : function() {$/;"	m
+initBox	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    initBox : function(item) {$/;"	m
+initComponent	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    initComponent : function() {$/;"	m
+initComponent	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    initComponent : function(){$/;"	m
+initComponent	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    initComponent: function() {$/;"	m
+initConfig	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    initConfig : function(el, runConfig) {$/;"	m
+initEvents	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    initEvents : function() {$/;"	m
+initItems	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    initItems : function() {$/;"	m
+initItems	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    initItems : function(){$/;"	m
+initLayout	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    initLayout : function(layout, defaultType) {$/;"	m
+initPlugin	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    initPlugin : function(plugin) {$/;"	m
+initValue	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    initValue : function(){$/;"	m
+initialize	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    initialize: function() {$/;"	m
+insert	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    insert : function(index, comp){$/;"	m
+insert	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    insert : function(index, key, o){$/;"	m
+insert	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    insert : function(index, records) {$/;"	m
+insertAfter	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    insertAfter : function(el) {$/;"	m
+insertAfter	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    insertAfter : function(el, o, returnElement) {$/;"	m
+insertAfter	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    insertAfter: function(el, values, returnElement) {$/;"	m
+insertBefore	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    insertBefore : function(el) {$/;"	m
+insertBefore	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    insertBefore : function(el, o, returnElement) {$/;"	m
+insertBefore	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    insertBefore : function(node, refNode){$/;"	m
+insertBefore	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    insertBefore: function(el, values, returnElement) {$/;"	m
+insertDocked	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    insertDocked : function(pos, items) {$/;"	m
+insertFirst	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    insertFirst : function(el, o, returnElement) {$/;"	m
+insertFirst	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    insertFirst : function(el, returnDom) {$/;"	m
+insertFirst	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    insertFirst: function(el, values, returnElement) {$/;"	m
+insertHtml	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    insertHtml : function(where, el, html) {$/;"	m
+insertHtml	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    insertHtml : function(where, html, returnEl) {$/;"	m
+insertSibling	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    insertSibling: function(el, where, returnDom){$/;"	m
+intersect	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    intersect : function(region) {$/;"	m
+invoke	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    invoke : function(fn, args) {$/;"	m
+is	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    is : function(el, q) {$/;"	m
+is	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    is : function(simpleSelector) {$/;"	m
+isAncestor	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    isAncestor : function(c) {$/;"	m
+isAncestor	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    isAncestor : function(node){$/;"	m
+isArray	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    isArray : function(v) {$/;"	m
+isBaby	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^        isBaby: function(age){$/;"	m
+isBoolean	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    isBoolean : function(v) {$/;"	m
+isComplete	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    isComplete: function() {$/;"	m
+isDST	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    isDST: function() {$/;"	m
+isDate	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    isDate : function(v) {$/;"	m
+isDefined	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    isDefined : function(v){$/;"	m
+isDescendent	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    isDescendent : function(p) {$/;"	m
+isDirty	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    isDirty : function() {$/;"	m
+isDragOver	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    isDragOver : function(draggable, region) {$/;"	m
+isElement	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    isElement : function(v) {$/;"	m
+isEmpty	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    isEmpty : function(v, allowBlank) {$/;"	m
+isExpandable	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    isExpandable : function(){$/;"	m
+isFiltered	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    isFiltered : function(){$/;"	m
+isFirst	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    isFirst : function(){$/;"	m
+isFunction	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    isFunction : function(v) {$/;"	m
+isGirl	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^        isGirl: function(name){$/;"	m
+isIterable	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    isIterable : function(v){$/;"	m
+isLast	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    isLast : function(){$/;"	m
+isLeaf	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    isLeaf : function(){$/;"	m
+isLeapYear	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    isLeapYear: function() {$/;"	m
+isLeapYear	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    isLeapYear: function(year) {$/;"	m
+isListening	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^            isListening : function(fn, scope){$/;"	m
+isLoading	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    isLoading : function(){$/;"	m
+isLoading	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    isLoading : function(r) {$/;"	m
+isModified	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    isModified : function(fieldName) {$/;"	m
+isNumber	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    isNumber : function(v) {$/;"	m
+isObject	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    isObject : function(v) {$/;"	m
+isPrimitive	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    isPrimitive : function(v) {$/;"	m
+isRegistered	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    isRegistered : function(type){$/;"	m
+isRunning	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    isRunning: function() {$/;"	m
+isSelected	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    isSelected: function(node) {$/;"	m
+isStarted	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    isStarted: function() {$/;"	m
+isString	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    isString : function(v) {$/;"	m
+isStyle	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    isStyle: function(style, val) {$/;"	m
+isValid	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^        isValid: function(y, m, d, h, i, s, ms) {$/;"	m
+isValidParent	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    isValidParent : function(item, target) {$/;"	m
+isVisible	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    isVisible : function() {$/;"	m
+item	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    item : function(index) {$/;"	m
+item	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    item : function(index){$/;"	m
+item	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    item : function(key){$/;"	m
+itemAt	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    itemAt : function(index){$/;"	m
+iterate	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^     iterate : function(obj, fn, scope){$/;"	m
+join	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    join : function(store){$/;"	m
+key	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    key : function(key){$/;"	m
+l	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^            l: function() {$/;"	m
+last	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    last : function() {$/;"	m
+last	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    last : function(){$/;"	m
+last	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    last : function(selector, returnDom) {$/;"	m
+layout	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    layout : function() {$/;"	m
+layoutConfig	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^        var layoutConfig = {};$/;"	o
+leftPad	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    leftPad : function (val, size, ch) {$/;"	m
+listener	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^                var listener = {$/;"	o
+listeners	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^        var listeners = {$/;"	o
+load	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    load: function() {$/;"	m
+load	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    load: function(instance) {$/;"	m
+loadAlphabet	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    loadAlphabet : function() {$/;"	m
+loadData	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    loadData : function(data, append){$/;"	m
+loadData	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    loadData: function(data, append) {$/;"	m
+loadPage	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    loadPage: function(page) {$/;"	m
+loadRecords	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    loadRecords: function(records, add) {$/;"	m
+lookup	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    lookup : function(id) {$/;"	m
+lookupComponent	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    lookupComponent : function(comp) {$/;"	m
+markCompleted	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    markCompleted: function() {$/;"	m
+markDirty	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    markDirty : function() {$/;"	m
+markException	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    markException: function(error) {$/;"	m
+markStarted	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    markStarted: function() {$/;"	m
+markup	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    markup : function(o) {$/;"	m
+mask	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    mask: function(transparent, html) {$/;"	m
+matchNode	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    matchNode : function(dir, start, selector, returnDom) {$/;"	m
+me.pinchTargets	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^        me.pinchTargets = {};$/;"	o
+me.tracks	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^        me.tracks = {};$/;"	o
+meta	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^        meta = {    \/\/ table of character substitutions$/;"	o
+mon	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    mon : function(item, ename, fn, scope, opt) {$/;"	m
+moveItem	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    moveItem : function(item, position, target) {$/;"	m
+moveThumb	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    moveThumb: function(thumb, pixel, animate) {$/;"	m
+moveTo	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    moveTo : function(x, y) {$/;"	m
+mun	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    mun : function(item, ename, fn, scope) {$/;"	m
+myDiv	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^var myDiv = {@link Ext#get Ext.get}("myDiv");  \/\/ get reference to an {@link Ext.Element}$/;"	o
+namespace	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    namespace : function() {$/;"	m
+newMethod	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^newMethod1: function(){$/;"	I
+newMethod1	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^newMethod1: function(){$/;"	m
+newMethod2	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^newMethod2: function(foo){$/;"	m
+next	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    next : function() {$/;"	m
+next	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    next : function(anim, wrap) {$/;"	m
+next	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    next : function(selector, returnDom) {$/;"	m
+next	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    next: function(scrollTo, wrap, animate) {$/;"	m
+nextAll	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    nextAll: function() {$/;"	m
+nextPage	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    nextPage: function() {$/;"	m
+none	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    none : function(s){$/;"	m
+normalize	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    normalize : function(prop) {$/;"	m
+num	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    num : function(v, defaultValue){$/;"	m
+o	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^            o: function() {$/;"	m
+obj	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^        var obj = {},$/;"	o
+onActivate	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onActivate : function(){$/;"	m
+onAdd	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onAdd : function(ds, records, index) {$/;"	m
+onAdd	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onAdd: function(ds, records, index) {$/;"	m
+onAdded	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onAdded : function(container, pos) {$/;"	m
+onAvailable	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onAvailable : function(id, fn, scope){$/;"	m
+onBackTap	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onBackTap : function() {$/;"	m
+onBatchComplete	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onBatchComplete: function(batch, operation) {$/;"	m
+onBatchException	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onBatchException: function(batch, operation) {$/;"	m
+onBatchOperationComplete	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onBatchOperationComplete: function(batch, operation) {$/;"	m
+onBeforeActivate	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onBeforeActivate : function() {$/;"	m
+onBeforeAdd	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onBeforeAdd : function(item) {$/;"	m
+onBeforeDeactivate	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onBeforeDeactivate : function() {$/;"	m
+onBeforeDeactivate	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onBeforeDeactivate : function(){$/;"	m
+onBeforeDragEnd	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onBeforeDragEnd: function(draggable, e) {$/;"	m
+onBeforeLoad	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onBeforeLoad: function() {$/;"	m
+onBlur	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onBlur : function() {$/;"	m
+onCardAdd	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onCardAdd : function(panel, card) {$/;"	m
+onCardAdd	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onCardAdd: function() {$/;"	m
+onCardRemove	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onCardRemove : function(panel, card) {$/;"	m
+onCardRemove	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onCardRemove: function() {$/;"	m
+onCardSwitch	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onCardSwitch: function(carousel, card, index) {$/;"	m
+onChange	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onChange : function(e) {$/;"	m
+onClick	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onClick: function() {$/;"	m
+onComplete	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onComplete : function(r) {$/;"	m
+onContainerTap	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onContainerTap: function(e) {$/;"	m
+onDataChanged	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onDataChanged: function() {$/;"	m
+onDeactivate	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onDeactivate : function() {$/;"	m
+onDestroy	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onDestroy: function() {$/;"	m
+onDisable	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onDisable : function() {$/;"	m
+onDisableChange	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onDisableChange : function(disabled) {$/;"	m
+onDocumentReady	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onDocumentReady : function(fn, scope, options){$/;"	m
+onDoubleTap	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onDoubleTap: function(e) {$/;"	m
+onDrag	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onDrag : function(draggable, e) {$/;"	m
+onDragEnd	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onDragEnd : function(draggable, e) {$/;"	m
+onDragStart	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onDragStart : function(draggable, e) {$/;"	m
+onDragStart	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onDragStart : function(e) {$/;"	m
+onEnable	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onEnable : function() {$/;"	m
+onFloatingTouchStart	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onFloatingTouchStart : function(e, t) {$/;"	m
+onFocus	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onFocus : function() {$/;"	m
+onGeoUpdate	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onGeoUpdate : function(coords) {$/;"	m
+onHide	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onHide : function(animation) {$/;"	m
+onIndex	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onIndex : function(record, target, index) {$/;"	m
+onItemTap	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onItemTap : function(item) {$/;"	m
+onItemTap	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onItemTap: function(dv, idx, n) {$/;"	m
+onItemTap	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onItemTap: function(item, index, e) {$/;"	m
+onKeyUp	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onKeyUp : function(e) {$/;"	m
+onLayout	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onLayout : function() {$/;"	m
+onLayout	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onLayout : function(items, target) {$/;"	m
+onLayout	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onLayout : function(owner, target) {$/;"	m
+onLayout	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onLayout : function(owner, target, args) {$/;"	m
+onLayout	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onLayout: function(owner, target) {$/;"	m
+onLayout	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onLayout: function(owner, target, args) {$/;"	m
+onMaskTap	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onMaskTap : function(e) {$/;"	m
+onMetaChange	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onMetaChange : function(meta) {$/;"	m
+onOrientationChange	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onOrientationChange : function(fn, scope, options) {$/;"	m
+onOrientationChange	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onOrientationChange : function(orientation, w, h) {$/;"	m
+onPick	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onPick: function(picker, name, value, r) {$/;"	m
+onPress	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onPress : function(e) {$/;"	m
+onProxyRead	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onProxyRead: function(operation) {$/;"	m
+onProxyWrite	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onProxyWrite: function(operation) {$/;"	m
+onRemove	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onRemove : function(ds, record, index) {$/;"	m
+onRemove	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onRemove: function(ds, record, index) {$/;"	m
+onRemoved	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onRemoved : function() {$/;"	m
+onRender	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onRender : function() {$/;"	m
+onRender	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onRender : function(ct, position) {$/;"	m
+onRender	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onRender: function() {$/;"	m
+onRender	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onRender: function(ct, position) {$/;"	m
+onScroll	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onScroll : function(e, t) {$/;"	m
+onScroll	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onScroll : function(scroller, pos, options) {$/;"	m
+onScrollEnd	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onScrollEnd : function(e, t) {$/;"	m
+onScrollEnd	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onScrollEnd: function(scroller) {$/;"	m
+onScrollStart	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onScrollStart : function() {$/;"	m
+onScrollStart	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onScrollStart : function(e, t) {$/;"	m
+onShow	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onShow : function(){$/;"	m
+onShow	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onShow : function(animation) {$/;"	m
+onSortChange	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onSortChange : function(sortable, el, index) {$/;"	m
+onSortStart	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onSortStart : function(e, t) {$/;"	m
+onSpinDown	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onSpinDown: function() {$/;"	m
+onSpinUp	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onSpinUp: function() {$/;"	m
+onStateChange	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onStateChange : function(r) {$/;"	m
+onSubmit	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onSubmit : function(e, t) {$/;"	m
+onTabTap	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onTabTap : function(tab) {$/;"	m
+onTap	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onTap : function(e, t) {$/;"	m
+onTap	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onTap: function() {$/;"	m
+onTap	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onTap: function(e) {$/;"	m
+onTap	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onTap: function(e, t) {$/;"	m
+onTapCancel	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onTapCancel : function() {$/;"	m
+onTapCancel	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onTapCancel: function(e, t) {$/;"	m
+onTapEvent	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onTapEvent : function(e, t) {$/;"	m
+onTapStart	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onTapStart : function() {$/;"	m
+onTapStart	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onTapStart: function(e, t) {$/;"	m
+onThumbDragEnd	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onThumbDragEnd: function(draggable) {$/;"	m
+onTouchEnd	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onTouchEnd : function(btn) {$/;"	m
+onTouchEnd	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onTouchEnd : function(e) {$/;"	m
+onTouchEnd	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onTouchEnd : function(e, t) {$/;"	m
+onTouchEnd	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onTouchEnd: function(e) {$/;"	m
+onTouchEnd	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onTouchEnd: function(e, scroller) {$/;"	m
+onTouchMove	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onTouchMove : function(e) {$/;"	m
+onTouchStart	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onTouchStart : function(btn) {$/;"	m
+onTouchStart	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onTouchStart : function(e) {$/;"	m
+onTouchStart	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onTouchStart : function(e, t) {$/;"	m
+onTouchStart	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onTouchStart: function(e) {$/;"	m
+onTransitionEnd	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onTransitionEnd : function() {$/;"	m
+onTransitionEnd	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onTransitionEnd: function(ev, el, o) {$/;"	m
+onUpdate	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onUpdate : function(ds, record) {$/;"	m
+onUpdate	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onUpdate : function(map, e, options) {$/;"	m
+onUpdate	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onUpdate: function(ds, record) {$/;"	m
+onWindowResize	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    onWindowResize : function(fn, scope, options) {$/;"	m
+opt	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^var opt = {$/;"	o
+outConfig	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^                var outConfig = {}, outAnim;$/;"	o
+output	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^            output = {};$/;"	o
+override	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    override : function(origclass, overrides) {$/;"	m
+overwrite	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    overwrite : function(el, o, returnElement) {$/;"	m
+overwrite	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    overwrite: function(el, values, returnElement) {$/;"	m
+parent	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    parent : function(selector, returnDom) {$/;"	m
+parseActiveItem	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    parseActiveItem : function(item) {$/;"	m
+parseBox	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    parseBox : function(box) {$/;"	m
+parseCoords	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    parseCoords : function(location) {$/;"	m
+parseDate	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^        parseDate: function(input, format, strict) {$/;"	m
+pause	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    pause : function() {$/;"	m
+pause	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    pause: function() {$/;"	m
+play	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    play : function() {$/;"	m
+pointers	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^            pointers = {},$/;"	o
+pos	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^        pos = {$/;"	o
+pos	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^        pos = {x: Math.round(pos.x), y: Math.round(pos.y)};$/;"	o
+prepareData	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    prepareData: function(data) {$/;"	m
+prepareDrag	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    prepareDrag : function(e) {$/;"	m
+prepareItems	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    prepareItems : function(items, applyDefaults) {$/;"	m
+prev	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    prev : function(anim, wrap) {$/;"	m
+prev	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    prev : function(selector, returnDom) {$/;"	m
+preventDefault	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    preventDefault : function() {$/;"	m
+preventDefault	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    preventDefault : function(){$/;"	m
+previous	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    previous: function(scrollTo, wrap, animate) {$/;"	m
+previousPage	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    previousPage: function() {$/;"	m
+proxyNodeEvent	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    proxyNodeEvent : function(){$/;"	m
+purgeAllListeners	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    purgeAllListeners : function() {$/;"	m
+purgeElement	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    purgeElement : function(element, recurse, eventName) {$/;"	m
+purgeListeners	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    purgeListeners : function() {$/;"	m
+purgeListeners	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    purgeListeners : function(){$/;"	m
+query	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    query : function(selector) {$/;"	m
+quit	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^        quit: function() {$/;"	m
+radioClass	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    radioClass: function(className) {$/;"	m
+read	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    read: function() {$/;"	m
+read	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    read: function(operation, callback, scope) {$/;"	m
+read	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    read: function(options) {$/;"	m
+read	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    read: function(response) {$/;"	m
+readRecords	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    readRecords: function(data) {$/;"	m
+readRecords	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    readRecords: function(doc) {$/;"	m
+reader	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^                reader = {$/;"	o
+refresh	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    refresh: function() {$/;"	m
+refreshNode	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    refreshNode: function(index){$/;"	m
+register	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    register : function() {$/;"	m
+register	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    register: function(item) {$/;"	m
+registerNode	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    registerNode : function(node){$/;"	m
+registerType	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    registerType : function(type, cls){$/;"	m
+registerType	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    registerType: function(name, config) {$/;"	m
+reject	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    reject : function(silent) {$/;"	m
+relayEvents	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    relayEvents : function(o, events) {$/;"	m
+remove	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    remove : function() {$/;"	m
+remove	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    remove : function(comp, autoDestroy) {$/;"	m
+remove	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    remove : function(destroy){$/;"	m
+remove	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    remove : function(o) {$/;"	m
+remove	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    remove : function(o){$/;"	m
+remove	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    remove: function(record) {$/;"	m
+removeAll	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    removeAll : function(autoDestroy) {$/;"	m
+removeAll	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    removeAll : function(destroy){$/;"	m
+removeAll	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    removeAll : function(element){$/;"	m
+removeAllListeners	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    removeAllListeners : function(){$/;"	m
+removeAt	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    removeAt : function(index){$/;"	m
+removeChild	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    removeChild : function(node, destroy){$/;"	m
+removeClass	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    removeClass : function(cls) {$/;"	m
+removeClass	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    removeClass: function(className) {$/;"	m
+removeDocked	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    removeDocked : function(item, autoDestroy) {$/;"	m
+removeElement	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    removeElement : function(keys, removeDom){$/;"	m
+removeEventListener	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    removeEventListener : function(dom, ename, fn) {$/;"	m
+removeKey	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    removeKey : function(key){$/;"	m
+removeListener	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^            removeListener : function(fn, scope){$/;"	m
+removeListener	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    removeListener : function(element, eventName, fn, scope) {$/;"	m
+removeListener	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    removeListener : function(ename, fn, scope) {$/;"	m
+removeListener	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    removeListener : function(eventName, fn, scope) {$/;"	m
+removeNode	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    removeNode : function(n){$/;"	m
+removeRecord	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    removeRecord: function(id, updateIds) {$/;"	m
+render	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    render : function(container, position) {$/;"	m
+renderItem	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    renderItem : function(item, position, target) {$/;"	m
+renderItems	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    renderItems : function(ct) {$/;"	m
+renderItems	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    renderItems : function(items, target) {$/;"	m
+renderThumbs	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    renderThumbs: function() {$/;"	m
+repaint	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    repaint : function() {$/;"	m
+repaint	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    repaint: function() {$/;"	m
+replace	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    replace : function(el) {$/;"	m
+replace	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    replace : function(key, o){$/;"	m
+replaceChild	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    replaceChild : function(newChild, oldChild){$/;"	m
+replaceClass	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    replaceClass: function(oldClassName, newClassName) {$/;"	m
+replaceElement	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    replaceElement : function(el, replacement, domReplace){$/;"	m
+request	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^            request = {$/;"	o
+request	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    request : function(o) {$/;"	m
+reset	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    reset : function() {$/;"	m
+reset	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    reset: function() {$/;"	m
+resumeEvents	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    resumeEvents : function(){$/;"	m
+ret	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^            ret = {};$/;"	o
+return elementCache.events || (elementCache.events	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^        return elementCache.events || (elementCache.events = {});$/;"	o
+run	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    run: function(el, config) {$/;"	m
+runNextOperation	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    runNextOperation: function() {$/;"	m
+runOperation	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    runOperation: function(index) {$/;"	m
+runtime	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^            runtime = {},$/;"	o
+save	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    save: function() {$/;"	m
+scrollTo	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    scrollTo : function(pos, animate, easing) {$/;"	m
+scrollTo	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    scrollTo : function(pos, animate, easing, inBounds) {$/;"	m
+scrollToNode	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    scrollToNode: function(dv, n, animate) {$/;"	m
+select	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    select : function(q, root) {$/;"	m
+select	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    select : function(selector, composite) {$/;"	m
+select	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    select: function(nodeInfo, keepExisting, suppressEvent) {$/;"	m
+selectNode	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    selectNode : function(q, root) {$/;"	m
+selectRange	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    selectRange: function(start, end, keepExisting) {$/;"	m
+set	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    set : function(o, useSet) {$/;"	m
+set	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    set: function(field, value) {$/;"	m
+set	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    set: function(html, compile) {$/;"	m
+setActive	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    setActive : function(btn) {$/;"	m
+setActiveItem	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    setActiveItem : function(item, animation) {$/;"	m
+setActiveItem	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    setActiveItem: function(item, scrollTo, animate) {$/;"	m
+setBadge	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    setBadge : function(text) {$/;"	m
+setBatch	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    setBatch: function(batch) {$/;"	m
+setBottom	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    setBottom : function(bottom) {$/;"	m
+setBox	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    setBox : function(left, top, width, height) {$/;"	m
+setCanDrop	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    setCanDrop : function(canDrop, draggable, e) {$/;"	m
+setCard	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^            setCard : function(item, animation) {$/;"	m
+setCard	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    setCard : function(card) {$/;"	m
+setCardLayout	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    setCardLayout : function(layout) {$/;"	m
+setCentered	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    setCentered : function(centered, update) {$/;"	m
+setComponentLayout	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    setComponentLayout : function(layout) {$/;"	m
+setDate	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^        setDate: function(d) {$/;"	m
+setDisabled	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    setDisabled : function(disabled) {$/;"	m
+setDisplayMode	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    setDisplayMode : function(mode) {$/;"	m
+setDraggable	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    setDraggable : function(draggable, autoShow) {$/;"	m
+setEvent	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    setEvent : function(e) {$/;"	m
+setEvent	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    setEvent : function(e){$/;"	m
+setFirstChild	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    setFirstChild : function(node){$/;"	m
+setFloating	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    setFloating : function(floating, autoShow) {$/;"	m
+setHTML	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    setHTML : function(html) {$/;"	m
+setHandler	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    setHandler : function(handler, scope) {$/;"	m
+setHeight	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    setHeight : function(height) {$/;"	m
+setHeight	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    setHeight: function(height) {$/;"	m
+setIcon	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    setIcon : function(icon) {$/;"	m
+setIconClass	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    setIconClass : function(cls) {$/;"	m
+setId	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    setId: function(id) {$/;"	m
+setId	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    setId: function(id){$/;"	m
+setIds	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    setIds: function(ids) {$/;"	m
+setItemBox	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    setItemBox : function(item, box) {$/;"	m
+setLastChild	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    setLastChild : function(node){$/;"	m
+setLayout	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    setLayout : function(layout) {$/;"	m
+setLeft	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    setLeft : function(left) {$/;"	m
+setList	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    setList : function(list, init) {$/;"	m
+setModel	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    setModel: function(model) {$/;"	m
+setMonth	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^        setMonth: function(num) {$/;"	m
+setOrientation	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    setOrientation : function(orientation, w, h) {$/;"	m
+setOwner	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    setOwner : function(owner) { $/;"	m
+setOwner	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    setOwner : function(owner) {$/;"	m
+setOwnerTree	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    setOwnerTree : function(tree, destroy){$/;"	m
+setPosition	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    setPosition : function(x, y) {$/;"	m
+setRecord	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    setRecord: function(record, id) {$/;"	m
+setRight	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    setRight : function(right) {$/;"	m
+setRootNode	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    setRootNode : function(node){$/;"	m
+setScrollable	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    setScrollable : function(config) {$/;"	m
+setScrollable	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    setScrollable : function(direction) {$/;"	m
+setSize	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    setSize : function(w, h) {$/;"	m
+setSize	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    setSize: function(width, height) {$/;"	m
+setStyle	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    setStyle: function(prop, value) {$/;"	m
+setTargetSize	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    setTargetSize : function(w, h) {$/;"	m
+setText	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    setText : function(text) {$/;"	m
+setTitle	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    setTitle : function(title) {$/;"	m
+setTop	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    setTop : function(top) {$/;"	m
+setTopLeft	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    setTopLeft: function(top, left) {$/;"	m
+setValue	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    setValue : function(v) {$/;"	m
+setValue	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    setValue : function(v){$/;"	m
+setValue	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    setValue: function(newValue) {$/;"	m
+setValue	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    setValue: function(obj, animate) {$/;"	m
+setValue	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    setValue: function(v) {$/;"	m
+setValue	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    setValue: function(value) {$/;"	m
+setValues	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    setValues: function(values) {$/;"	m
+setVisible	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^     setVisible : function(visible, animate) {$/;"	m
+setVisible	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    setVisible : function(visible) {$/;"	m
+setWidth	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    setWidth : function(width) {$/;"	m
+setWidth	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    setWidth: function(width) {$/;"	m
+setX	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    setX : function(x){$/;"	m
+setXY	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    setXY : function(pos) {$/;"	m
+setY	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    setY : function(y) {$/;"	m
+show	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    show : function() {$/;"	m
+show	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    show : function(animation) {$/;"	m
+showBy	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    showBy : function(el, animation, xyOffsets) {$/;"	m
+showTitle	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    showTitle : function() {$/;"	m
+slotItem	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^            slotItem = {$/;"	o
+snapToBounds	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    snapToBounds : function(animate, easing) {$/;"	m
+sort	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    sort : function(dir, fn) {$/;"	m
+sort	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    sort : function(fn, scope){$/;"	m
+sort	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    sort: function(sorters, direction, suppressEvent) {$/;"	m
+sortType	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    sortType: function(v) {$/;"	m
+sortType	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^sortType: function(value) {$/;"	m
+spec	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^var spec = {$/;"	o
+spin	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    spin: function(down) {$/;"	m
+start	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    start: function() {$/;"	m
+startDeceleration	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    startDeceleration : function(e) {$/;"	m
+startTrack	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    startTrack : function(touch, e) {$/;"	m
+stop	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    stop : function() {$/;"	m
+stopEvent	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    stopEvent : function() {$/;"	m
+stopEvent	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    stopEvent : function(){$/;"	m
+stopPropagation	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    stopPropagation : function() {$/;"	m
+subclassProto = subclass	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^            subclassProto = subclass.prototype = new F();$/;"	p
+success	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^   success: function(response, opts) {$/;"	m
+sumStyles	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    sumStyles: function(sides, styles) {$/;"	m
+suspendEvents	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    suspendEvents : function(queueSuspended) {$/;"	m
+sync	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    sync: function() {$/;"	m
+tap	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    tap: function(e) {$/;"	m
+tapHoldHandler	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    tapHoldHandler : function() {$/;"	m
+this.JSON	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    this.JSON = {};$/;"	o
+this.bounds	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^        this.bounds = {$/;"	o
+this.contentSize	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^        this.contentSize = {$/;"	o
+this.data	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^        this.data = {};$/;"	o
+this.doubleTapTargets	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^        this.doubleTapTargets = {};$/;"	o
+this.dragConfig	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^        this.dragConfig = {$/;"	o
+this.from	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^                this.from = {$/;"	o
+this.from	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^            this.from = {$/;"	o
+this.lastSize	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^        this.lastSize = {$/;"	o
+this.layout	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^        this.layout = {$/;"	o
+this.listeners	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^        this.listeners = {};$/;"	o
+this.map	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^        this.map = {};$/;"	o
+this.map	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    this.map = {};$/;"	o
+this.modified	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^            this.modified = {};$/;"	o
+this.modified	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^        this.modified = {};$/;"	o
+this.momentum.horizontal	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^                this.momentum.horizontal = {$/;"	o
+this.momentum.horizontal	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^            this.momentum.horizontal = {$/;"	o
+this.momentum.vertical	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^                this.momentum.vertical = {$/;"	o
+this.momentum.vertical	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^            this.momentum.vertical = {$/;"	o
+this.nodeHash	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^        this.nodeHash = {};$/;"	o
+this.offset	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^            this.offset = {$/;"	o
+this.offset	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^        this.offset = {x: 0, y: 0};$/;"	o
+this.offsetToCorner	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^        this.offsetToCorner = {$/;"	o
+this.parentSize	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^        this.parentSize = {$/;"	o
+this.pinchTargets	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^        this.pinchTargets = {};$/;"	o
+this.position	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^        this.position = {$/;"	o
+this.scroll	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^            this.scroll = {$/;"	o
+this.scroll	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^        this.scroll = {$/;"	o
+this.size	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^        this.size = {$/;"	o
+this.sortInfo	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^        this.sortInfo = {$/;"	o
+this.sortToggle	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^        this.sortToggle = {};$/;"	o
+this.startPosition = this.position	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^        this.startPosition = this.position = {$/;"	o
+this.targets	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^        this.targets = {$/;"	o
+this.to	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^                this.to = {$/;"	o
+this.to	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^            this.to = {$/;"	o
+this.tracks	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^        this.tracks = {};$/;"	o
+this.transform	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^        this.transform = {x: 0, y: 0};$/;"	o
+this.transform	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^        this.transform = {x: x, y: y};$/;"	o
+this.types	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^        this.types = {};$/;"	o
+tmp	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^            tmp = {};$/;"	o
+toArray	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^     toArray : function(array, start, end){$/;"	m
+toString	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    toString : function(){$/;"	m
+toggle	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    toggle : function() {$/;"	m
+toggle	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    toggle : function(value, other){$/;"	m
+toggle	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    toggle: function() {$/;"	m
+toggleClass	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    toggleClass: function(className) {$/;"	m
+touchEvent	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^            touchEvent = {$/;"	o
+track = me.tracks[touchId]	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^        track = me.tracks[touchId] = {$/;"	o
+track.scrollBounds	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^                    track.scrollBounds = {$/;"	o
+transformElement	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    transformElement : function(el) {$/;"	m
+transformTo	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    transformTo : function(x, y) {$/;"	m
+translatePoints	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    translatePoints : function(x, y) {$/;"	m
+trim	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    trim : function() {$/;"	m
+undoNativeScroll	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    undoNativeScroll : function() {$/;"	m
+union	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    union : function(region) {$/;"	m
+unjoin	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    unjoin: function(store) {$/;"	m
+unmask	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    unmask: function() {$/;"	m
+unregister	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    unregister : function() {$/;"	m
+unregister	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    unregister: function(item) {$/;"	m
+unregisterNode	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    unregisterNode : function(node){$/;"	m
+up	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    up : function(simpleSelector, maxDepth) {$/;"	m
+update	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    update : function() {$/;"	m
+update	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    update : function(data) {$/;"	m
+update	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    update : function(htmlOrData, loadScripts, cb) {$/;"	m
+update	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    update: function() {$/;"	m
+update	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    update: function(operation, callback, scope) {$/;"	m
+update	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    update: function(options) {$/;"	m
+updateBounds	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    updateBounds : function() {$/;"	m
+updateIndexes	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    updateIndexes: function(startIndex, endIndex){$/;"	m
+updateLocation	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    updateLocation : function(callback, scope) {$/;"	m
+url     = Ext.urlAppend(request.url, format("{0}	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^            url     = Ext.urlAppend(request.url, format("{0}={1}", this.callbackParam, stCallback));$/;"	o
+url = Ext.urlAppend(url, String.format("{0}	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^            url = Ext.urlAppend(url, String.format("{0}={1}", this.cacheString, (new Date().getTime())));$/;"	o
+url = Ext.urlAppend(url, String.format("{0}	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^            url = Ext.urlAppend(url, String.format("{0}={1}", this.recordParam, this.encodeRecords(records)));$/;"	o
+urlAppend	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    urlAppend : function(url, s){$/;"	m
+urlDecode	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    urlDecode : function(string, overwrite){$/;"	m
+urlEncode	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    urlEncode : function(o, pre){$/;"	m
+vals	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^        var vals = {},$/;"	o
+values	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^            values = {},$/;"	o
+wasSuccessful	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    wasSuccessful: function() {$/;"	m
+wrap	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    wrap : function(config, returnDom) {$/;"	m
+write	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    write: function(request) {$/;"	m
+writeRecords	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^    writeRecords: function(request) {$/;"	m
+writer	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^                writer = {$/;"	o
+yourMethod	/usr/include/javascript/Sencha/sencha-touch/ext-touch-debug-w-comments.js	/^yourMethod: function() {$/;"	m

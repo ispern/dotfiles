@@ -1,0 +1,397 @@
+########################################################################
+# JavaScript snippets
+########################################################################
+
+snippet :f
+	${1:method_name}: function(${2:attribute}){
+		${0}
+	}
+
+snippet func
+	function ${1:function_name} (${2:argument}) {
+		${0:// body...}
+	}
+
+snippet proto
+	${1:class_name}.prototype.${2:method_name} = function(${3:first_argument}) {
+		${0:// body...}
+	}
+
+snippet f
+    function(${1}) {
+		${0:$TM_SELECTED_TEXT}
+	}
+
+snippet if
+	if (${1:true}) {
+		${0:$TM_SELECTED_TEXT}
+	}
+
+snippet ife
+    if (${1:true}) {
+		${0:$TM_SELECTED_TEXT}
+	} else {
+	}
+
+snippet for
+	for (var ${2:i}=0; ${2:i} < Things.length; ${2:i}++) {
+		${0}
+	}
+
+snippet key
+    ${1:key}: ${3:'$\{4\}'}${2:,}
+
+snippet timeout
+    setTimeout(function() {${0}}${2:}, ${1:10});
+
+snippet     new
+abbr        new instance
+prev_word   '^'
+	var ${1:name} = new ${2:class name}();
+
+snippet     log
+abbr        console.log
+prev_word   '^'
+	console.log(${1:'$\{2\}'});
+
+snippet     vme
+abbr        var me = this;
+prev_word   '^'
+	var me = this;
+
+########################################################################
+# ExtJS class snippets
+########################################################################
+
+snippet eo
+abbr Ext.onReady
+prev_word   '^'
+	Ext.onReady(function() {
+		${1}
+	})
+
+snippet ebiu
+abbr Ext.BLANK_IMAGE_URL
+prev_word   '^'
+	Ext.BLANK_IMAGE_URL = '${1}/resources/images/default/s.gif';
+
+snippet eqi
+abbr Ext.QuickTips.init
+prev_word   '^'
+	Ext.QuickTips.init();
+
+snippet ee
+abbr Ext.extend
+prev_word   '^'
+	Ext.extend(${1:class name}, ${2:extend class}, {
+		${3:/* source */}
+	});
+
+snippet     eae
+abbr        Ext.addEvents
+prev_word   '^'
+	Ext.addEvents('${1:event name}');
+
+snippet     ens
+abbr        Ext.ns
+prev_word   '^'
+	Ext.ns('${1:name space}');
+
+snippet     er
+abbr        Ext.reg
+prev_word   '^'
+    Ext.reg('${1}', ${2});
+snippet     ep
+abbr        Ext.Panel
+prev_word   '^'
+	Ext.Panel
+
+snippet     ettp
+abbr        Ext.tree.TreePanel
+prev_word   '^'
+	Ext.tree.TreePanel
+
+snippet     ettpc
+abbr        Ext.tree.TreePanel config
+prev_word   '^'
+	// タイトル設定
+	title: '${1:title}',
+
+	// 境界線表示
+	split: true,
+
+	// 最小幅設定
+	minSize: ${2},
+
+	// 最大幅設定
+	maxSize: ${3},
+
+	// 幅設定
+	width: ${6},
+
+	// 自動スクロール表示
+	autoScroll: true,
+
+	// ノード開閉のアニメーション表示
+	animate: true,
+
+	// ScrollManagerへのコンテナ登録
+	containerScroll: true,
+
+	// ルートノードを非表示
+	rootVisible: false,
+
+	// ルートノード設定
+	root: {
+		// ルートノードのType
+		nodeType: 'async',
+
+		// ルートノードの表示名
+		text: 'root'
+	},
+
+	// TreeLoader設定
+	loader: ${7}
+snippet     ettl
+abbr        Ext.tree.TreeLoader
+prev_word   '^'
+	Ext.tree.TreeLoader(${1});
+
+snippet     eggp
+abbr        Ext.grid.GridPanel
+prev_word   '^'
+	Ext.grid.GridPanel
+
+snippet     egegp
+abbr        Ext.grid.EditorGridPanel
+prev_word   '^'
+	Ext.grid.EditorGridPanel
+
+snippet     eggpc
+abbr        Ext.grid.GridPanel config
+prev_word   '^'
+    // ロードマスク設定
+	laodMask: true,
+
+    // ストア設定
+	store: ${1:store},
+
+    // カラムモデル設定
+	colModel: ${2:col},
+
+    // ビューコンフィグ設定
+	viewConfig: {
+
+		forcFit: true
+	},
+	sm: new Ext.grid.RowSelectionModel({singleSelect: ${3:true}})
+
+snippet     egcm
+abbr        Ext.grid.ColumnModel
+prev_word   '^'
+	Ext.grid.ColumnModel({
+		defaults: {
+			width: ${2:100},
+			sortable: ${3:true}
+		},
+		columns: [${4}]
+	})${5}
+
+snippet     egcmc
+abbr        Ext.grid.ColumnModel column
+prev_word   '^'
+	header: '${1}',
+	dataIndex: '${2}'
+	xtype: '${3}',
+	format: '${4}',
+	editor: '${5}'
+
+snippet     edjs
+abbr        Ext.data.JsonStore
+prev_word   '^'
+	Ext.data.JsonStore(${1});
+
+snippet     edjsc
+abbr        Ext.data.JsonStore config
+prev_word   '^'
+	proxy: ${1},
+	autoDestroy: ${2:true},
+	root: '${3:data}',
+	idProperty: '${4:id}',
+	fields: [${5}]
+
+snippet     edjsf
+abbr        Ext.data.JsonStore field
+prev_word   '^'
+	{name: '${1}', type: '${2}', ${3:dataFormat: '$\{4:Y/m/d\}'}}${5:,}
+
+snippet     eti
+abbr        Ext.Toolbar items
+prev_word   '^'
+	{
+		xtype: '${1}',
+		text: '${2}',
+		iconCls: '${3}',
+		handler: ${4},
+		scope: ${5:this}
+	}
+
+snippet     ept
+abbr        Ext.PagingToolbar
+prev_word   '^'
+	Ext.PagingToolbar(${1})
+
+snippet     eptc
+abbr        Ext.PagingToolbar config
+prev_word   '^'
+	{
+		store: ${1: store},
+		pageSize: ${2},
+		displayInfo: ${3:true},
+		displayMsg: '${4:Topics {0} - {1} of {2}}',
+		emptyMsg: '${5:no topics to display}'
+	}
+
+snippet     ev
+abbr        Ext.Viewport
+prev_word   '^'
+	Ext.Viewport({
+		layout: 'border',
+		items: [${1}]
+	});
+
+snippet edadd
+abbr Ext.Direct.addProvider 
+prev_word   '^'
+	Ext.Direct.addProvider({
+		type: '${1:remoting}',
+		url: '${2:url}',
+		actions: {
+			"{3:controller name}": [
+				{'name': '${4:method name}', 'len': ${5}}
+			]
+		},
+		namespace: '${6:namespace}'
+	});${7}
+
+########################################################################
+#ExtJS method Snippets
+########################################################################
+
+snippet     emic
+abbr        ExtJS component method initComponent
+prev_word   '^'
+	initComponent: function() {
+		var me = this;
+
+		// 設定適用
+		Ext.apply(me, {
+			${4}
+		});
+		
+		// スーパークラスメソッドコール
+		${2:classname}.superclass.initComponent.call(me);
+	}${1:,}
+
+snippet     emie
+abbr        ExtJS component method initEvents
+prev_word   '^'
+	initEvents: function() {
+		var me = this;
+
+		// スーパークラスメソッドコール
+		${2:classname}.superclass.initEvents.call(me);
+
+        // レンダリング後のイベント定義
+		me.on('afterrender', me.onAfterRender, me);
+	}${1:,}
+
+snippet     emoar
+abbr        ExtJS component method afterRender
+prev_word   '^'
+	onAfterRender: function() {
+		${2}
+	}${1:,}
+
+snippet     emd
+abbr        ExtJs component method destory
+prev_word   '^'
+    destroy: function() {
+        var me = this;
+
+        ${3}
+
+        // スーパークラスメソッドコール
+        ${2:classname}.superclass.destroy.call(me);
+    }${1:,}
+
+snippet     eg
+abbr        abbr
+prev_word   '^'
+    Ext.get(${0:'$\{1\}'});
+
+snippet     eai
+abbr        Ext.applyIf
+prev_word   '^'
+    Ext.applyIf(${1}, ${2});
+
+snippet     ea
+abbr        Ext.apply
+prev_word   '^'
+    Ext.apply(${1}, ${2});
+
+snippet     tcolum
+abbr        Column Template
+prev_word   '^'
+    ${1} = Ext.extend(Trick.grid.Column, {
+
+        header: '${2}',
+
+        dataIndex: '${3}',
+
+        width: ${4},
+
+        sortable: ${5}
+    });
+
+    Ext.grid.Column.types['${6}'] = ${7:$1};
+
+snippet     cc
+abbr        Custom Component
+prev_word   '^'
+
+    /**
+     *
+     */
+    ${1} = Ext.extend(${2}, {
+
+        /**
+         * コンポーネント初期化メソッド
+         */
+        initComponent: function() {
+
+            var me = this;
+
+            // 設定適用
+            Ext.apply(me, {
+                ${3}
+            });
+
+            // スーパークラスメソッドコール
+            $1.superclass.initComponent.call(me);
+        },
+
+        /**
+         * イベント初期化メソッド
+         */
+        initEvents: function() {
+
+            var me = this;
+
+            // スーパークラスメソッドコール
+            $1.superclass.initEvents.call(me);
+
+        }
+
+    });
+include sencha-touch.snip

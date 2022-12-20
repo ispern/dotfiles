@@ -1,0 +1,64 @@
+[battery]
+full_symbol = "🔋"
+charging_symbol = "🔌"
+discharging_symbol = "⚡"
+
+[[battery.display]]
+threshold = 30
+style = "bold red"
+
+[character]
+success_symbol = "[➜](bold green) "
+error_symbol = "[✗](bold red) "
+
+[directory]
+truncation_length = 5
+
+[git_branch]
+symbol = "🌿 "
+style = "bold yellow"
+
+[git_state]
+format = '[\($state( $progress_current of $progress_total)\)]($style) '
+
+[git_status]
+conflicted = "⚔️ "
+ahead = "🏎️ 💨 ×${count}"
+behind = "🐢 ×${count}"
+diverged = "🔱 🏎️ 💨 ×${ahead_count} 🐢 ×${behind_count}"
+untracked = "🛤️ × ${count}"
+stashed = "📦 "
+modified = "📝 × ${count}"
+staged = "🗃️ × ${count}"
+renamed = "📛 × ${count}"
+deleted = "🗑️  × ${count}"
+style = "bright-white"
+
+[hostname]
+ssh_only = false
+format = "[$hostname]($style) in "
+trim_at = "-"
+style = "bold dimmed white"
+disabled = false
+
+[memory_usage]
+disabled = false
+threshold = -1
+symbol = " "
+style = "bold dimmed green"
+
+[package]
+disabled = true
+
+[time]
+disabled = false
+format = '🕙[$time]($style) '
+time_format = "%T"
+utc_time_offset = "+9"
+
+[username]
+style_user = "bold dimmed blue"
+show_always = false
+
+[nodejs]
+symbol = "🤖"

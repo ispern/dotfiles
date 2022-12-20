@@ -1,0 +1,80 @@
+"-------------------------------------------------------------------------------
+" 編集関連
+"-------------------------------------------------------------------------------
+
+" タブ周り
+set tabstop=4           " タブの文字数
+set shiftwidth=4        " indent,autoindentで挿入されるインデントの幅
+set softtabstop=4       " Tabキー入力時に挿入される空白文字の文字数
+set expandtab           " Tabキーを空白に変換
+set autoindent          " オートインデント
+set smartindent         " スマートインデント
+set smarttab            " スマートタブ
+
+" 検索関連
+set nowrapscan          " 循環検索をOFF
+set ignorecase          " 検索時に大文字、小文字を区別しない
+set smartcase           " 検索文字を大文字で始めたら、大文字・小文字を区別する
+set incsearch           " インクリメンタルサーチ
+set hlsearch            " 検索文字をハイライト
+
+" insertモードを抜けるとIMEオフ
+set noimdisable
+set iminsert=0 imsearch=0
+set noimcmdline
+
+inoremap , ,<Space>
+
+"  Insert mode中で単語単位/行単位の削除をアンドゥ可能にする
+inoremap <C-u>  <C-g>u<C-u>
+inoremap <C-w>  <C-g>u<C-w>
+
+" :Ptでインデントモード切替
+command! Pt :set paste!
+
+" インサートモード中に<C-o>でyankした内容をputする
+inoremap <C-o> <ESC>:<C-U>YRPaste 'p'<CR>i
+
+" y9 ydで行末までヤンク
+nmap y9 y$
+nmap yd y$
+" y0 ykで行頭までヤンク
+nmap y0 y^
+nmap yk y^
+
+" カーソルから行頭まで削除
+nnoremap <silent> <C-d> d0
+
+" カーソルから行頭まで削除(インサートモード)
+inoremap <silent> <C-k> <Esc>lc^
+" カーソルから行末まで削除(インサートモード)
+inoremap <silent> <C-d> <Esc>lc$
+" カーソルから行頭までヤンク(インサートモード)
+inoremap <silent> <C-y>e <Esc>ly0<Insert>
+" カーソルから行末までヤンク(インサートモード)
+inoremap <silent> <C-y>0 <Esc>ly$<Insert>
+
+" 括弧の自動補完
+" inoremap { {}<LEFT>
+" inoremap [ []<LEFT>
+" "inoremap ( ()<LEFT>
+" inoremap \" \"\"<LEFT>
+" inoremap ' ''<LEFT>
+" vnoremap { "zdi^V{<C-R>z}<ESC>
+" vnoremap [ "zdi^V[<C-R>z]<ESC>
+" vnoremap ( "zdi^V(<C-R>z)<ESC>
+" vnoremap \" \"zdi^V"<C-R>z^V"<ESC>
+" vnoremap ' "zdi'<C-R>z'<ESC>
+
+" 保存時に行末の空白を除去する
+autocmd BufWritePre * :%s/\s\+$//ge
+
+" Turn off paste mode when leaving insert
+autocmd InsertLeave * set nopaste
+
+" 保存時にコードチェックする
+let g:syntastic_mode_map = {
+    \ "mode" : "active",
+    \ "active_filetypes" : ["javascript",  "json"],
+    \}
+

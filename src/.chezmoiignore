@@ -1,0 +1,13 @@
+# zsh
+.zsh/*zsh_history
+.zsh/*.zwc
+
+# tmux
+.tmux/resurrect
+.tmux/plugins
+
+# neovim
+.config/nvim/plugins/packer_compiled.lua
+
+# fish
+.config/fish/fish_variables

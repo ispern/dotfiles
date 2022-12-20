@@ -1,0 +1,37 @@
+# Base Color Palette
+foreground='#f8f8f2'
+cyan='#80ffea'
+green='#8aff80'
+orange='#ffca80'
+pink='#ff80bf'
+purple='#9580ff'
+red='#ff9580'
+yellow='#ffff80'
+
+right_sep=''
+left_sep=''
+
+# set refresh interval
+set-option -g status-interval 5
+
+# set length
+set-option -g status-left-length 150
+set-option -g status-right-length 150
+
+# pane border styling
+set-option -g pane-active-border-style "fg=${purple}"
+set-option -g pane-border-style "fg=${background}"
+
+# message styling
+set-option -g message-style "bg=${background},fg=${foreground}"
+
+# status bar
+set-option -g status-bg "${selection}"
+set-option -g status-fg "${foreground}"
+
+set-option -g status-left "#[bg=${selection},fg=${comment}]#{?client_prefix,#[reverse],} #S #[default]"
+set-option -g status-right "#[bg=${selection},fg=${comment}] #H #[default]"
+
+# window tabs
+set-window-option -g window-status-format " #I #W #[default]"
+set-window-option -g window-status-current-format "#[bg=${comment}] #I #W #[default]"

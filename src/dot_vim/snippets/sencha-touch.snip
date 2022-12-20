@@ -1,0 +1,77 @@
+snippet     regapp
+abbr        Ext.regApplication
+prev_word   '^'
+    Ext.regApplication({
+
+        // アプリケーション名
+        name: '${1:app name}',
+
+        // アイコン
+        icon: '${2}',
+
+        // アイコンの光沢効果
+        glossOnIcon: ${3:true},
+
+        // モバイル用スタートアップ画像
+        phoneStartupScreen: '${4}',
+
+        // タブレット用スタートアップ画像
+        tabletStartupScreen: '${5}',
+
+        launch: function() {
+            ${6}
+        }
+    });
+
+snippet     regmodel
+abbr        Ext.regModel
+prev_word   '^'
+    Ext.regModel('${1}', {
+        fields: [
+            ${2}
+        ],
+        proxy: {
+            type: '${3}'
+        }
+    });
+
+snippet     setup
+abbr        Ext.setup
+prev_word   '^'
+    Ext.setup({
+
+        // アイコン
+        icon: '${1}',
+
+        // アイコンの光沢効果
+        glossOnIcon: ${2:true},
+
+        // モバイル用スタートアップ画像
+        phoneStartupScreen: '${3}',
+
+        // タブレット用スタートアップ画像
+        tabletStartupScreen: '${4}',
+
+        onReady: function() {
+            ${5}
+        }
+    });
+
+snippet     regstore
+abbr        Ext.regStore
+prev_word   '^'
+    Ext.regStore('${1}', {
+        model: '${2}'
+    });
+
+snippet     regcon
+abbr        Ext.regController
+prev_word   '^'
+    Ext.regController('${1}', {
+        model: '${2}'
+    });
+
+snippet     efl
+abbr        Ext.fly
+prev_word   '^'
+    Ext.fly(${1});

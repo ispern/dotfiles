@@ -1,0 +1,236 @@
+# Some useful Unicode entities
+# Non-Breaking Space
+snippet nbs
+	&nbsp;
+# ←
+snippet left
+	&#x2190;
+# →
+snippet right
+	&#x2192;
+# ↑
+snippet up
+	&#x2191;
+# ↓
+snippet down
+	&#x2193;
+# ↩
+snippet return
+	&#x21A9;
+# ⇤
+snippet backtab
+	&#x21E4;
+# ⇥
+snippet tab
+	&#x21E5;
+# ⇧
+snippet shift
+	&#x21E7;
+# ⌃
+snippet control
+	&#x2303;
+# ⌅
+snippet enter
+	&#x2305;
+# ⌘
+snippet command
+	&#x2318;
+# ⌥
+snippet option
+	&#x2325;
+# ⌦
+snippet delete
+	&#x2326;
+# ⌫
+snippet backspace
+	&#x232B;
+# ⎋
+snippet escape
+	&#x238B;
+
+# Generic Doctype
+snippet     doctype4
+abbr        HTML4 4.0.1 Transitional
+prev_word   '^'
+	<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN""
+	"http://www.w3.org/TR/html4/loose.dtd">
+
+snippet     doctype5
+abbr        HTML5
+prev_word   '^'
+	<!DOCTYPE HTML>
+
+snippet html
+	<html>
+	${1}
+	</html>
+snippet xhtml
+	<html xmlns="http://www.w3.org/1999/xhtml">
+	${1}
+	</html>
+snippet body
+	<body>
+		${1}
+	</body>
+snippet head
+abbr head
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta http-equiv="content-script-type" content="text/javascript" />
+		<meta http-equiv="content-style-type" content="text/css" />
+		<title>${1}</title>
+		${2}
+	</head>
+    <!-- /head -->
+snippet title
+    <tilte>${1}</title>
+snippet script
+	<script type="text/javascript" charset="utf-8">
+		${1}
+	</script>${2}
+snippet scriptsrc
+	<script type="text/javascript" src="${1}.js" charset="utf-8"></script>${2}
+snippet style
+	<style type="text/css">
+		${2}
+	</style>${3}
+snippet br
+    <br />
+snippet div
+	<div class="${1:class}">
+		${1}
+	</div>
+snippet fieldset
+	<fieldset id="$1">
+		<legend>${1:name}</legend>
+	
+		${3}
+	</fieldset>
+snippet form
+	<form action="${1}" method="${2:get}" accept-charset="utf-8">
+		${3}
+	
+		
+	<p><input type="submit" value="Continue &rarr;" /></p>
+	</form>
+snippet input
+	<input type="${1:text/submit/hidden/button}" name="${2:some_name}" value="${3}" />${4}
+snippet label
+	<label for="${2:$1}">${1:name}</label><input type="${3:text/submit/hidden/button}" name="${4:$2}" value="${5}" id="${6:$2}" />${7}
+snippet link
+	<link rel="${1:stylesheet}" href="${2:/css/master.css}" type="text/css" media="${3:screen}" charset="utf-8" />${4}
+snippet mailto
+	<a href="mailto:${1:joe@example.com}?subject=${2:feedback}">${3:email me}</a>
+snippet meta
+	<meta name="${1:name}" content="${2:content}" />${3}
+snippet opt
+	<option value="${1:option}">${2:$1}</option>${3}
+snippet optt
+	<option>${1:option}</option>${2}
+snippet select
+	<select name="${1:some_name}" id="${2:$1}">
+		<option value="${3:option}">${4:$3}</option>
+	</select>${5}
+snippet table
+	<table>
+		<tr>
+            ${1}
+        </tr>
+	</table>
+snippet th
+    <th>${1}</th>
+snippet td
+    <td>${1}</td>
+snippet tr
+    <tr>
+        ${1}
+    </tr>
+snippet textarea
+	<textarea name="${1:Name}" rows="${2:8}" cols="${3:40}">${4}</textarea>${5}
+# ExtJS
+snippet extjs
+	<!-- Ext JS -->
+	<link rel="stylesheet" type="text/css" href="${1:http://extjs.cachefly.net/ext-3.3.0}/resources/css/ext-all.css" />
+	<script type="text/javascript" src="${2:$1}/adapter/ext/ext-base.js" charset="utf-8"></script>
+	<script type="text/javascript" src="${3:$1}/ext-all.js"></script>
+	<script type="text/javascript" src="${4:$1}/src/locale/ext-lang-ja.js" charset="utf-8"></script>
+	${5}
+snippet touch
+	<!-- Sencha Touch -->
+	<link rel="stylesheet" type="text/css" href="${1}/resources/css/sencha-touch.css" />
+	<script type="text/javascript" src="${2:$1}/sencha-touch.js" charset="utf-8"></script>
+    ${3}
+snippet omegajs
+	<!-- OmegaTrick -->
+	<script type="text/javascript" src="${1:lib/OmegaTrick}/OmegaTrick-all.js" charset="utf-8"></script>
+snippet ct
+	<!-- ${1} -->
+
+snippet     h1
+abbr        h1
+prev_word   '^'
+	<h1>${2}</h1>
+
+snippet     h2
+abbr        h2
+prev_word   '^'
+	<h2>${2}</h2>
+
+snippet     h3
+abbr        h3
+prev_word   '^'
+	<h3>${2}</h3>
+
+snippet     h4
+abbr        h4
+prev_word   '^'
+	<h4>${2}</h4>
+
+snippet     p
+abbr        p
+prev_word   '^'
+	<p>
+		${1}
+	</p>
+
+snippet     a
+abbr        a
+prev_word   '^'
+	<a href="${1:url}" target="_blank">${2}</a>
+
+snippet     code
+abbr        code
+prev_word   '^'
+	[${1:code}]
+		${2}
+	[/$1]
+
+snippet     ul
+abbr        ul
+prev_word   '^'
+	<ul>
+		${1}
+	</ul>
+
+snippet     html5
+abbr        HTML5 Template
+prev_word   '^'
+    <!DOCTYPE html>
+    <html lang="ja">
+        <head>
+            <meta charset="utf-8">
+            <title>${1:title}</title>
+            ${2}
+        </head>
+        <body>
+        </body>
+    </html>
+snippet     script5
+abbr        HTML5 script tag
+prev_word   '^'
+    <script src="${1}"></script>
+
+snippet     link5
+abbr        HTML5 link tag
+prev_word   '^'
+    <link rel="stylesheet" href="${1}">

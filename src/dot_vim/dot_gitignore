@@ -1,0 +1,4 @@
+temp/*
+!.empty
+.bundle
+.netrwhist
