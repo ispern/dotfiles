@@ -1,0 +1,15 @@
+{{ if and (eq .chezmoi.os "linux") (contains .chezmoi.osRelease.idLike "debian") -}}
+{{ $sudo := "sudo " -}}
+{{ if eq .chezmoi.username "root" -}}
+{{   $sudo = "" -}}
+{{ end -}}
+
+#!/bin/bash
+if !(type "aws" > /dev/null 2>&1); then
+  FILE_NAME="awscliv2.zip"
+  curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "$FILE_NAME"
+  unzip $FILE_NAME
+  {{ $sudo }} ./aws/install
+  rm -rf $FILE_NAME
+fi
+{{ end -}} 
