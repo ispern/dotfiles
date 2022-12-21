@@ -7,5 +7,7 @@ NONINTERACTIVE=1 /bin/bash -c "sudo $(curl -fsSL https://raw.githubusercontent.c
 test -d ~/.linuxbrew && eval "$(~/.linuxbrew/bin/brew shellenv)"
 test -d /home/linuxbrew/.linuxbrew && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
-[ -e ${WORKING_DIR}/Brewfile ] HOMEBREW_BUNDLE_FILE=${WORKING_DIR}/Brewfile brew bundle
+if [ -e ${WORKING_DIR}/Brewfile ]; then
+  HOMEBREW_BUNDLE_FILE=${WORKING_DIR}/Brewfile brew bundle
+end
 {{ end -}}
