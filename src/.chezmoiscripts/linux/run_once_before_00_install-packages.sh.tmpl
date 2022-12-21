@@ -1,4 +1,18 @@
 {{ if and (eq .chezmoi.os "linux") (contains .chezmoi.osRelease.idLike "debian") -}}
+
+{{ $packages := list
+     "tree"
+     "build-essential"
+     "procps"
+     "curl"
+     "file"
+     "git"
+     "language-pack-ja"
+     "xdg-utils"
+     "zsh"
+     "fish" -}}
+{{ $classicSnaps := list -}}
+
 {{ $sudo := "sudo " -}}
 {{ if eq .chezmoi.username "root" -}}
 {{   $sudo = "" -}}
@@ -6,6 +20,7 @@
 
 #!/bin/bash
 
-{{ $sudo }} apt update && \
-     {{ $sudo }} apt install -y tree build-essential procps curl file git language-pack-ja xdg-utils zsh
+{{ $sudo }} apt-add-repository ppa:fish-shell/release-3 && \
+     {{ $sudo }} apt update && \
+     {{ $sudo }} apt install {{ $packages | join " " }}
 {{ end -}} 

@@ -3,7 +3,6 @@
 
 {{ $packages := list
      "fzf"
-     "fish"
      "tmux"
      "bat"
      "exa"
@@ -18,8 +17,7 @@
 
 #!/bin/bash
 
-{{ $sudo }} apt-add-repository ppa:fish-shell/release-3 && \
-     {{ $sudo }} apt update && \
+{{ $sudo }} apt update && \
      {{ $sudo }} apt install {{ $packages | join " " }}
 
 curl -O https://github.com/dandavison/delta/releases/download/{{ .deltaVersion }}/git-delta_{{ .deltaVersion }}_amd64.deb
