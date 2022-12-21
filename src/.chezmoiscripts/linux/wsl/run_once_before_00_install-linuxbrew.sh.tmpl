@@ -8,6 +8,6 @@ test -d ~/.linuxbrew && eval "$(~/.linuxbrew/bin/brew shellenv)"
 test -d /home/linuxbrew/.linuxbrew && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 if [ -e ${WORKING_DIR}/Brewfile ]; then
-  HOMEBREW_BUNDLE_FILE=${WORKING_DIR}/Brewfile brew bundle
+  HOMEBREW_BUNDLE_FILE=${WORKING_DIR}/Brewfile NONINTERACTIVE=1 brew bundle
 fi
 {{ end -}}
