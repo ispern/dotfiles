@@ -1,0 +1,4 @@
+{{ if (eq .chezmoi.os "linux") (contains .chezmoi.osRelease.idLike "debian") (.chezmoi.kernel.osrelease | lower | contains "microsoft") -}}
+#!/bin/bash
+curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+{{ end -}}

@@ -1,0 +1,4 @@
+{{ if and (eq .chezmoi.os "linux") (contains .chezmoi.osRelease.idLike "debian") -}}
+#!/bin/bash
+curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
+{{ end -}} 

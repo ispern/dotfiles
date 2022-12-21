@@ -1,0 +1,11 @@
+{{ if (eq .chezmoi.os "linux") (contains .chezmoi.osRelease.idLike "debian") (.chezmoi.kernel.osrelease | lower | contains "microsoft") -}}
+#!/bin/bash
+WORKING_DIR={{ .chezmoi.workingTree }}
+
+NONINTERACTIVE=1 /bin/bash -c "sudo $(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+test -d ~/.linuxbrew && eval "$(~/.linuxbrew/bin/brew shellenv)"
+test -d /home/linuxbrew/.linuxbrew && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+[ -e ${WORKING_DIR}/Brewfile ] HOMEBREW_BUNDLE_FILE=${WORKING_DIR}/Brewfile brew bundle
+{{ end -}}

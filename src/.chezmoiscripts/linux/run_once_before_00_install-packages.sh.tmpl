@@ -1,0 +1,11 @@
+{{ if and (eq .chezmoi.os "linux") (contains .chezmoi.osRelease.idLike "debian") -}}
+{{ $sudo := "sudo " -}}
+{{ if eq .chezmoi.username "root" -}}
+{{   $sudo = "" -}}
+{{ end -}}
+
+#!/bin/bash
+
+{{ $sudo }} apt update && \
+     apt install -y tree build-essential procps curl file git language-pack-ja xdg-utils zsh
+{{ end -}} 

@@ -1,0 +1,29 @@
+{{ if and (eq .chezmoi.os "linux") (contains .chezmoi.osRelease.idLike "debian") -}}
+{{   if not (.chezmoi.kernel.osrelease | lower | contains "microsoft") -}}
+
+{{ $packages := list
+     "fzf"
+     "fish"
+     "tmux"
+     "bat"
+     "exa"
+     "fd-find"
+     "neovim" -}}
+{{ $classicSnaps := list -}}
+
+{{ $sudo := "sudo " -}}
+{{ if eq .chezmoi.username "root" -}}
+{{   $sudo = "" -}}
+{{ end -}}
+
+#!/bin/bash
+
+{{ $sudo }} apt-add-repository ppa:fish-shell/release-3 && \
+     apt update && \
+     apt install {{ $packages | join " " }}
+
+curl -O https://github.com/dandavison/delta/releases/download/{{ .deltaVersion }}/git-delta_{{ .deltaVersion }}_amd64.deb
+{{ $sudo }} dpkg -i git-delta_{{ .deltaVersion }}_amd64.deb
+
+{{   end -}}
+{{ end -}} 
