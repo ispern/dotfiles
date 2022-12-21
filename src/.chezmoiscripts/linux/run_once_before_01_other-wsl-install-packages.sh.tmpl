@@ -19,8 +19,8 @@
 #!/bin/bash
 
 {{ $sudo }} apt-add-repository ppa:fish-shell/release-3 && \
-     apt update && \
-     apt install {{ $packages | join " " }}
+     {{ $sudo }} apt update && \
+     {{ $sudo }} apt install {{ $packages | join " " }}
 
 curl -O https://github.com/dandavison/delta/releases/download/{{ .deltaVersion }}/git-delta_{{ .deltaVersion }}_amd64.deb
 {{ $sudo }} dpkg -i git-delta_{{ .deltaVersion }}_amd64.deb
