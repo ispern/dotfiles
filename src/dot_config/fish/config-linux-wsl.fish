@@ -1,5 +1,20 @@
 set -gx WIN_HOME /mnt/c/Users/h.matsuoka
 
+if test -d /home/linuxbrew/.linuxbrew/; or test -d $HOME/.linuxbrew
+  if status --is-interactive
+    eval (/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+  end
+
+  # diff-highlight
+  fish_add_path (brew --prefix)/Cellar/git/2.38.0/share/git-core/contrib/diff-highlight/
+
+  # glib
+  fish_add_path (brew --prefix glib)/bin
+  fish_add_path (brew --prefix glib)/sbin
+  set -gx LDFLAGS "-L$(brew --prefix glib)/lib"
+  set -gx CPPFLAGS "-L$(brew --prefix glib)/include"
+end
+
 # Docker for Windows
 fish_add_path /mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/ProgramData/DockerDesktop/version-bin
 
@@ -8,8 +23,6 @@ alias open "/mnt/c/Windows/explorer.exe"
 
 # Google chorome
 fish_add_path "/mnt/c/Program Files/Google/Chrome/Application"
-set -gx LD_LIBRARY_PATH $LD_LIBRARY_PATH /lib/x86_64-linux-gnu
-set -gx LD_LIBRARY_PATH $LD_LIBRARY_PATH /usr/lib/x86_64-linux-gnu
 set -gx BROWSER chrome.exe
 
 # VSCode
@@ -18,15 +31,6 @@ fish_add_path "$WIN_HOME/AppData/Local/Programs/Microsoft VS Code/bin"
 # NeoVim
 set -gx NEOVIM_WIN_DIR "/mnt/c/Program Files/Neovim/bin/"
 fish_add_path $NEOVIM_WIN_DIR
-
-if test -d /home/linuxbrew/.linuxbrew/; or test -d $HOME/.linuxbrew
-  if status --is-interactive
-    eval (/home/linuxbrew/.linuxbrew/bin/brew shellenv)
-  end
-
-  # diff-highlight
-  fish_add_path /home/linuxbrew/.linuxbrew/Cellar/git/2.38.0/share/git-core/contrib/diff-highlight/
-end
 
 # Starship
 if type -q starship
