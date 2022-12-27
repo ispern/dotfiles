@@ -1,20 +1,17 @@
-{{- $email := promptStringOnce . "email" "Email address" -}}
-{{- $workspaceRoot := promptStringOnce . "workspaceRoot" "Workspace Root Directory" -}}
-{{- $editor := promptStringOnce . "editor" "Git Editor" -}}
 {{- $codespaces:= env "CODESPACES" | not | not -}}
 
 {
   "data": {
     "name": "ispern",
-    codespaces = {{ $codespaces }},
+    "codespaces": {{ $codespaces }},
 {{- if $codespaces }}
     "email": "",
     "workspaceRoot": "~/workspaces",
-    "editor": "/usr/sbin/nvim"
+    "editor": "/usr/sbin/nvim",
 {{- else }}
-    "email": {{ $email | quote }},
-    "workspaceRoot": {{ $workspaceRoot | quote }},
-    "editor": {{ $editor | quote }}
+    "email": {{ promptString "email" | quote }},
+    "workspaceRoot": {{ promptString "Workspace Root Directory" | quote }},
+    "editor": {{ promptString "Git Editor" | quote }}
 {{- end }}
   }
 }
