@@ -7,7 +7,7 @@
 {{- if $codespaces }}
     "email": "",
     "workspaceRoot": "~/workspaces",
-    "editor": "/usr/sbin/nvim",
+    "editor": "/usr/sbin/nvim"
 {{- else }}
     "email": {{ promptString "email" | quote }},
     "workspaceRoot": {{ promptString "Workspace Root Directory" | quote }},
