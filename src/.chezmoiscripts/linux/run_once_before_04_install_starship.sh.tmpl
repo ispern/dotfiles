@@ -1,0 +1,9 @@
+{{ if and (eq .chezmoi.os "linux") (contains .chezmoi.osRelease.idLike "debian") -}}
+{{   if not (.chezmoi.kernel.osrelease | lower | contains "microsoft") -}}
+
+#!/bin/bash
+
+curl -sS https://starship.rs/install.sh | sh
+
+{{   end -}}
+{{ end -}} 
