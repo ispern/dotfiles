@@ -32,11 +32,6 @@ fish_add_path "$WIN_HOME/AppData/Local/Programs/Microsoft VS Code/bin"
 set -gx NEOVIM_WIN_DIR "/mnt/c/Program Files/Neovim/bin/"
 fish_add_path $NEOVIM_WIN_DIR
 
-# Starship
-if type -q starship
-  starship init fish | source
-end
-
 # rbenv
 # export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
 if type -q rbenv
