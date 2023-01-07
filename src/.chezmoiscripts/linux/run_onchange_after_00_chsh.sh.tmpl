@@ -1,7 +1,5 @@
-#!/bin/bash
 {{- $codespaces:= env "CODESPACES" | not | not -}}
-{{- if $codespaces -}}
-set -eufo pipefail
-
+{{- if not $codespaces -}}
+#!/bin/bash
 chsh -s /usr/bin/zsh
 {{ end -}}
