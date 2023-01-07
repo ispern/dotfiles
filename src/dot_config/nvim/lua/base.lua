@@ -3,6 +3,7 @@ local g = vim.g
 -- Leader
 g.mapleader = ' '
 g.maplocalleader = ','
+g.indentLine_conceallevel = 0
 
 -- Settings
 local opt = vim.opt
