@@ -9,8 +9,7 @@
      "file"
      "git"
      "xdg-utils"
-     "zsh"
-     "fish" -}}
+     "zsh" -}}
 {{ $classicSnaps := list -}}
 
 {{ $sudo := "sudo " -}}
@@ -22,24 +21,31 @@
 
 {{ $sudo }} apt update && \
      {{ $sudo }} apt install -y software-properties-common && \
-     {{ $sudo }} apt-add-repository -y ppa:fish-shell/release-3 && \
-     {{ $sudo }} apt update && \
      {{ $sudo }} apt install -y {{ $packages | join " " }}
 
 {{   if eq .chezmoi.osRelease.id "ubuntu" -}}
 
-{{ $sudo }} apt update && \
-     {{ $sudo }} apt install language-pack-ja
+# locale
+{{ $sudo }} apt-add-repository -y ppa:fish-shell/release-3 && \
+     {{ $sudo }} apt update && \
+     {{ $sudo }} apt install -y language-pack-ja fish
 {{ $sudo }} update-locale LANG=ja_JP.UTF-8
 
 {{   else if eq .chezmoi.osRelease.id "debian" -}}
 
+# fish
+echo 'deb http://download.opensuse.org/repositories/shells:/fish:/release:/3/Debian_11/ /' | {{ $sudo }} tee /etc/apt/sources.list.d/shells:fish:release:3.list
+curl -fsSL https://download.opensuse.org/repositories/shells:fish:release:3/Debian_11/Release.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/shells_fish_release_3.gpg > /dev/null
+{{ $sudo }} apt update
+{{ $sudo }} apt install -y locales fish
+
+# locale
 {{ $sudo }} sed -i -E 's/# (ja_JP.UTF-8)/\1/' /etc/locale.gen
 {{ $sudo }} locale-gen
 {{ $sudo }} update-locale LANG=ja_JP.UTF-8
 
 {{   end -}}
 
-{{ $sudo }} apt autoremove
+{{ $sudo }} apt autoremove -y
 
 {{ end -}} 
