@@ -1,6 +1,6 @@
 {{- if eq .chezmoi.os "linux" -}}
 #!{{ lookPath "fish" }}
 
-fish -c "curl -sL https://git.io/fisher | source && fisher list && fisher update"
+fish -c "curl -sL https://git.io/fisher | source && fisher update"
 
 {{ end -}} 
