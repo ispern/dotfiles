@@ -1,9 +1,13 @@
-{{- $codespaces:= env "CODESPACES" | not | not -}}
+{{- $codespaces := env "CODESPACES" | not | not -}}
+{{- $remoteContainers := env "REMOTE_CONTAINERS" | not | not -}}
+{{- $wsl2 := and (eq .chezmoi.os "linux") (contains .chezmoi.osRelease.idLike "debian") (.chezmoi.kernel.osrelease | lower | contains "microsoft") ($remoteContainers | not) -}}
 
 {
   "data": {
     "name": "ispern",
+    "wsl2": {{ $wsl2 }},
     "codespaces": {{ $codespaces }},
+    "remoteContainers": {{ $remoteContainers }},
 {{- if $codespaces }}
     "email": "",
     "workspaceRoot": "~/workspaces",

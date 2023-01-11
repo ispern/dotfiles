@@ -1,5 +1,4 @@
-{{- $codespaces:= env "CODESPACES" | not | not -}}
-{{- if not $codespaces -}}
+{{- if and (not .codespaces) (not .wsl2) -}}
 #!/bin/bash
 chsh -s /usr/bin/zsh
 {{ end -}}

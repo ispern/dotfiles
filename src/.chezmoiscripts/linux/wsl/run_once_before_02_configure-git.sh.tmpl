@@ -1,4 +1,4 @@
-{{ if and (eq .chezmoi.os "linux") (contains .chezmoi.osRelease.idLike "debian") (.chezmoi.kernel.osrelease | lower | contains "microsoft") -}}
+{{ if .wsl2 -}}
 #!/bin/bash
 sudo chmod +x /usr/share/doc/git/contrib/diff-highlight/diff-highlight
 if [ ! -e /usr/local/bin/diff-highlight ]; then

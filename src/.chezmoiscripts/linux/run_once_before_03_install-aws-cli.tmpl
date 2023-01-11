@@ -1,6 +1,5 @@
-{{- $codespaces:= env "CODESPACES" | not | not -}}
 #!/bin/bash
-{{- if not $codespaces }}
+{{- if and (not .codespaces) (not .wsl2) }}
   {{ if and (eq .chezmoi.os "linux") (contains .chezmoi.osRelease.idLike "debian") -}}
   {{ $sudo := "sudo " -}}
   {{ if eq .chezmoi.username "root" -}}

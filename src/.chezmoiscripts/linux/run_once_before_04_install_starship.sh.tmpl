@@ -1,5 +1,5 @@
 {{ if and (eq .chezmoi.os "linux") (contains .chezmoi.osRelease.idLike "debian") -}}
-{{   if not (.chezmoi.kernel.osrelease | lower | contains "microsoft") -}}
+{{   if not .wsl2 -}}
 
 #!/bin/bash
 
