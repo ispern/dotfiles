@@ -4,7 +4,10 @@
 echo 'run'
 curl -sL https://git.io/fisher | source
 
+curl -I https://api.github.com
+
 echo 'update'
 fisher update
+echo 'update complete'
 
 {{ end -}} 
