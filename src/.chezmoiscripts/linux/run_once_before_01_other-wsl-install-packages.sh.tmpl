@@ -1,5 +1,4 @@
-{{ if and (eq .chezmoi.os "linux") (contains .chezmoi.osRelease.idLike "debian") -}}
-{{   if not .wsl2 -}}
+{{ if and (eq .chezmoi.os "linux") (not .wsl2) -}}
 
 {{ $packages := list
      "fzf"
@@ -30,5 +29,4 @@ if [ ! -e $HOME/.local/bin/delta ]; then
   rm -rf delta-{{ .deltaVersion }}-x86_64-unknown-linux-musl delta-{{ .deltaVersion }}-x86_64-unknown-linux-musl.tar.gz
 fi
 
-{{   end -}}
 {{ end -}} 

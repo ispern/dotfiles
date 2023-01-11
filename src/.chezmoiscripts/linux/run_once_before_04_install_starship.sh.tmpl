@@ -1,5 +1,4 @@
-{{ if and (eq .chezmoi.os "linux") (contains .chezmoi.osRelease.idLike "debian") -}}
-{{   if not .wsl2 -}}
+{{ if and (eq .chezmoi.os "linux") (not .wsl2) -}}
 
 #!/bin/bash
 
@@ -10,5 +9,4 @@ chmod +x /tmp/$FILE
 /tmp/$FILE -y
 rm /tmp/$FILE
 
-{{   end -}}
 {{ end -}}

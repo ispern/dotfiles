@@ -1,6 +1,6 @@
 {{- $codespaces := env "CODESPACES" | not | not -}}
 {{- $remoteContainers := env "REMOTE_CONTAINERS" | not | not -}}
-{{- $wsl2 := and (eq .chezmoi.os "linux") (contains .chezmoi.osRelease.idLike "debian") (.chezmoi.kernel.osrelease | lower | contains "microsoft") ($remoteContainers | not) -}}
+{{- $wsl2 := and (eq .chezmoi.os "linux") (.chezmoi.kernel.osrelease | lower | contains "microsoft") ($remoteContainers | not) -}}
 
 {
   "data": {
