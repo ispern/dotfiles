@@ -20,7 +20,7 @@ if ! chezmoi="$(command -v chezmoi)"; then
   unset chezmoi_install_script bin_dir
 fi
 
-set -- init --apply ispern
+set -- init --apply ispern --debug
 
 echo "Running 'chezmoi $*'" >&2
 # exec: replace current process with chezmoi
