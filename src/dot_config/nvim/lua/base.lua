@@ -3,7 +3,6 @@ local g = vim.g
 -- Leader
 g.mapleader = ' '
 g.maplocalleader = ','
-g.indentLine_conceallevel = 0
 
 -- Settings
 local opt = vim.opt
@@ -40,6 +39,19 @@ opt.cursorline = true
 opt.modeline = false
 opt.mouse = 'nivh'
 opt.signcolumn = 'yes:1'
-opt.clipboard = vim.o.clipboard .. 'unnamedplus'
+opt.clipboard = 'unnamedplus'
 opt.termguicolors = true
+opt.conceallevel = 0
+
+vim.cmd [[
+if has('clipboard') || exists('g:vscode')
+    let s:clip = '/mnt/c/Windows/System32/clip.exe'
+    if executable(s:clip)
+        augroup WSLYank
+            autocmd!
+            autocmd TextYankPost * if v:event.operator ==# 'y' | call system(s:clip, @0) | endif
+        augroup END
+    endif
+endif
+]]
 
