@@ -1,4 +1,6 @@
-{{- if and (eq .chezmoi.os "linux") (not .remoteContainers) -}}
-#!/usr/bin/fish
+{{- if eq .chezmoi.os "linux" -}}
+#!{{ lookPath "fish" }}
+
 curl -sL https://git.io/fisher | source && fisher update
+
 {{ end -}} 
