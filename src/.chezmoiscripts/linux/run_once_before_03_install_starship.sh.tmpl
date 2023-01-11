@@ -1,12 +1,17 @@
 {{ if and (eq .chezmoi.os "linux") (not .wsl2) -}}
 
+{{ $sudo := "sudo " -}}
+{{ if eq .chezmoi.username "root" -}}
+{{   $sudo = "" -}}
+{{ end -}}
+
 #!/bin/bash
 
 FILE=starship_install.sh
 
 curl -sS https://starship.rs/install.sh -o /tmp/$FILE
 chmod +x /tmp/$FILE
-/tmp/$FILE -y
+{{ $sudo }} /tmp/$FILE -y
 rm /tmp/$FILE
 
 {{ end -}}
