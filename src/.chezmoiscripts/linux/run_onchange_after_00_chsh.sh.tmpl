@@ -1,4 +1,4 @@
-{{- if and (not .codespaces) (not .wsl2) (not .remoteContainer) -}}
+{{- if and (not .codespaces) (not .wsl2) (not .remoteContainers) -}}
 #!/bin/bash
 chsh -s /usr/bin/zsh
 {{ end -}}
