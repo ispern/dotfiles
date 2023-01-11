@@ -8,7 +8,7 @@
     "wsl2": {{ $wsl2 }},
     "codespaces": {{ $codespaces }},
     "remoteContainers": {{ $remoteContainers }},
-{{- if $codespaces }}
+{{- if or ($codespaces) ($remoteContainers) }}
     "email": "",
     "workspaceRoot": "~/workspaces",
     "editor": "/usr/sbin/nvim"
