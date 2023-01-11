@@ -1,13 +1,8 @@
 {{- if eq .chezmoi.os "linux" -}}
 #!{{ lookPath "fish" }}
 
-echo 'run'
 curl -sL https://git.io/fisher | source
-
-curl -I https://api.github.com
-
-echo 'update'
+fisher install jorgebucaran/fisher
 fisher update
-echo 'update complete'
 
 {{ end -}} 
