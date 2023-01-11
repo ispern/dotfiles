@@ -1,4 +1,4 @@
-{{ if and (eq .chezmoi.os "linux") -}}
+{{ if eq .chezmoi.os "linux" -}}
 
 {{ $packages := list
      "tree"
@@ -8,7 +8,6 @@
      "unzip"
      "file"
      "git"
-     "language-pack-ja"
      "xdg-utils"
      "zsh"
      "fish" -}}
@@ -26,4 +25,21 @@
      {{ $sudo }} apt-add-repository -y ppa:fish-shell/release-3 && \
      {{ $sudo }} apt update && \
      {{ $sudo }} apt install -y {{ $packages | join " " }}
+
+{{   if eq .chezmoi.osRelease.id "ubuntu" -}}
+
+{{ $sudo }} apt update && \
+     {{ $sudo }} apt install language-pack-ja
+{{ $sudo }} update-locale LANG=ja_JP.UTF-8
+
+{{   else if eq .chezmoi.osRelease.id "debian" -}}
+
+{{ $sudo }} sed -i -E 's/# (ja_JP.UTF-8)/\1/' /etc/locale.gen
+{{ $sudo }} locale-gen
+{{ $sudo }} update-locale LANG=ja_JP.UTF-8
+
+{{   end -}}
+
+{{ $sudo }} apt autoremove
+
 {{ end -}} 
