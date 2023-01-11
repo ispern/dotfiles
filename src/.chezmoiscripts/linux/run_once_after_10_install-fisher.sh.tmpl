@@ -1,4 +1,4 @@
-{{- if and (eq .chezmoi.os "linux") (not .remoteContainers) -}}
+{{- if and (eq .chezmoi.os "linux") (not .codespaces) (not .remoteContainers) -}}
 #!{{ lookPath "fish" }}
 
 fish -c "curl -sL https://git.io/fisher | source && fisher update"
