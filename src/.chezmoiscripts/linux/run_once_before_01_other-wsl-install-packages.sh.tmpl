@@ -5,8 +5,7 @@
      "tmux"
      "bat"
      "exa"
-     "fd-find"
-     "neovim" -}}
+     "fd-find" -}}
 {{ $classicSnaps := list -}}
 
 {{ $sudo := "sudo " -}}
@@ -22,11 +21,22 @@
 if [ ! -d $HOME/.local/bin ]; then
   mkdir -p $HOME/.local/bin
 fi
+
+# delta
 if [ ! -e $HOME/.local/bin/delta ]; then
   curl -LO https://github.com/dandavison/delta/releases/download/{{ .deltaVersion }}/delta-{{ .deltaVersion }}-x86_64-unknown-linux-musl.tar.gz
   tar -zxvf delta-{{ .deltaVersion }}-x86_64-unknown-linux-musl.tar.gz
   mv delta-{{ .deltaVersion }}-x86_64-unknown-linux-musl/delta $HOME/.local/bin/
   rm -rf delta-{{ .deltaVersion }}-x86_64-unknown-linux-musl delta-{{ .deltaVersion }}-x86_64-unknown-linux-musl.tar.gz
+fi
+
+# neovim
+if [ ! -e /usr/bin/nvim ]; then
+  curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
+  chmod u+x nvim.appimage
+  ./nvim.appimage --appimage-extract
+  {{ $sudo }} mv squashfs-root /
+  {{ $sudo }} ln -s /squashfs-root/AppRun /usr/bin/nvim
 fi
 
 {{ end -}} 
