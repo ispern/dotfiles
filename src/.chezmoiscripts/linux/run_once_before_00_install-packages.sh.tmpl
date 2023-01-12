@@ -21,7 +21,7 @@
 
 {{ $sudo }} apt update && \
      {{ $sudo }} apt install -y software-properties-common && \
-     {{ $sudo }} apt install -y {{ $packages | join " " }}
+     {{ $sudo }} apt install -y -o Dpkg::Options::=--force-confnew {{ $packages | join " " }}
 
 {{   if eq .chezmoi.osRelease.id "ubuntu" -}}
 
