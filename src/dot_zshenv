@@ -64,3 +64,4 @@ if [[ $UID == 0 ]]; then
     export SAVEHIST=0
 fi
 
+export TMUX_SHELL=/bin/zsh
