@@ -9,7 +9,7 @@ umask 022
 limit coredumpsize 0
 bindkey -d
 
-if type "fish" > /dev/null 2>&1; then
+if type "fish" > /dev/null 2>&1 && [ -t 1 ]; then
   exec fish
 else
   if [ ! -f ~/.zshrc.zwc -o ~/.zshrc -nt ~/.zshrc.zwc ]; then
