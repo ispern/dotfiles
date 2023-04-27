@@ -1,5 +1,12 @@
 set -gx WIN_HOME /mnt/c/Users/h.matsuoka
 
+# volta
+# LinuxBrewでインストールされたnodeが優先されてしまうので、先にvoltaを読み込む
+if test -d $HOME/.volta
+  set -gx VOLTA_HOME $HOME/.volta
+  set -gx PATH "$VOLTA_HOME/bin" $PATH
+end
+
 if test -d /home/linuxbrew/.linuxbrew/; or test -d $HOME/.linuxbrew
   if status --is-interactive
     eval (/home/linuxbrew/.linuxbrew/bin/brew shellenv)
@@ -36,10 +43,4 @@ fish_add_path $NEOVIM_WIN_DIR
 # export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
 if type -q rbenv
   status --is-interactive; and source (rbenv init -|psub)
-end
-
-# volta
-if test -d $HOME/.volta
-  set -gx VOLTA_HOME $HOME/.volta
-  fish_add_path $VOLTA_HOME/bin
 end
