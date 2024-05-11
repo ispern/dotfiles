@@ -20,7 +20,7 @@ set -gx EDITOR nvim
 alias vi="nvim"
 
 # tmux
-alias tm 'tmux'
+alias tm tmux
 alias tma 'tmux attach'
 alias tmd 'tmux dettach'
 alias tml 'tmux list-window'
@@ -29,13 +29,13 @@ alias tml 'tmux list-window'
 alias g git
 
 # docker
-alias d 'docker'
-alias dc 'docker-compose'
+alias d docker
+alias dc docker-compose
 
 # abbr
 abbr -a abe 'for a in (abbr --list); abbr --erase $a; end'
 abbr -a fr "source ~/.config/fish/config.fish"
 
-if type -q exa
-  alias ll "exa -l -g -a --icons --sort=type"
+if type -q eza
+  alias ll "eza -l -g -a --icons --sort=type"
 end
