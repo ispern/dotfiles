@@ -6,8 +6,8 @@ require('mason-lspconfig').setup({
 
     -- Backend
     'jdtls', -- Java
-    'psalm', -- PHP
-    'solargraph', -- Ruby
+    -- 'psalm', -- PHP
+    -- 'solargraph', -- Ruby
 
 
     -- Script
