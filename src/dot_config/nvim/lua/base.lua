@@ -45,7 +45,7 @@ opt.conceallevel = 0
 
 vim.cmd [[
 if has('clipboard') || exists('g:vscode')
-    let s:clip = '/mnt/c/Windows/System32/clip.exe'
+    let s:clip = '~/bin/win32yank.exe'
     if executable(s:clip)
         augroup WSLYank
             autocmd!
