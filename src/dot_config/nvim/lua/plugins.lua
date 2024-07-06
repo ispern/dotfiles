@@ -83,7 +83,7 @@ return require('packer').startup(function(use)
   use {
     {
       'nvim-telescope/telescope.nvim',
-      tag = '0.1.0',
+      tag = '0.1.8',
       requires = {
         'nvim-lua/popup.nvim',
         'nvim-lua/plenary.nvim',
@@ -107,7 +107,7 @@ return require('packer').startup(function(use)
   -- use 'justinmk/vim-dirvish'
   use {
     'nvim-neo-tree/neo-tree.nvim',
-    branch = 'v2.x',
+    branch = 'v3.x',
     config = [[require('config.neo_tree')]],
     requires = {
       'nvim-lua/plenary.nvim',
@@ -119,7 +119,7 @@ return require('packer').startup(function(use)
   -- Buffer management
 	use {
     'akinsho/bufferline.nvim',
-    tag = "v2.*",
+    tag = "*",
     config = [[require('config.bufferline')]],
     requires = 'kyazdani42/nvim-web-devicons',
   }
@@ -136,12 +136,8 @@ return require('packer').startup(function(use)
     'williamboman/mason.nvim',
     'williamboman/mason-lspconfig.nvim',
     'neovim/nvim-lspconfig',
-  }
-  use {
-    'jose-elias-alvarez/null-ls.nvim',
-    config = function()
-      require('config.null-ls')
-    end
+    'nvimtools/none-ls.nvim',
+    'jay-babu/mason-null-ls.nvim'
   }
 
   -- Highlights

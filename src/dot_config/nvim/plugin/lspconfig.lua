@@ -5,13 +5,9 @@ require('mason-lspconfig').setup({
     'eslint', 'emmet_ls', 'html', 'tsserver', 'cssls', 'cssmodules_ls', 'stylelint_lsp', 'volar', 'tailwindcss',
 
     -- Backend
-    'jdtls', -- Java
+    -- 'jdtls', -- Java
     -- 'psalm', -- PHP
     -- 'solargraph', -- Ruby
-
-
-    -- Script
-    'sumneko_lua',  -- lua
 
     -- Database
     'sqlls',
@@ -19,14 +15,14 @@ require('mason-lspconfig').setup({
     -- Infrastructure
     'terraformls',
 
-
     -- Other
     'marksman', 'jsonls', 'lemminx', 'yamlls',
   },
 })
-require('mason-lspconfig').setup_handlers({ function(server)
-  require('lspconfig')[server].setup({})
-end })
+
+require("mason-null-ls").setup({
+    handlers = {},
+})
 
 -- hover setting
 local api = vim.api
@@ -51,16 +47,6 @@ api.nvim_create_autocmd("LspAttach", { callback = function(args)
       callback = buf.clear_references,
       buffer = bufnr,
     })
-  end
-end })
-
--- diagnostic hover
-vim.opt.updatetime = 500
-local diagnostic_hover_augroup_name = 'lspconfig-diagnostic-hover'
-api.nvim_create_augroup(diagnostic_hover_augroup_name, { clear = true })
-api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, { group = diagnostic_hover_augroup_name, callback = function()
-  if buf.server_ready() then
-    vim.diagnostic.open_float()
   end
 end })
 
