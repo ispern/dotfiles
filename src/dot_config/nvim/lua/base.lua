@@ -6,7 +6,7 @@ g.maplocalleader = ','
 
 -- Settings
 local opt = vim.opt
-opt.shellslash = true
+-- opt.shellslash = true
 opt.textwidth = 0
 opt.scrolloff = 7
 opt.swapfile = false
