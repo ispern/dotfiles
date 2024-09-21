@@ -1,100 +1,101 @@
 [user]
-	useConfigOnly = true
-	name = {{ .name }}
-	email = {{ .email }}
+  useConfigOnly = true
+  name = {{ .name }}
+  email = {{ .email }}
 [color]
-	branch = auto
-	diff = auto
-	interactive = auto
-	status = auto
-	ui = auto
-	grep = auto
+  branch = auto
+  diff = auto
+  interactive = auto
+  status = auto
+  ui = auto
+  grep = auto
 [push]
-	default = upstream
+  default = upstream
 [core]
-	excludesfile = ~/.gitignore
-	editor = {{ .editor }}
-	autocrlf = input
-	precomposeunicode = true
-	quotepath = false
-	pager = delta
+  excludesfile = ~/.gitignore
+  editor = {{ .editor }}
+  autocrlf = input
+  precomposeunicode = true
+  quotepath = false
+  pager = delta
+  sshCommand = ssh.exe
 [interactive]
   diffFilter = delta --color-only
 [add.interactive]
   useBuiltin = false # required for git 2.37.0
 [alias]
-	# http://oli.jp/2012/git-powerup/
-	# http://blog.blindgaenger.net/advanced_git_aliases.html
-	alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\\t => \\2/' | sort
-	b = branch -a
-	br = browse-remote
-	c = commit -v
-	co = checkout
-	cob= checkout -b
-	d = diff
-	dc = diff --cached
-	di = diff
-	dic = diff --cached
-	f = fetch --prune
-	fa = fetch --all --prune
-	ignore = !([ ! -e .gitignore ] && touch .gitignore) | echo $1 >> .gitignore
-	info = remote show origin
-	l = log --graph -n 20 --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(green)- %an, %cr%Creset'
-	ll = log --stat --abbrev-commit
-	ln = log --graph -n 20 --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(green)- %an, %cr%Creset' --name-status
-	lp = log --oneline -n 20 -p
-	ls = log --stat --abbrev-commit -n 1 # display previous log
-	s = status --short --branch
-	st = status
-	sta = stash
-	su = submodule update
-	p = pull
-	pu = push
-    pus = push --set-upstream
-	puu = push -u
-	new-branch = "!sh -c 'git checkout -b $1 && git commit --allow-empty -m \"[WIP]$2 $1\"' -"
-	empty-commit = "!sh -c 'git commit --allow-empty -m \"$1\"' -"
-    delete-merged-branch = "!f () { git checkout $1; git branch --merged | egrep -v '\\*|develop|main|master' | xargs git branch -d; };f"
+  # http://oli.jp/2012/git-powerup/
+  # http://blog.blindgaenger.net/advanced_git_aliases.html
+  alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\\t => \\2/' | sort
+  b = branch -a
+  br = browse-remote
+  c = commit -v
+  co = checkout
+  cob= checkout -b
+  d = diff
+  dc = diff --cached
+  di = diff
+  dic = diff --cached
+  f = fetch --prune
+  fa = fetch --all --prune
+  ignore = !([ ! -e .gitignore ] && touch .gitignore) | echo $1 >> .gitignore
+  info = remote show origin
+  l = log --graph -n 20 --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(green)- %an, %cr%Creset'
+  ll = log --stat --abbrev-commit
+  ln = log --graph -n 20 --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(green)- %an, %cr%Creset' --name-status
+  lp = log --oneline -n 20 -p
+  ls = log --stat --abbrev-commit -n 1 # display previous log
+  s = status --short --branch
+  st = status
+  sta = stash
+  su = submodule update
+  p = pull
+  pu = push
+  pus = push --set-upstream
+  puu = push -u
+  new-branch = "!sh -c 'git checkout -b $1 && git commit --allow-empty -m \"[WIP]$2 $1\"' -"
+  empty-commit = "!sh -c 'git commit --allow-empty -m \"$1\"' -"
+  delete-merged-branch = "!f () { git checkout $1; git branch --merged | egrep -v '\\*|develop|main|master' | xargs git branch -d; };f"
 [apply]
-	whitespace = nowarn
+  whitespace = nowarn
 [branch]
-	autosetupmerge = false
+  autosetupmerge = false
 [mergetool]
-	keepBackup = false
-	prompt = false
+  keepBackup = false
+  prompt = false
 [diff]
   colorMoved = default
 [difftool]
-	prompt = false
+  prompt = false
 [merge]
-	ff = false
+  ff = false
   conflictstyle = diff3
 [pull]
-	rebase = true
+  rebase = true
 [rebase]
-    autostash = true
+  autostash = true
 
 # git-browse-remote
 # http://subtech.g.hatena.ne.jp/motemen/20120917/1347889804
 [web]
-	browser = chrome
+  browser = chrome
 [browse-remote "github.com"]
-	top = https://{host}/{path}
-	ref = https://{host}/{path}/tree/{short_ref}
-	rev = https://{host}/{path}/commit/{commit}
+  top = https://{host}/{path}
+  ref = https://{host}/{path}/tree/{short_ref}
+  rev = https://{host}/{path}/commit/{commit}
 [http]
-	sslVerify = false
+  sslVerify = false
 [credential]
-	helper = store
+  helper = store
 [ghq]
-	root = {{ .workspaceRoot }}
+  root = {{ .workspaceRoot }}
 [filter "lfs"]
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
-	clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
+  clean = git-lfs clean -- %f
 [delta]
-  navigate = true    # use n and N to move between diff sections
-  light = false      # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
+  navigate = true  # use n and N to move between diff sections
+  light = false    # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
 [init]
-	defaultBranch = main
+  defaultBranch = main
