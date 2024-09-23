@@ -17,13 +17,6 @@ set -gx WIN_HOME /mnt/c/Users/h.matsuoka
 #    eval (socat UNIX-LISTEN:$SSH_AUTH_SOCK,fork EXEC:"$NPIPERELAY -ei -s //./pipe/openssh-ssh-agent",nofork &) >/dev/null 2>&1
 #end
 
-# volta
-# LinuxBrewでインストールされたnodeが優先されてしまうので、先にvoltaを読み込む
-if test -d $HOME/.volta
-    set -gx VOLTA_HOME $HOME/.volta
-    set -gx PATH "$VOLTA_HOME/bin" $PATH
-end
-
 if test -d /home/linuxbrew/.linuxbrew/; or test -d $HOME/.linuxbrew
     if status --is-interactive
         eval (/home/linuxbrew/.linuxbrew/bin/brew shellenv)
@@ -37,6 +30,12 @@ if test -d /home/linuxbrew/.linuxbrew/; or test -d $HOME/.linuxbrew
     fish_add_path (brew --prefix glib)/sbin
     set -gx LDFLAGS "-L$(brew --prefix glib)/lib"
     set -gx CPPFLAGS "-L$(brew --prefix glib)/include"
+end
+
+# volta
+if test -d $HOME/.volta
+    set -gx VOLTA_HOME $HOME/.volta
+    set -gx PATH "$VOLTA_HOME/bin" $PATH
 end
 
 # Docker for Windows
