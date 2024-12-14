@@ -38,6 +38,10 @@ if test -d $HOME/.volta
     set -gx PATH "$VOLTA_HOME/bin" $PATH
 end
 
+if type -q eza
+  alias ll "eza -l -g -a --icons --sort=type"
+end
+
 # Docker for Windows
 fish_add_path /mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/ProgramData/DockerDesktop/version-bin
 
