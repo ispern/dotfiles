@@ -38,6 +38,12 @@ if test -d $HOME/.volta
     set -gx PATH "$VOLTA_HOME/bin" $PATH
 end
 
+# pnpm
+if test -d $HOME/.local/share/pnpm
+    set -gx PNPM_HOME $HOME/.local/share/pnpm
+    set -gx PATH "$PNPM_HOME/bin" $PATH
+end
+
 if type -q eza
   alias ll "eza -l -g -a --icons --sort=type"
 end
