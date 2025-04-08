@@ -1,5 +1,4 @@
 tap "eth-p/software"
-tap "homebrew/bundle"
 brew "act"
 brew "bat"
 brew "libxml2"
