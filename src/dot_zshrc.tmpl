@@ -9,6 +9,14 @@ umask 022
 limit coredumpsize 0
 bindkey -d
 
+if command -v ssh.exe &> /dev/null; then
+  alias ssh='ssh.exe'
+fi
+
+if command -v ssh-add.exe &> /dev/null; then
+  alias ssh-add='ssh-add.exe'
+fi
+
 if type "fish" > /dev/null 2>&1 && [ -t 1 ]; then
   exec fish
 else

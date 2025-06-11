@@ -3,20 +3,6 @@ alias ssh-add 'ssh-add.exe'
 
 set -gx WIN_HOME /mnt/c/Users/h.matsuoka
 
-# Configure ssh forwarding
-# https://stuartleeks.com/posts/wsl-ssh-key-forward-to-windows
-#set -gx SSH_AUTH_SOCK $HOME/.ssh/agent.sock
-
-#if ! ss -a | grep -q $SSH_AUTH_SOCK >/dev/null 2>&1
-#    if test -S $SSH_AUTH_SOCK
-#        echo "removing previous socket..."
-#        rm -f $SSH_AUTH_SOCK
-#    end
-#    echo "Starting SSH-Agent relay..."
-#    set -x NPIPERELAY $HOME/bin/npiperelay.exe
-#    eval (socat UNIX-LISTEN:$SSH_AUTH_SOCK,fork EXEC:"$NPIPERELAY -ei -s //./pipe/openssh-ssh-agent",nofork &) >/dev/null 2>&1
-#end
-
 if test -d /home/linuxbrew/.linuxbrew/; or test -d $HOME/.linuxbrew
     if status --is-interactive
         eval (/home/linuxbrew/.linuxbrew/bin/brew shellenv)
