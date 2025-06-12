@@ -1,5 +1,9 @@
-alias ssh 'ssh.exe'
-alias ssh-add 'ssh-add.exe'
+set ssh_exe_path (which ssh.exe 2>/dev/null)
+
+if test -n "$ssh_exe_path"
+    alias ssh="$ssh_exe_path"
+    alias ssh-add=(string replace ssh.exe ssh-add.exe $ssh_exe_path)
+end
 
 set -gx WIN_HOME /mnt/c/Users/h.matsuoka
 
