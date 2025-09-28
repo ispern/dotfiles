@@ -1,0 +1,170 @@
+{{- if eq .chezmoi.os "darwin" }}
+{
+  "title": "Windows style nav (Home/End/PageUp/PageDown + Option+Tab hold Command)",
+  "rules": [
+    {
+      "description": "Home/End → Cmd+Left/Right（行頭/行末）",
+      "manipulators": [
+        { "type": "basic", "from": { "key_code": "home" }, "to": [ { "key_code": "left_arrow", "modifiers": ["left_command"] } ] },
+        { "type": "basic", "from": { "key_code": "end" },  "to": [ { "key_code": "right_arrow", "modifiers": ["left_command"] } ] }
+      ]
+    },
+    {
+      "description": "PageUp/PageDown → ページスクロール（そのまま）",
+      "manipulators": [
+        { "type": "basic", "from": { "key_code": "page_up" },   "to": [ { "key_code": "page_up" } ] },
+        { "type": "basic", "from": { "key_code": "page_down" }, "to": [ { "key_code": "page_down" } ] }
+      ]
+    },
+    {
+      "description": "Option+Tab behaves like Windows Alt+Tab (hold Option to keep ⌘ pressed)",
+      "manipulators": [
+
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "left_option",
+            "modifiers": { "optional": ["any"] }
+          },
+          "to_if_held_down": [
+            {
+              "set_variable": { "name": "option_is_held", "value": 1 }
+            },
+            {
+              "key_code": "left_command",
+              "lazy": true
+            }
+          ],
+          "to_after_key_up": [
+            {
+              "set_variable": { "name": "option_is_held", "value": 0 }
+            },
+            {
+              "key_code": "left_command",
+              "lazy": true
+            }
+          ],
+          "parameters": {
+            "basic.to_if_held_down_threshold_milliseconds": 80
+          }
+        },
+
+        {
+          "type": "basic",
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "option_is_held",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "tab",
+            "modifiers": { "optional": ["any"] }
+          },
+          "to": [
+            {
+              "key_code": "tab",
+              "modifiers": ["left_command"]
+            }
+          ]
+        },
+
+        {
+          "type": "basic",
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "option_is_held",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "tab",
+            "modifiers": {
+              "mandatory": ["left_shift"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "tab",
+              "modifiers": ["left_command", "left_shift"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Hold ⌘ only during app switch: Option hold + Tab/Shift+Tab",
+      "manipulators": [
+        /* Optionを押したら"待機フラグ"だけ立てる（他のOption+◯は素通し） */
+        {
+          "type": "basic",
+          "from": { "key_code": "left_option", "modifiers": { "optional": ["any"] } },
+          "to": [ { "set_variable": { "name": "opt_waiting_tab", "value": 1 } } ],
+          "to_after_key_up": [
+            { "set_variable": { "name": "opt_waiting_tab", "value": 0 } },
+            { "set_variable": { "name": "opt_switch_active", "value": 0 } },
+            { "shell_command": "osascript -e 'tell application \"System Events\" to key up command'" }
+          ]
+        },
+
+        /* 初回：Option押し中にTabが来た瞬間だけ ⌘を押し始め、Tab送出（=⌘+Tab）し、保持を有効化 */
+        {
+          "type": "basic",
+          "conditions": [
+            { "type": "variable_if", "name": "opt_waiting_tab",  "value": 1 },
+            { "type": "variable_if", "name": "opt_switch_active", "value": 0 }
+          ],
+          "from": { "key_code": "tab", "modifiers": { "optional": ["any"] } },
+          "to": [
+            { "shell_command": "osascript -e 'tell application \"System Events\" to key down command'" },
+            { "set_variable": { "name": "opt_switch_active", "value": 1 } },
+            { "key_code": "tab" }
+          ]
+        },
+
+        /* 継続：保持中はTab→⌘+Tab、Shift+Tab→⌘+Shift+Tab（⌘はOS側で保持中） */
+        {
+          "type": "basic",
+          "conditions": [ { "type": "variable_if", "name": "opt_switch_active", "value": 1 } ],
+          "from": { "key_code": "tab", "modifiers": { "optional": ["any"] } },
+          "to": [ { "key_code": "tab" } ]
+        },
+        {
+          "type": "basic",
+          "conditions": [ { "type": "variable_if", "name": "opt_switch_active", "value": 1 } ],
+          "from": { "key_code": "tab", "modifiers": { "mandatory": ["left_shift"], "optional": ["any"] } },
+          "to": [ { "key_code": "tab", "modifiers": ["left_shift"] } ]
+        }
+      ]
+    },
+    {
+      "description": "Map left_control to left_command except in Terminal/Alacritty/Ghostty",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "left_control",
+            "modifiers": { "optional": ["any"] }
+          },
+          "to": [
+            { "key_code": "left_command" }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.apple\\.Terminal$",
+                "^org\\.alacritty$",
+                "^com\\.mitchellh\\.ghostty$"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+{{- end }}
