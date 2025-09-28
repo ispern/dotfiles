@@ -1,0 +1,120 @@
+# Alacritty configuration (TOML format)
+
+[env]
+TERM = "xterm-256color"
+
+[window]
+padding = { x = 10, y = 5 }
+dynamic_padding = true
+opacity = 0.9
+decorations = "Full"
+
+[window.dimensions]
+columns = 0
+lines = 0
+
+[font]
+size = {{ if eq .chezmoi.os "darwin" -}}
+14.0
+{{- else -}}
+12.0
+{{- end }}
+
+[font.normal]
+family = "UDEV Gothic 35HSLG"
+style = "Regular"
+
+[font.bold]
+family = "UDEV Gothic 35HSLG"
+style = "Bold"
+
+[font.italic]
+family = "UDEV Gothic 35HSLG"
+style = "Italic"
+
+# Colors (Nord theme)
+# https://www.nordtheme.com/
+[colors.primary]
+background = '#2E3440'  # nord0
+foreground = '#D8DEE9'  # nord4
+dim_foreground = '#A5ABAD'
+bright_foreground = '#ECEFF4'  # nord6
+
+[colors.cursor]
+text = '#2E3440'  # nord0
+cursor = '#D8DEE9'  # nord4
+
+[colors.vi_mode_cursor]
+text = '#2E3440'  # nord0
+cursor = '#D8DEE9'  # nord4
+
+[colors.selection]
+text = 'CellForeground'
+background = '#4C566A'  # nord3
+
+[colors.search]
+matches = { foreground = '#2E3440', background = '#88C0D0' }  # nord0, nord8
+focused_match = { foreground = '#2E3440', background = '#A3BE8C' }  # nord0, nord14
+
+[colors.normal]
+black   = '#3B4252'  # nord1
+red     = '#BF616A'  # nord11
+green   = '#A3BE8C'  # nord14
+yellow  = '#EBCB8B'  # nord13
+blue    = '#81A1C1'  # nord9
+magenta = '#B48EAD'  # nord15
+cyan    = '#88C0D0'  # nord8
+white   = '#E5E9F0'  # nord5
+
+[colors.bright]
+black   = '#4C566A'  # nord3
+red     = '#BF616A'  # nord11
+green   = '#A3BE8C'  # nord14
+yellow  = '#EBCB8B'  # nord13
+blue    = '#81A1C1'  # nord9
+magenta = '#B48EAD'  # nord15
+cyan    = '#8FBCBB'  # nord7
+white   = '#ECEFF4'  # nord6
+
+[colors.dim]
+black   = '#373E4D'
+red     = '#94545D'
+green   = '#809575'
+yellow  = '#B29E75'
+blue    = '#68809A'
+magenta = '#8C738C'
+cyan    = '#6D96A5'
+white   = '#AEB3BB'
+
+[shell]
+{{- if eq .chezmoi.os "darwin" }}
+program = "/opt/homebrew/bin/fish"
+{{- else if .wsl2 }}
+program = "/usr/bin/fish"
+{{- else if eq .chezmoi.os "windows" }}
+program = "powershell.exe"
+{{- else }}
+program = "/usr/bin/fish"
+{{- end }}
+
+[keyboard]
+bindings = [
+  # macOS specific bindings
+  {{- if eq .chezmoi.os "darwin" }}
+  { key = "N", mods = "Command", action = "SpawnNewInstance" },
+  { key = "Q", mods = "Command", action = "Quit" },
+  { key = "W", mods = "Command", action = "Quit" },
+  { key = "Plus", mods = "Command", action = "IncreaseFontSize" },
+  { key = "Minus", mods = "Command", action = "DecreaseFontSize" },
+  { key = "Key0", mods = "Command", action = "ResetFontSize" },
+  {{- else }}
+  # Linux/Windows bindings
+  { key = "N", mods = "Control|Shift", action = "SpawnNewInstance" },
+  { key = "Plus", mods = "Control", action = "IncreaseFontSize" },
+  { key = "Minus", mods = "Control", action = "DecreaseFontSize" },
+  { key = "Key0", mods = "Control", action = "ResetFontSize" },
+  {{- end }}
+  # Common bindings
+  { key = "V", mods = "Control|Shift", action = "Paste" },
+  { key = "C", mods = "Control|Shift", action = "Copy" },
+]

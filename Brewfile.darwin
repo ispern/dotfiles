@@ -71,6 +71,7 @@ brew "iperf3"
 brew "pyenv"
 
 # Cask applications
+cask "alacritty"
 cask "1password"
 cask "1password-cli"
 cask "atok"
