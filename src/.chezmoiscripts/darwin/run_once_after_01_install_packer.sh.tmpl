@@ -1,0 +1,18 @@
+{{ if eq .chezmoi.os "darwin" -}}
+#!/bin/bash
+set -eufo pipefail
+
+# Install Packer.nvim for Neovim plugin management
+PACKER_DIR="$HOME/.local/share/nvim/site/pack/packer/start/packer.nvim"
+
+if [ ! -d "$PACKER_DIR" ]; then
+    echo "Installing Packer.nvim..."
+    git clone --depth 1 https://github.com/wbthomason/packer.nvim "$PACKER_DIR"
+    echo "Packer.nvim installed successfully"
+else
+    echo "Packer.nvim is already installed"
+fi
+
+# Create Neovim config directory if it doesn't exist
+mkdir -p "$HOME/.config/nvim"
+{{ end -}}

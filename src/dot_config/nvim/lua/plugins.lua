@@ -143,8 +143,8 @@ return require('packer').startup(function(use)
   -- Highlights
   use {
     'nvim-treesitter/nvim-treesitter',
+    branch = 'main',  -- main is the recommended branch
     requires = {
-      'nvim-treesitter/nvim-treesitter-refactor',
       'RRethy/nvim-treesitter-textsubjects',
     },
     config = [[require('config.treesitter')]],
