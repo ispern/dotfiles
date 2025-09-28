@@ -1,5 +1,5 @@
-#!/bin/bash
 {{- if .wsl2 }}
+#!/bin/bash
   {{ $sudo := "sudo " -}}
   {{ if eq .chezmoi.username "root" -}}
   {{   $sudo = "" -}}

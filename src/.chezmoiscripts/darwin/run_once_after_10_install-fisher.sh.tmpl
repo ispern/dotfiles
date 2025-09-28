@@ -1,0 +1,18 @@
+{{ if eq .chezmoi.os "darwin" -}}
+#!/bin/bash
+
+set -eufo pipefail
+
+# Install Fisher (fish plugin manager)
+if ! fish -c "type -q fisher" 2>/dev/null; then
+    echo "Installing Fisher..."
+    fish -c "curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher"
+fi
+
+# Install fish plugins
+if [ -f "$HOME/.config/fish/fish_plugins" ]; then
+    echo "Installing fish plugins..."
+    fish -c "fisher update"
+fi
+
+{{ end -}}

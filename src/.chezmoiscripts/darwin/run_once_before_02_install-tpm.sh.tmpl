@@ -1,0 +1,14 @@
+{{ if eq .chezmoi.os "darwin" -}}
+#!/bin/bash
+
+set -eufo pipefail
+
+# Install Tmux Plugin Manager
+if [ ! -d "$HOME/.tmux/plugins/tpm" ]; then
+    echo "Installing Tmux Plugin Manager..."
+    git clone https://github.com/tmux-plugins/tpm "$HOME/.tmux/plugins/tpm"
+else
+    echo "Tmux Plugin Manager is already installed"
+fi
+
+{{ end -}}

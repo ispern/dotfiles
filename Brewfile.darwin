@@ -1,0 +1,109 @@
+# Homebrew packages for macOS
+
+# Taps
+tap "eth-p/software"
+
+# Development tools
+brew "act"
+brew "bat"
+brew "bat-extras"
+brew "curlie"
+brew "deno"
+brew "eza"
+brew "fd"
+brew "fzf"
+brew "gh"
+brew "ghq"
+brew "gibo"
+brew "git"
+brew "git-delta"
+brew "jq"
+brew "neovim"
+brew "ripgrep"
+brew "starship"
+brew "tig"
+brew "tmux"
+
+# Shell
+brew "fish"
+
+# GNU tools for macOS
+brew "coreutils"
+brew "gnu-sed"
+brew "gawk"
+brew "findutils"
+brew "grep"
+
+# Additional utilities
+brew "wget"
+brew "tree"
+brew "watch"
+brew "htop"
+brew "ncdu"
+brew "tldr"
+brew "glow"  # Markdown viewer
+brew "yq"    # YAML processor
+
+# Build tools and dependencies
+brew "autoconf"
+brew "ca-certificates"
+brew "gettext"
+brew "libunistring"
+brew "libuv"
+brew "lpeg"
+brew "luajit"
+brew "luv"
+brew "m4"
+brew "mpdecimal"
+brew "openssl@3"
+brew "pkgconf"
+brew "readline"
+brew "sqlite"
+brew "tree-sitter"
+brew "unibilium"
+brew "utf8proc"
+brew "xz"
+
+# Network tools
+brew "iperf3"
+
+# Version managers
+brew "pyenv"
+
+# Cask applications
+cask "1password"
+cask "1password-cli"
+cask "atok"
+cask "chatgpt"
+cask "claude"
+cask "claude-code"
+cask "cursor"
+cask "deepl"
+cask "dropbox"
+cask "figma"
+cask "google-chrome"
+cask "google-drive"
+cask "jetbrains-toolbox"
+cask "karabiner-elements"
+cask "logi-options+"
+cask "microsoft-auto-update"
+cask "microsoft-office-businesspro"
+cask "notion"
+cask "notion-calendar"
+cask "obsidian"
+cask "orbstack"
+cask "path-finder"
+cask "postman"
+cask "raycast"
+cask "slack"
+cask "visual-studio-code"
+cask "zoom"
+
+# Fonts
+cask "font-hackgen"
+cask "font-hackgen-nerd"
+cask "font-jetbrains-mono"
+cask "font-jetbrains-mono-nerd-font"
+cask "font-udev-gothic"
+cask "font-udev-gothic-hs"
+cask "font-udev-gothic-nf"

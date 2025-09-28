@@ -18,7 +18,9 @@
   precomposeunicode = true
   quotepath = false
   pager = delta
+{{- if ne .chezmoi.os "darwin" }}
   sshCommand = ssh.exe
+{{- end }}
 [interactive]
   diffFilter = delta --color-only
 [add.interactive]

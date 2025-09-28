@@ -1,4 +1,4 @@
-{{ if and (eq .chezmoi.os "linux") -}}
+{{- if eq .chezmoi.os "linux" }}
 #!/bin/bash
 if [ ! -d $HOME/.local/share/nvim/site/pack/packer ]; then
 git clone --depth 1 https://github.com/wbthomason/packer.nvim $HOME/.local/share/nvim/site/pack/packer/start/packer.nvim

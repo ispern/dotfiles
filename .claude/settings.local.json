@@ -4,7 +4,11 @@
       "Bash(find:*)",
       "Bash(git add:*)",
       "Bash(git commit:*)",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "Bash(grep:*)",
+      "Bash(mkdir:*)",
+      "Bash(brew list:*)",
+      "Bash(chezmoi status:*)"
     ],
     "deny": []
   }
