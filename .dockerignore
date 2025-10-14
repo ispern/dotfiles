@@ -1,0 +1,48 @@
+# Git関連
+.git
+.gitignore
+.gitattributes
+
+# Docker関連
+Dockerfile
+.dockerignore
+docker-compose.yml
+
+# ドキュメント
+README.md
+CLAUDE.md
+
+# ロックファイル
+Brewfile.lock.json
+
+# 一時ファイル
+*.tmp
+*.log
+.DS_Store
+Thumbs.db
+
+# IDE関連
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# キャッシュ
+node_modules/
+.npm/
+.yarn/
+
+# ビルド成果物
+dist/
+build/
+target/
+
+# テスト関連
+coverage/
+.nyc_output/
+
+# 環境変数ファイル
+.env
+.env.local
+.env.*.local
+

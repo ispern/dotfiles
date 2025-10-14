@@ -9,9 +9,9 @@
     "codespaces": {{ $codespaces }},
     "remoteContainers": {{ $remoteContainers }},
 {{- if or ($codespaces) ($remoteContainers) }}
-    "email": "",
-    "workspaceRoot": "~/workspaces",
-    "editor": "/usr/sbin/nvim"
+    "email": {{ env "CHEZMOI_EMAIL" | default "" | quote }},
+    "workspaceRoot": {{ env "CHEZMOI_WORKSPACE_ROOT" | default "~/workspaces" | quote }},
+    "editor": {{ env "CHEZMOI_EDITOR" | default "/usr/bin/nvim" | quote }}
 {{- else }}
     "email": {{ promptString "email" | quote }},
     "workspaceRoot": {{ promptString "Workspace Root Directory" | quote }},

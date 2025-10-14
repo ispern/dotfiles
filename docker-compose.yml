@@ -1,0 +1,64 @@
+version: "3.8"
+
+services:
+  # Linux環境テスト（通常のLinux）
+  linux-interactive:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: dotfiles-linux-interactive
+    volumes:
+      - .:/workspace
+    working_dir: /workspace
+    stdin_open: true
+    tty: true
+    command: /bin/bash
+
+  # WSL2環境テスト（Microsoftカーネル）
+  wsl2-interactive:
+    build:
+      context: .
+      dockerfile: Dockerfile.wsl2
+    container_name: dotfiles-wsl2-interactive
+    volumes:
+      - .:/workspace
+    working_dir: /workspace
+    stdin_open: true
+    tty: true
+    command: /bin/bash
+
+  # Remote Containers環境テスト
+  remote-containers-interactive:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: dotfiles-remote-containers-interactive
+    volumes:
+      - .:/workspace
+    working_dir: /workspace
+    environment:
+      - REMOTE_CONTAINERS=true
+      - CHEZMOI_EMAIL=test@example.com
+      - CHEZMOI_WORKSPACE_ROOT=/workspace
+      - CHEZMOI_EDITOR=/usr/bin/nvim
+    stdin_open: true
+    tty: true
+    command: /bin/bash
+
+  # Codespaces環境テスト
+  codespaces-interactive:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: dotfiles-codespaces-interactive
+    volumes:
+      - .:/workspace
+    working_dir: /workspace
+    environment:
+      - CODESPACES=true
+      - CHEZMOI_EMAIL=test@example.com
+      - CHEZMOI_WORKSPACE_ROOT=/workspace
+      - CHEZMOI_EDITOR=/usr/bin/nvim
+    stdin_open: true
+    tty: true
+    command: /bin/bash
