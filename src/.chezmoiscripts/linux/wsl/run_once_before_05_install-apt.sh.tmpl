@@ -1,0 +1,11 @@
+{{ if .wsl2 -}}
+{{ $sudo := "sudo " -}}
+{{ if eq .chezmoi.username "root" -}}
+{{   $sudo = "" -}}
+{{ end -}}
+
+#!/bin/bash
+
+{{ $sudo }} apt update && \
+     {{ $sudo }} apt install -y socat
+{{ end -}}
