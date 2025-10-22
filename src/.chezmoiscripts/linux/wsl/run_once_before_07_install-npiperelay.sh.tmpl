@@ -1,0 +1,40 @@
+{{ if .wsl2 -}}
+{{ $sudo := "sudo " -}}
+{{ if eq .chezmoi.username "root" -}}
+{{   $sudo = "" -}}
+{{ end -}}
+
+#!/bin/bash
+
+# npiperelay.exeのインストール
+# SSH agent forwarding用のWindows名前付きパイプリレー
+
+# binディレクトリの作成
+if [ ! -d $HOME/bin ]; then
+  mkdir -p $HOME/bin
+fi
+
+# npiperelay.exeが既に存在する場合はスキップ
+if [ ! -e $HOME/bin/npiperelay.exe ]; then
+  echo "Downloading npiperelay.exe..."
+  
+  # GitHubリリースから最新版をダウンロード
+  curl -L -o /tmp/npiperelay.zip https://github.com/jstarks/npiperelay/releases/latest/download/npiperelay_windows_amd64.zip
+  
+  # ZIPファイルを解凍
+  unzip -q /tmp/npiperelay.zip -d /tmp/npiperelay
+  
+  # npiperelay.exeをbinディレクトリに移動
+  mv /tmp/npiperelay/npiperelay.exe $HOME/bin/
+  
+  # 実行可能権限を付与
+  chmod +x $HOME/bin/npiperelay.exe
+  
+  # 一時ファイルをクリーンアップ
+  rm -rf /tmp/npiperelay /tmp/npiperelay.zip
+  
+  echo "npiperelay.exe installed successfully to $HOME/bin/"
+else
+  echo "npiperelay.exe already exists at $HOME/bin/npiperelay.exe"
+fi
+{{ end -}}
