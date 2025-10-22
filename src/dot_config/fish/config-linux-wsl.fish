@@ -1,11 +1,25 @@
-set ssh_exe_path (which ssh.exe 2>/dev/null)
+set -gx WIN_HOME /mnt/c/Users/h.matsuoka
 
-if test -n "$ssh_exe_path"
-    alias ssh="$ssh_exe_path"
-    alias ssh-add=(string replace ssh.exe ssh-add.exe $ssh_exe_path)
+# Configure ssh forwarding
+# https://stuartleeks.com/posts/wsl-ssh-key-forward-to-windows
+set -gx SSH_AUTH_SOCK $HOME/.ssh/agent.sock
+
+if ! ss -a | grep -q $SSH_AUTH_SOCK >/dev/null 2>&1
+    if test -S $SSH_AUTH_SOCK
+        echo "removing previous socket..."
+        rm -f $SSH_AUTH_SOCK
+    end
+    echo "Starting SSH-Agent relay..."
+    set -x NPIPERELAY $HOME/bin/npiperelay.exe
+    eval (socat UNIX-LISTEN:$SSH_AUTH_SOCK,fork EXEC:"$NPIPERELAY -ei -s //./pipe/openssh-ssh-agent",nofork &) >/dev/null 2>&1
 end
 
-set -gx WIN_HOME /mnt/c/Users/h.matsuoka
+# volta
+# LinuxBrewでインストールされたnodeが優先されてしまうので、先にvoltaを読み込む
+if test -d $HOME/.volta
+    set -gx VOLTA_HOME $HOME/.volta
+    set -gx PATH "$VOLTA_HOME/bin" $PATH
+end
 
 if test -d /home/linuxbrew/.linuxbrew/; or test -d $HOME/.linuxbrew
     if status --is-interactive
@@ -35,7 +49,7 @@ if test -d $HOME/.local/share/pnpm
 end
 
 if type -q eza
-  alias ll "eza -l -g -a --icons --sort=type"
+    alias ll "eza -l -g -a --icons --sort=type"
 end
 
 # Docker for Windows
