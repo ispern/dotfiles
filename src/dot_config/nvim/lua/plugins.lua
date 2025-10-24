@@ -144,9 +144,6 @@ return require('packer').startup(function(use)
   use {
     'nvim-treesitter/nvim-treesitter',
     branch = 'main',  -- main is the recommended branch
-    requires = {
-      'RRethy/nvim-treesitter-textsubjects',
-    },
     config = [[require('config.treesitter')]],
     run = ':TSUpdate',
   }
