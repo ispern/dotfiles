@@ -37,6 +37,9 @@ dracula.setup({
     DiagnosticVirtualTextHint = { fg = hint, },
     LspDiagnosticsDefaultInformation = { fg = info, },
     LspDiagnosticsDefaultHint = { fg = hint, },
+    -- Visual mode selection highlighting
+    Visual = { fg = dracula.colors().fg, bg = palette.selection },
+    VisualNOS = { fg = dracula.colors().fg, bg = palette.selection },
     -- Examples
     -- NonText = { fg = dracula.colors().white }, -- set NonText fg to white
     -- NvimTreeIndentMarker = { link = "NonText" }, -- link to NonText highlight
