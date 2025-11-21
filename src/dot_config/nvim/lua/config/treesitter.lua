@@ -1,11 +1,7 @@
--- Ensure nvim-treesitter is loaded before attempting configuration
-local status_ok, configs = pcall(require, 'nvim-treesitter.configs')
-if not status_ok then
-  vim.notify('nvim-treesitter.configs not found!', vim.log.levels.ERROR)
-  return
-end
+-- Ensure nvim-treesitter is loaded (fixes rtp management issue)
+vim.cmd('packadd nvim-treesitter')
 
-configs.setup {
+require('nvim-treesitter.configs').setup {
   -- A list of parser names, or "all" (for latest version, use "all" or "maintained")
   ensure_installed = {
     -- Frontend
