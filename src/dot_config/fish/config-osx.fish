@@ -26,6 +26,11 @@ if test -d /opt/homebrew/opt/grep/libexec/gnubin
     fish_add_path -gP /opt/homebrew/opt/grep/libexec/gnubin
 end
 
+# User binaries
+if test -d "$HOME/.local/bin"
+    fish_add_path -gP "$HOME/.local/bin"
+end
+
 # Environment variables
 set -gx EDITOR nvim
 set -gx VISUAL nvim
