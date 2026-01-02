@@ -7,9 +7,9 @@ config.automatically_reload_config = true
 config.font = wezterm.font("UDEV Gothic NF", {
 	weight = "Medium",
 })
-config.font_size = 15.0
+config.font_size = 16.0
 config.use_ime = true
-config.window_background_opacity = 0.90
+config.window_background_opacity = 0.97
 config.macos_window_background_blur = 20
 
 ----------------------------------------------------
