@@ -98,3 +98,21 @@
   light = false    # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
 [init]
 	defaultBranch = main
+
+# OS固有の設定
+{{- if eq .chezmoi.os "darwin" }}
+# macOS固有の設定
+{{- end }}
+
+{{- if eq .chezmoi.os "windows" }}
+# Windows固有の設定
+[credential]
+	helper = manager-core
+{{- end }}
+
+# ホスト固有の設定ファイルを読み込む
+# 各ホストで ~/.gitconfig.local を作成すると、自動的に読み込まれます
+# このファイルはchezmoiで管理されず、各ホストで自由に設定できます
+# ファイルが存在しない場合は無視されます
+[include]
+	path = ~/.gitconfig.local
