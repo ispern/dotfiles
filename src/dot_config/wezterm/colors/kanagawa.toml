@@ -1,0 +1,60 @@
+[colors]
+foreground = "#dcd7ba"
+background = "#1F1F28"
+cursor_bg = "#c8c093"
+cursor_border = "#c8c093"
+cursor_fg = "#2D4F67"
+selection_fg = "#c8c093"
+selection_bg = "#2d4f67"
+scrollbar_thumb = "#16161d"
+split = "#16161d"
+
+ansi = [
+  "#090618",
+  "#c34043",
+  "#76946a",
+  "#c0a36e",
+  "#7e9cd8",
+  "#957fb8",
+  "#6a9589",
+  "#c8c093",
+]
+brights = [
+  "#727169",
+  "#e82424",
+  "#98bb6c",
+  "#e6c384",
+  "#7fb4ca",
+  "#938aa9",
+  "#7aa89f",
+  "#dcd7ba",
+]
+
+[colors.tab_bar]
+inactive_tab_edge = "#16161d"
+background = "#1F1F28"
+
+[colors.tab_bar.active_tab]
+fg_color = "#c8c093"
+bg_color = "#1F1F28"
+
+[colors.tab_bar.inactive_tab]
+fg_color = "#727169"
+bg_color = "#16161d"
+
+[colors.tab_bar.inactive_tab_hover]
+fg_color = "#dcd7ba"
+bg_color = "#16161d"
+
+[colors.tab_bar.new_tab_hover]
+fg_color = "#dcd7ba"
+bg_color = "#1F1F28"
+
+[colors.tab_bar.new_tab]
+fg_color = "#dcd7ba"
+bg_color = "#1F1F28"
+
+[metadata]
+aliases = []
+author = "rebelot"
+name = "kanagawa"
