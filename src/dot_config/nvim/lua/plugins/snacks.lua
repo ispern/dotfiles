@@ -18,6 +18,15 @@ return {
 			scroll = {
 				enabled = false,
 			},
+
+			picker = {
+				sources = {
+					explorer = {
+						hidden = true, -- 隠しファイル (.で始まる) を表示
+						ignored = true, -- gitignore されたファイル (.env等) を表示
+					},
+				},
+			},
 		},
 	},
 }
