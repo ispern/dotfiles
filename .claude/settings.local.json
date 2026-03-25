@@ -8,7 +8,9 @@
       "Bash(grep:*)",
       "Bash(mkdir:*)",
       "Bash(brew list:*)",
-      "Bash(chezmoi status:*)"
+      "Bash(chezmoi status:*)",
+      "WebFetch(domain:wezterm.org)",
+      "Bash(git status:*)"
     ],
     "deny": []
   }

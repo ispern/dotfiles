@@ -7,6 +7,7 @@ return {
 			typescript = { "eslint" },
 			typescriptreact = { "eslint" },
 			astro = { "eslint" },
+			vue = { "eslint" },
 		},
 	},
 }

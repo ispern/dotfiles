@@ -53,6 +53,8 @@ return {
 		-- Tab移動
 		{ key = "Tab", mods = "CTRL", action = act.ActivateTabRelative(1) },
 		{ key = "Tab", mods = "SHIFT|CTRL", action = act.ActivateTabRelative(-1) },
+		{ key = "]", mods = "SHIFT|CTRL", action = act.ActivateTabRelative(1) },
+		{ key = "[", mods = "SHIFT|CTRL", action = act.ActivateTabRelative(-1) },
 		-- Tab入れ替え
 		{ key = "{", mods = "LEADER", action = act({ MoveTabRelative = -1 }) },
 		{ key = "}", mods = "LEADER", action = act({ MoveTabRelative = 1 }) },
@@ -79,8 +81,6 @@ return {
 		{ key = "l", mods = "LEADER", action = act.ActivatePaneDirection("Right") },
 		{ key = "k", mods = "LEADER", action = act.ActivatePaneDirection("Up") },
 		{ key = "j", mods = "LEADER", action = act.ActivatePaneDirection("Down") },
-		-- Pane選択
-		{ key = "[", mods = "CTRL|SHIFT", action = act.PaneSelect },
 		-- 選択中のPaneのみ表示
 		{ key = "z", mods = "LEADER", action = act.TogglePaneZoomState },
 
