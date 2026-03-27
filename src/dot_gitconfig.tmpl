@@ -21,13 +21,11 @@
 {{- end }}
   precomposeunicode = true
   quotepath = false
-{{- if ne .chezmoi.os "windows" }}
   pager = delta
 [interactive]
   diffFilter = delta --color-only
 [add.interactive]
   useBuiltin = false # required for git 2.37.0
-{{- end }}
 [alias]
 	# http://oli.jp/2012/git-powerup/
 	# http://blog.blindgaenger.net/advanced_git_aliases.html
@@ -96,19 +94,17 @@
 {{- else }}
 [credential]
 	helper = store
+{{- end }}
 [ghq]
 	root = {{ .workspaceRoot }}
-{{- end }}
 [filter "lfs"]
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
 	clean = git-lfs clean -- %f
-{{- if ne .chezmoi.os "windows" }}
 [delta]
   navigate = true  # use n and N to move between diff sections
   light = false    # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
-{{- end }}
 [init]
 	defaultBranch = main
 
