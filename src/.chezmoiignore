@@ -15,3 +15,29 @@
 {{- if .remoteContainers }}
 /.gitconfig
 {{- end }}
+
+{{- if eq .chezmoi.os "windows" }}
+# Windows: nvimとweztermのみ適用、それ以外は無視
+.zsh
+.zshrc
+.zshenv
+.zprofile
+.tmux
+.tmux.conf
+.vim
+.vimrc
+.gitconfig
+.gitignore
+.gemrc
+.npmrc
+.tigrc
+.tigrc.vim
+.ideavimrc
+.claude
+.config/fish
+.config/alacritty
+.config/karabiner
+.config/lazygit
+.config/starship.toml
+.chezmoiscripts
+{{- end }}

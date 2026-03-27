@@ -1,6 +1,7 @@
 {{- $codespaces := env "CODESPACES" | not | not -}}
 {{- $remoteContainers := env "REMOTE_CONTAINERS" | not | not -}}
-{{- $wsl2 := and (eq .chezmoi.os "linux") (.chezmoi.kernel.osrelease | lower | contains "microsoft") ($remoteContainers | not) -}}
+{{- $isWindows := eq .chezmoi.os "windows" -}}
+{{- $wsl2 := and (eq .chezmoi.os "linux") (not $isWindows) (.chezmoi.kernel.osrelease | lower | contains "microsoft") ($remoteContainers | not) -}}
 
 {
   "data": {
@@ -8,7 +9,11 @@
     "wsl2": {{ $wsl2 }},
     "codespaces": {{ $codespaces }},
     "remoteContainers": {{ $remoteContainers }},
-{{- if or ($codespaces) ($remoteContainers) }}
+{{- if $isWindows }}
+    "email": {{ promptString "email" | quote }},
+    "workspaceRoot": {{ promptString "Workspace Root Directory" | quote }},
+    "editor": {{ promptString "Git Editor" | quote }}
+{{- else if or ($codespaces) ($remoteContainers) }}
     "email": {{ env "CHEZMOI_EMAIL" | default "" | quote }},
     "workspaceRoot": {{ env "CHEZMOI_WORKSPACE_ROOT" | default "~/workspaces" | quote }},
     "editor": {{ env "CHEZMOI_EDITOR" | default "/usr/bin/nvim" | quote }}
