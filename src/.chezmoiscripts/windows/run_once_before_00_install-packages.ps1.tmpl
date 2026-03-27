@@ -1,6 +1,6 @@
 {{ if eq .chezmoi.os "windows" -}}
 # winget import でパッケージを一括インストール
-$wingetJson = Join-Path "{{ .chezmoi.sourceDir }}" ".chezmoiscripts\windows\winget.json"
+$wingetJson = Join-Path "{{ .chezmoi.sourceDir }}" "..\winget.json"
 Write-Host "Installing packages from $wingetJson ..."
 winget import --import-file $wingetJson --accept-package-agreements --accept-source-agreements --no-upgrade
 
