@@ -1,0 +1,107 @@
+{
+    "$schema": "https://aka.ms/winget-packages.schema.2.0.json",
+    "CreationDate": "2025-04-08T20:56:35.835-00:00",
+    "Sources": [
+        {
+            "Packages": [
+                {
+                    "PackageIdentifier": "7zip.7zip"
+                },
+                {
+                    "PackageIdentifier": "Docker.DockerDesktop"
+                },
+                {
+                    "PackageIdentifier": "Mozilla.Firefox.DeveloperEdition.ja"
+                },
+                {
+                    "PackageIdentifier": "Git.Git"
+                },
+                {
+                    "PackageIdentifier": "Volta.Volta"
+                },
+                {
+                    "PackageIdentifier": "Google.Chrome"
+                },
+                {
+                    "PackageIdentifier": "Logitech.OptionsPlus"
+                },
+                {
+                    "PackageIdentifier": "Olivia.VIA"
+                },
+                {
+                    "PackageIdentifier": "Adobe.CreativeCloud"
+                },
+                {
+                    "PackageIdentifier": "OBSProject.OBSStudio"
+                },
+                {
+                    "PackageIdentifier": "AgileBits.1Password"
+                },
+                {
+                    "PackageIdentifier": "Canva.Canva"
+                },
+                {
+                    "PackageIdentifier": "Notion.Notion"
+                },
+                {
+                    "PackageIdentifier": "Anthropic.Claude"
+                },
+                {
+                    "PackageIdentifier": "AutoHotkey.AutoHotkey"
+                },
+                {
+                    "PackageIdentifier": "Discord.Discord"
+                },
+                {
+                    "PackageIdentifier": "Figma.Figma"
+                },
+                {
+                    "PackageIdentifier": "Postman.Postman"
+                },
+                {
+                    "PackageIdentifier": "JetBrains.Toolbox"
+                },
+                {
+                    "PackageIdentifier": "Zoom.Zoom.EXE"
+                },
+                {
+                    "PackageIdentifier": "DeepL.DeepL"
+                },
+                {
+                    "PackageIdentifier": "SlackTechnologies.Slack"
+                },
+                {
+                    "PackageIdentifier": "WinSCP.WinSCP"
+                },
+                {
+                    "PackageIdentifier": "Microsoft.PowerToys"
+                },
+                {
+                    "PackageIdentifier": "Microsoft.VisualStudioCode"
+                },
+                {
+                    "PackageIdentifier": "Anysphere.Cursor"
+                },
+                {
+                    "PackageIdentifier": "wez.wezterm"
+                },
+                {
+                    "PackageIdentifier": "dandavison.delta"
+                },
+                {
+                    "PackageIdentifier": "x-motemen.ghq"
+                },
+                {
+                    "PackageIdentifier": "Neovim.Neovim"
+                }
+            ],
+            "SourceDetails": {
+                "Argument": "https://cdn.winget.microsoft.com/cache",
+                "Identifier": "Microsoft.Winget.Source_8wekyb3d8bbwe",
+                "Name": "winget",
+                "Type": "Microsoft.PreIndexed.Package"
+            }
+        }
+    ],
+    "WinGetVersion": "1.10.340"
+}
