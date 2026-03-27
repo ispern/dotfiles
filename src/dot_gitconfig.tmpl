@@ -14,14 +14,20 @@
 [core]
   excludesfile = ~/.gitignore
   editor = {{ .editor }}
+{{- if eq .chezmoi.os "windows" }}
+  autocrlf = true
+{{- else }}
   autocrlf = input
+{{- end }}
   precomposeunicode = true
   quotepath = false
+{{- if ne .chezmoi.os "windows" }}
   pager = delta
 [interactive]
   diffFilter = delta --color-only
 [add.interactive]
   useBuiltin = false # required for git 2.37.0
+{{- end }}
 [alias]
 	# http://oli.jp/2012/git-powerup/
 	# http://blog.blindgaenger.net/advanced_git_aliases.html
@@ -84,18 +90,25 @@
 	rev = https://{host}/{path}/commit/{commit}
 [http]
 	sslVerify = false
+{{- if eq .chezmoi.os "windows" }}
+[credential]
+	helper = manager
+{{- else }}
 [credential]
 	helper = store
 [ghq]
 	root = {{ .workspaceRoot }}
+{{- end }}
 [filter "lfs"]
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
 	clean = git-lfs clean -- %f
+{{- if ne .chezmoi.os "windows" }}
 [delta]
   navigate = true  # use n and N to move between diff sections
   light = false    # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
+{{- end }}
 [init]
 	defaultBranch = main
 
@@ -104,11 +117,7 @@
 # macOS固有の設定
 {{- end }}
 
-{{- if eq .chezmoi.os "windows" }}
-# Windows固有の設定
-[credential]
-	helper = manager-core
-{{- end }}
+
 
 # ホスト固有の設定ファイルを読み込む
 # 各ホストで ~/.gitconfig.local を作成すると、自動的に読み込まれます
