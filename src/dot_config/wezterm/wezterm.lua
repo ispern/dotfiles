@@ -1,7 +1,17 @@
 local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
-local resurrect_plugin = require("plugins/resurrect")
+local is_windows = wezterm.target_triple:find("windows") ~= nil
+
+local resurrect_plugin = nil
+if not is_windows then
+	resurrect_plugin = require("plugins/resurrect")
+end
+
+if is_windows then
+	config.default_domain = "WSL:Ubuntu-24.04"
+	config.front_end = "WebGpu"
+end
 
 config.automatically_reload_config = true
 config.font = wezterm.font("UDEV Gothic NF", {
@@ -92,11 +102,12 @@ end)
 config.disable_default_key_bindings = true
 -- 既存のキーバインドを読み込む
 local base_keys = require("keybindings").keys
--- resurrectプラグインのキーバインドを追加
-local resurrect_keys = resurrect_plugin.keys()
--- キーバインドをマージ（resurrectのキーバインドを追加）
-for _, key_binding in ipairs(resurrect_keys) do
-	table.insert(base_keys, key_binding)
+-- resurrectプラグインのキーバインドを追加（Windows以外）
+if resurrect_plugin then
+	local resurrect_keys = resurrect_plugin.keys()
+	for _, key_binding in ipairs(resurrect_keys) do
+		table.insert(base_keys, key_binding)
+	end
 end
 config.keys = base_keys
 config.key_tables = require("keybindings").key_tables

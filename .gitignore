@@ -1,1 +1,4 @@
 .claude/settings.local.json
+
+# Dropbox metadata
+*:com.dropbox.attrs
