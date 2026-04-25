@@ -11,6 +11,9 @@
   # Make fish a recognized login shell so `chsh -s fish` succeeds.
   programs.fish.enable = true;
 
+  # Register Nix-provided fish in /etc/shells (chsh validates against this list).
+  environment.shells = [ pkgs.fish ];
+
   # Primary user — required for nix-darwin to set up Spotlight launchers and
   # user-scoped services correctly.
   system.primaryUser = username;
