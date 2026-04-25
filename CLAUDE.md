@@ -4,11 +4,27 @@
 
 ## リポジトリ概要
 
-これは複数のマシン間で個人設定ファイルを管理するための **chezmoi管理のdotfilesリポジトリ** です。Chezmoiは、テンプレート機能を通じてマシン固有の差異を処理する宣言的なdotfilesマネージャーです。
+これは複数のマシン間で個人設定ファイルを管理するための **chezmoi + Nix Flakes ハイブリッドの dotfiles リポジトリ** です。
+
+| 責務 | ツール |
+|---|---|
+| CLI ツール（fish, tmux, neovim, eza 等）と将来的なシステム設定 | **Nix (nix-darwin + Home Manager)** — `nix/` 配下、`flake.lock` でハッシュ固定 |
+| dotfiles 本体（`~/.config/**`、`~/.tmux.conf`、`~/.gitconfig` 等の設定ファイル） | **chezmoi** — `src/` 配下、Go テンプレートでマシン固有値を処理 |
+| GUI アプリ・Font (macOS) | **Homebrew (cask)** — `Brewfile.darwin` |
+| Windows ネイティブ | **winget** — `winget.json` |
+| 言語ツールチェーン (Python/Ruby/Java) | **per-project flake + direnv**（このリポジトリでは管理しない） |
+
+Nix と chezmoi のパスは重なりません（Nix は `~/.nix-profile/bin/` 配下のバイナリを、chezmoi は `~/.config/...` の設定ファイルを管理）。
 
 ## よく使うコマンド
 
-### Dotfiles管理
+### Nix (CLI ツール / システム)
+- `darwin-rebuild switch --flake ./nix#default` - Nix 構成を適用
+- `darwin-rebuild --rollback` - 直前の世代へ巻き戻し
+- `nix flake update --flake ./nix` - inputs (nixpkgs 等) を最新化（明示的）
+- 詳細は `nix/README.md`
+
+### Dotfiles 管理 (chezmoi)
 - `chezmoi apply` - dotfilesの変更をホームディレクトリに適用
 - `chezmoi diff` - 適用される変更のプレビュー
 - `chezmoi edit <file>` - 管理されているファイルを編集（設定されたエディタで開く）
@@ -16,10 +32,10 @@
 - `chezmoi update` - ソースリポジトリから最新の変更を取得して適用
 
 ### 開発ワークフロー
-1. ソースディレクトリ (`src/`) 内のファイルを変更
-2. `chezmoi diff` で変更をテスト
-3. `chezmoi apply` で変更を適用
-4. gitに変更をコミット
+- **CLI ツールの追加 / 削除**: `nix/home/default.nix` の `home.packages` を編集 → `darwin-rebuild switch --flake ./nix#default`
+- **dotfiles の編集**: `src/` 内のファイルを変更 → `chezmoi diff` → `chezmoi apply`
+- **GUI アプリ / Font**: `Brewfile.darwin` を編集 → `brew bundle --file=Brewfile.darwin`
+- いずれの変更もコミット必須。Nix の場合は `nix/flake.lock` の更新もセットでコミット
 
 ### テスト
 - tmuxプラグインのテスト: `cd src/dot_tmux/plugins/<plugin>/tests && ./run_tests`
@@ -28,9 +44,10 @@
 ## アーキテクチャと構造
 
 ### ディレクトリ構成
-- **ソースルート**: `src/` (`.chezmoiroot` で設定)
-- **命名規則**: `dot_` プレフィックスはホームディレクトリで `.` になる（例：`dot_config` → `.config`）
-- **テンプレート**: `.tmpl` で終わるファイルはマシン固有の値のためにGoテンプレートで処理される
+- **chezmoi ソースルート**: `src/` (`.chezmoiroot` で設定)
+- **chezmoi 命名規則**: `dot_` プレフィックスはホームディレクトリで `.` になる（例：`dot_config` → `.config`）
+- **chezmoi テンプレート**: `.tmpl` で終わるファイルはマシン固有の値のためにGoテンプレートで処理される
+- **Nix 構成**: `nix/` （`flake.nix`, `home/`, `darwin/`）— chezmoi 管理対象外
 
 ### 主要な設定エリア
 1. **シェル環境**
