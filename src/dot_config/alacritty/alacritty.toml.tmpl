@@ -84,13 +84,13 @@ white   = '#AEB3BB'
 
 [terminal.shell]
 {{- if eq .chezmoi.os "darwin" }}
-program = "/opt/homebrew/bin/fish"
+program = "/run/current-system/sw/bin/fish"
 {{- else if .wsl2 }}
 program = "/usr/bin/fish"
 {{- else if eq .chezmoi.os "windows" }}
 program = "powershell.exe"
 {{- else }}
-program = "/usr/bin/fish"
+program = "/run/current-system/sw/bin/fish"
 {{- end }}
 
 [keyboard]
