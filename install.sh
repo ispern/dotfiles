@@ -46,21 +46,13 @@ fi
 # and renders all chezmoi-managed files including the nix/ flake.
 "$chezmoi" init --apply ispern
 
-# Step 4: Bootstrap nix-darwin on macOS so CLI tools (fish, tmux, neovim, etc.)
-# come from Nix instead of Homebrew. Idempotent: re-running just rebuilds.
-#
-# Sudo is only required for the first bootstrap (writing /etc/nix-darwin,
-# /etc/zshenv, /run/current-system). Subsequent rebuilds use darwin-rebuild
-# directly, which prompts for sudo internally only when activation needs root.
+# Step 4: Bootstrap (and rebuild) nix-darwin on macOS. Recent nix-darwin
+# requires root for system activation, so sudo is needed every time.
+# `nix run nix-darwin -- switch` works whether or not darwin-rebuild exists.
 if [ "$(uname)" = "Darwin" ] && command -v nix >/dev/null 2>&1; then
   flake_path="$("$chezmoi" source-path)/../nix"
   if [ -d "$flake_path" ]; then
-    if command -v darwin-rebuild >/dev/null 2>&1; then
-      echo "Rebuilding nix-darwin from ${flake_path} (no sudo)..." >&2
-      darwin-rebuild switch --flake "${flake_path}#default"
-    else
-      echo "Bootstrapping nix-darwin from ${flake_path} (sudo required)..." >&2
-      sudo nix run nix-darwin -- switch --flake "${flake_path}#default"
-    fi
+    echo "Applying nix-darwin from ${flake_path} (sudo required)..." >&2
+    sudo nix run nix-darwin -- switch --flake "${flake_path}#default"
   fi
 fi
