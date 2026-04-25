@@ -5,7 +5,7 @@
   # GNU userland tools shadow BSD coreutils so command behavior matches Linux.
   home.packages = lib.mkIf pkgs.stdenv.isDarwin (with pkgs; [
     coreutils
-    gnu-sed
+    gnused
     gawk
     findutils
     gnugrep
