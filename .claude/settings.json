@@ -9,8 +9,8 @@
       "Bash(mkdir:*)",
       "Bash(brew list:*)",
       "Bash(chezmoi status:*)",
-      "WebFetch(domain:wezterm.org)",
       "Bash(git status:*)",
+      "WebFetch(domain:wezterm.org)",
       "WebFetch(domain:raw.githubusercontent.com)"
     ],
     "deny": []
