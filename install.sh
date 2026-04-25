@@ -48,10 +48,19 @@ fi
 
 # Step 4: Bootstrap nix-darwin on macOS so CLI tools (fish, tmux, neovim, etc.)
 # come from Nix instead of Homebrew. Idempotent: re-running just rebuilds.
+#
+# Sudo is only required for the first bootstrap (writing /etc/nix-darwin,
+# /etc/zshenv, /run/current-system). Subsequent rebuilds use darwin-rebuild
+# directly, which prompts for sudo internally only when activation needs root.
 if [ "$(uname)" = "Darwin" ] && command -v nix >/dev/null 2>&1; then
   flake_path="$("$chezmoi" source-path)/../nix"
   if [ -d "$flake_path" ]; then
-    echo "Bootstrapping nix-darwin from ${flake_path}..." >&2
-    sudo nix run nix-darwin -- switch --flake "${flake_path}#default"
+    if command -v darwin-rebuild >/dev/null 2>&1; then
+      echo "Rebuilding nix-darwin from ${flake_path} (no sudo)..." >&2
+      darwin-rebuild switch --flake "${flake_path}#default"
+    else
+      echo "Bootstrapping nix-darwin from ${flake_path} (sudo required)..." >&2
+      sudo nix run nix-darwin -- switch --flake "${flake_path}#default"
+    fi
   fi
 fi
