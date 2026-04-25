@@ -4,6 +4,28 @@
 # -u: exit on unset variables
 set -eu
 
+# Step 1: Install Nix via Determinate Systems Installer if missing.
+# macOS / Linux / WSL2 supported. Skipped on plain Windows (uname != Darwin/Linux).
+if ! command -v nix >/dev/null 2>&1; then
+  case "$(uname)" in
+    Darwin|Linux)
+      echo "Installing Nix via Determinate Systems Installer..." >&2
+      curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix \
+        | sh -s -- install --no-confirm
+      ;;
+    *)
+      echo "Skipping Nix install on $(uname). Continuing with chezmoi only." >&2
+      ;;
+  esac
+
+  # Source Nix daemon env into this shell so subsequent commands see `nix`.
+  NIX_PROFILE_SCRIPT="/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh"
+  # shellcheck disable=SC1090
+  [ -f "$NIX_PROFILE_SCRIPT" ] && . "$NIX_PROFILE_SCRIPT"
+fi
+
+# Step 2: chezmoi bootstrap. Use existing chezmoi if available, else fetch
+# the lightweight install script from get.chezmoi.io.
 if ! chezmoi="$(command -v chezmoi)"; then
   bin_dir="${HOME}/.local/bin"
   chezmoi="${bin_dir}/chezmoi"
@@ -20,8 +42,16 @@ if ! chezmoi="$(command -v chezmoi)"; then
   unset chezmoi_install_script bin_dir
 fi
 
-set -- init --apply ispern
+# Step 3: Apply dotfiles. This clones the repo to ~/.local/share/chezmoi/
+# and renders all chezmoi-managed files including the nix/ flake.
+"$chezmoi" init --apply ispern
 
-echo "Running 'chezmoi $*'" >&2
-# exec: replace current process with chezmoi
-exec "$chezmoi" "$@"
+# Step 4: Bootstrap nix-darwin on macOS so CLI tools (fish, tmux, neovim, etc.)
+# come from Nix instead of Homebrew. Idempotent: re-running just rebuilds.
+if [ "$(uname)" = "Darwin" ] && command -v nix >/dev/null 2>&1; then
+  flake_path="$("$chezmoi" source-path)/../nix"
+  if [ -d "$flake_path" ]; then
+    echo "Bootstrapping nix-darwin from ${flake_path}..." >&2
+    sudo nix run nix-darwin -- switch --flake "${flake_path}#default"
+  fi
+fi

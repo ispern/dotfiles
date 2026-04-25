@@ -31,48 +31,33 @@ dotfiles
 
 ## 初回セットアップ
 
-### macOS
+### macOS（ワンライナー）
 
-1. **Nix のインストール** (Determinate Systems Installer)
+```sh
+curl -fsSL https://raw.githubusercontent.com/ispern/dotfiles/main/install.sh | sh
+```
 
-    ```sh
-    curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install
-    ```
+`install.sh` が以下を順に実行します:
 
-2. **このリポジトリを clone**
+1. Determinate Systems Installer で Nix を導入（既存ならスキップ）
+2. `chezmoi` をインストール（既存ならスキップ）
+3. `chezmoi init --apply ispern` でリポジトリを取得し dotfiles を適用
+4. `sudo nix run nix-darwin -- switch --flake ./nix#default` で CLI 環境を構築
 
-    ```sh
-    git clone git@github.com:ispern/dotfiles.git ~/workspace/github.com/ispern/dotfiles
-    cd ~/workspace/github.com/ispern/dotfiles
-    ```
+完了後の追加ステップ:
 
-3. **nix-darwin で CLI 環境をセットアップ**
+```sh
+# GUI アプリ / Font
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+brew bundle --file=Brewfile.darwin
 
-    ```sh
-    sudo nix run nix-darwin -- switch --flake ./nix#default
-    ```
+# fish をデフォルトシェルに
+chsh -s "$(which fish)"
+```
 
-    詳細・更新手順は [`nix/README.md`](./nix/README.md)。
+### macOS（手動セットアップ）
 
-4. **GUI アプリ / Font を Homebrew で導入**
-
-    ```sh
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-    brew bundle --file=Brewfile.darwin
-    ```
-
-5. **chezmoi で dotfiles を適用**
-
-    ```sh
-    nix profile install nixpkgs#chezmoi
-    chezmoi init --apply git@github.com:ispern/dotfiles.git
-    ```
-
-6. **fish をデフォルトシェルに**（`programs.fish.enable` が `/etc/shells` に追加済み）
-
-    ```sh
-    chsh -s "$(which fish)"
-    ```
+ワンライナーを使わず段階的に進める場合は [`nix/README.md`](./nix/README.md) を参照。
 
 ### Windows
 

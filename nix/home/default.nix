@@ -14,6 +14,9 @@
   home.stateVersion = "24.11";
 
   home.packages = with pkgs; [
+    # Bootstrap / dotfiles
+    chezmoi
+
     # Core CLI
     act
     bat
