@@ -1,4 +1,6 @@
 # macOS specific configuration for Zsh
+# CLI tools are provided by Nix (Home Manager). Homebrew remains for cask/font.
+# PATH order: ~/bin -> ~/.local/bin -> Nix -> system -> Homebrew suffix.
 
 # Environment variables
 export TERM="xterm-256color"
@@ -8,30 +10,22 @@ export EDITOR=nvim
 export VISUAL=nvim
 export PAGER=less
 
-# Homebrew setup for Apple Silicon
-if [ -d "/opt/homebrew" ]; then
-    eval "$(/opt/homebrew/bin/brew shellenv)"
-    export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
+# Homebrew (cask/font only). Append /opt/homebrew/{bin,sbin} so `brew` is found
+# without shadowing Nix-provided CLI tools.
+if [ -d "/opt/homebrew/bin" ]; then
+    export HOMEBREW_PREFIX="/opt/homebrew"
+    export HOMEBREW_CELLAR="/opt/homebrew/Cellar"
+    export HOMEBREW_REPOSITORY="/opt/homebrew"
+    case ":$PATH:" in
+        *:/opt/homebrew/bin:*) ;;
+        *) export PATH="$PATH:/opt/homebrew/bin:/opt/homebrew/sbin" ;;
+    esac
 fi
 
-# GNU tools from Homebrew
-if [ -d "/opt/homebrew/opt/coreutils/libexec/gnubin" ]; then
-    export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
-fi
-if [ -d "/opt/homebrew/opt/gnu-sed/libexec/gnubin" ]; then
-    export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
-fi
-if [ -d "/opt/homebrew/opt/findutils/libexec/gnubin" ]; then
-    export PATH="/opt/homebrew/opt/findutils/libexec/gnubin:$PATH"
-fi
-if [ -d "/opt/homebrew/opt/grep/libexec/gnubin" ]; then
-    export PATH="/opt/homebrew/opt/grep/libexec/gnubin:$PATH"
-fi
-
-# User binaries
+# User binaries (highest priority)
 export PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 
-# FZF configuration
+# FZF user defaults (programs.fzf.enable provides base init via Home Manager)
 if command -v fzf &> /dev/null; then
     export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --glob "!.git/*"'
     export FZF_DEFAULT_OPTS='--height 40% --reverse --border'
@@ -42,29 +36,9 @@ if [ -S "$HOME/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock" ]
     export SSH_AUTH_SOCK="$HOME/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
 fi
 
-# Starship prompt
+# Starship prompt (also provided via programs.starship for fish; zsh init here)
 if command -v starship &> /dev/null; then
     eval "$(starship init zsh)"
-fi
-
-# rbenv setup (if installed)
-if [ -d "$HOME/.rbenv" ]; then
-    export PATH="$HOME/.rbenv/bin:$PATH"
-    eval "$(rbenv init - zsh)"
-fi
-
-# nodenv setup (if installed)
-if [ -d "$HOME/.nodenv" ]; then
-    export PATH="$HOME/.nodenv/bin:$PATH"
-    eval "$(nodenv init -)"
-fi
-
-# pyenv setup (if installed)
-if [ -d "$HOME/.pyenv" ]; then
-    export PYENV_ROOT="$HOME/.pyenv"
-    export PATH="$PYENV_ROOT/bin:$PATH"
-    eval "$(pyenv init --path)"
-    eval "$(pyenv init -)"
 fi
 
 # Aliases
