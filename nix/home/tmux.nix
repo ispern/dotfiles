@@ -32,8 +32,8 @@
 
       set -g default-terminal "tmux-256color"
       set -ag terminal-overrides ",xterm-256color:RGB"
-      set-option -g default-shell /bin/zsh
-      set-option -g default-command /bin/zsh
+      set-option -g default-shell ${pkgs.fish}/bin/fish
+      set-option -g default-command ${pkgs.fish}/bin/fish
       set-option -g history-limit 10000
       set-option -g mouse on
 

@@ -1,7 +1,3 @@
-# zsh
-.zsh/*zsh_history
-.zsh/*.zwc
-
 # tmux
 .tmux/resurrect
 .tmux/plugins
@@ -18,10 +14,6 @@
 
 {{- if eq .chezmoi.os "windows" }}
 # Windows: nvim, wezterm, git設定のみ適用
-.zsh
-.zshrc
-.zshenv
-.zprofile
 .tmux
 .tmux.conf
 .vim

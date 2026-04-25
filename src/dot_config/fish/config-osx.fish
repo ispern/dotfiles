@@ -1,40 +1,18 @@
 # macOS specific configuration for Fish shell
+# CLI tools come from Nix (Home Manager). Homebrew is for cask/font only;
+# /opt/homebrew/bin is appended at PATH suffix so `brew` resolves without
+# shadowing Nix-provided binaries.
 
-# Homebrew setup for Apple Silicon
 if test -d /opt/homebrew
     set -gx HOMEBREW_PREFIX /opt/homebrew
     set -gx HOMEBREW_CELLAR /opt/homebrew/Cellar
     set -gx HOMEBREW_REPOSITORY /opt/homebrew
-    fish_add_path -gP /opt/homebrew/bin /opt/homebrew/sbin
+    fish_add_path -aP /opt/homebrew/bin /opt/homebrew/sbin
     set -q MANPATH; or set MANPATH ''
     set -gx MANPATH /opt/homebrew/share/man $MANPATH
     set -q INFOPATH; or set INFOPATH ''
     set -gx INFOPATH /opt/homebrew/share/info $INFOPATH
 end
-
-# GNU tools from Homebrew
-if test -d /opt/homebrew/opt/coreutils/libexec/gnubin
-    fish_add_path -gP /opt/homebrew/opt/coreutils/libexec/gnubin
-end
-if test -d /opt/homebrew/opt/gnu-sed/libexec/gnubin
-    fish_add_path -gP /opt/homebrew/opt/gnu-sed/libexec/gnubin
-end
-if test -d /opt/homebrew/opt/findutils/libexec/gnubin
-    fish_add_path -gP /opt/homebrew/opt/findutils/libexec/gnubin
-end
-if test -d /opt/homebrew/opt/grep/libexec/gnubin
-    fish_add_path -gP /opt/homebrew/opt/grep/libexec/gnubin
-end
-
-# User binaries
-if test -d "$HOME/.local/bin"
-    fish_add_path -gP "$HOME/.local/bin"
-end
-
-# Environment variables
-set -gx EDITOR nvim
-set -gx VISUAL nvim
-set -gx PAGER less
 
 # macOS specific aliases
 alias ls "eza --icons"
