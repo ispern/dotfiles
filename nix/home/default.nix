@@ -3,6 +3,8 @@
 {
   imports = [
     ./darwin.nix
+    ./fish.nix
+    ./tmux.nix
   ];
 
   home.username = username;
@@ -52,6 +54,12 @@
 
     # OpenAPI codegen (v3)
     swagger-codegen3
+
+    # Prompt (programs.starship.enable injects init for fish/zsh below)
+    starship
+
+    # Fuzzy finder (programs.fzf.enable wires shell integration)
+    fzf
   ] ++ (with pkgs.bat-extras; [
     batdiff
     batgrep
@@ -61,13 +69,25 @@
     prettybat
   ]);
 
-  # Lightweight programs.* enables that don't conflict with chezmoi-managed
-  # fish/tmux config files. Fish/tmux config and plugin migration is deferred
-  # to a Phase 1.x follow-up PR.
   programs.zoxide = {
     enable = true;
     enableFishIntegration = true;
     options = [ "--cmd" "z" ];
+  };
+
+  # Auto-injects `starship init fish | source` into config.fish, replacing
+  # the equivalent block previously in chezmoi's config-osx.fish.
+  programs.starship = {
+    enable = true;
+    enableFishIntegration = true;
+  };
+
+  # Sets FZF_* env vars and shell integrations (Ctrl-R history search etc.).
+  # Existing user customizations in chezmoi's config-osx.fish (FZF_DEFAULT_*)
+  # take precedence because they are sourced after HM-generated config.fish.
+  programs.fzf = {
+    enable = true;
+    enableFishIntegration = true;
   };
 
   # Let Home Manager track itself

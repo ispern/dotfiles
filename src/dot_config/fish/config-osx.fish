@@ -59,13 +59,11 @@ if test -S "$HOME/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock
     set -gx SSH_AUTH_SOCK "$HOME/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
 end
 
-# FZF configuration
+# FZF configuration (programs.fzf.enable in Home Manager handles base init;
+# these env vars layer on user-specific defaults).
 if command -v fzf >/dev/null
     set -gx FZF_DEFAULT_COMMAND 'rg --files --hidden --follow --glob "!.git/*"'
     set -gx FZF_DEFAULT_OPTS '--height 40% --reverse --border'
 end
 
-# Starship prompt
-if command -v starship >/dev/null
-    starship init fish | source
-end
+# Starship init is injected by Home Manager (programs.starship.enable).
