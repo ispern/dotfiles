@@ -27,11 +27,18 @@ return {
 		},
 	},
 
-	-- ブラウザでライブプレビュー（mermaid/KaTeX対応）
+	-- ブラウザでライブプレビュー（mermaid/KaTeX対応、GitHub風CSS）
 	{
 		"iamcco/markdown-preview.nvim",
 		cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
 		build = ":call mkdp#util#install()",
+		init = function()
+			local css_path = vim.fn.stdpath("config") .. "/github-markdown.css"
+			vim.g.mkdp_markdown_css = css_path
+		end,
+		config = function()
+			vim.cmd([[do FileType]])
+		end,
 		keys = {
 			{ "<leader>mp", ft = "markdown", "<cmd>MarkdownPreviewToggle<cr>", desc = "Markdown Preview (Browser)" },
 		},
