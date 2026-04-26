@@ -1,7 +1,7 @@
 #!/bin/sh
 
-# -e: exit on error
-# -u: exit on unset variables
+# -e: エラー時に即終了
+# -u: 未定義変数の参照で即終了
 set -eu
 
 # 非対話シェル（コンテナ内 `bash -c`、sudo --preserve-env なし、cron 等）では
@@ -11,54 +11,54 @@ set -eu
 : "${LOGNAME:=$USER}"
 export USER LOGNAME
 
-# Step 1: Install Nix via Determinate Systems Installer if missing.
-# macOS / Linux / WSL2 supported. Skipped on plain Windows (uname != Darwin/Linux).
+# Step 1: Nix が未インストールなら Determinate Systems Installer で導入する。
+# macOS / Linux / WSL2 に対応。ネイティブ Windows (uname != Darwin/Linux) ではスキップ。
 if ! command -v nix >/dev/null 2>&1; then
   case "$(uname)" in
     Darwin|Linux)
-      echo "Installing Nix via Determinate Systems Installer..." >&2
+      echo "Determinate Systems Installer で Nix を導入します..." >&2
       curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix \
         | sh -s -- install --no-confirm
       ;;
     *)
-      echo "Skipping Nix install on $(uname). Continuing with chezmoi only." >&2
+      echo "$(uname) では Nix のインストールをスキップし、chezmoi のみ続行します。" >&2
       ;;
   esac
 
-  # Source Nix daemon env into this shell so subsequent commands see `nix`.
+  # 後続コマンドが nix コマンドを見つけられるよう、Nix daemon 環境を読み込む。
   NIX_PROFILE_SCRIPT="/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh"
   # shellcheck disable=SC1090
   [ -f "$NIX_PROFILE_SCRIPT" ] && . "$NIX_PROFILE_SCRIPT"
 fi
 
-# Step 2: chezmoi bootstrap. Use existing chezmoi if available, else fetch
-# the lightweight install script from get.chezmoi.io.
+# Step 2: chezmoi の bootstrap。既に存在すれば再利用、無ければ get.chezmoi.io
+# の軽量インストーラを取得して導入する。
 if ! chezmoi="$(command -v chezmoi)"; then
   bin_dir="${HOME}/.local/bin"
   chezmoi="${bin_dir}/chezmoi"
-  echo "Installing chezmoi to '${chezmoi}'" >&2
+  echo "chezmoi を '${chezmoi}' にインストールします" >&2
   if command -v curl >/dev/null; then
     chezmoi_install_script="$(curl -fsSL get.chezmoi.io)"
   elif command -v wget >/dev/null; then
     chezmoi_install_script="$(wget -qO- get.chezmoi.io)"
   else
-    echo "To install chezmoi, you must have curl or wget installed." >&2
+    echo "chezmoi のインストールには curl または wget が必要です。" >&2
     exit 1
   fi
   sh -c "${chezmoi_install_script}" -- -b "${bin_dir}"
   unset chezmoi_install_script bin_dir
 fi
 
-# Step 3: Apply dotfiles. This clones the repo to ~/.local/share/chezmoi/
-# and renders all chezmoi-managed files including the nix/ flake.
+# Step 3: dotfiles を適用する。リポジトリを ~/.local/share/chezmoi/ に clone し、
+# nix/ flake を含む chezmoi 管理ファイルを全てレンダリング・配置する。
 # テスト用の上書き:
 #   DOTFILES_REPO=/path/to/repo  ローカルの git リポジトリから clone（push 不要の検証用）
 #   DOTFILES_BRANCH=feature/xxx  GitHub の特定ブランチから clone
 if [ -n "${DOTFILES_REPO:-}" ]; then
-  echo "Initializing chezmoi from local repo '${DOTFILES_REPO}'" >&2
+  echo "ローカルリポジトリ '${DOTFILES_REPO}' から chezmoi を初期化します" >&2
   "$chezmoi" init --apply "${DOTFILES_REPO}"
 elif [ -n "${DOTFILES_BRANCH:-}" ]; then
-  echo "Initializing chezmoi from branch '${DOTFILES_BRANCH}'" >&2
+  echo "ブランチ '${DOTFILES_BRANCH}' から chezmoi を初期化します" >&2
   "$chezmoi" init --apply --branch "${DOTFILES_BRANCH}" ispern
 else
   "$chezmoi" init --apply ispern
@@ -72,7 +72,7 @@ if command -v nix >/dev/null 2>&1; then
   if [ -d "$flake_path" ]; then
     case "$(uname)" in
       Darwin)
-        echo "Applying nix-darwin from ${flake_path} (sudo required)..." >&2
+        echo "${flake_path} から nix-darwin を適用します（sudo が必要）..." >&2
         sudo nix run nix-darwin -- switch --flake "${flake_path}#default"
         ;;
       Linux)
@@ -86,7 +86,7 @@ if command -v nix >/dev/null 2>&1; then
         case "$(uname -m)" in
           aarch64|arm64) home_target="${home_target}-aarch64" ;;
         esac
-        echo "Applying Home Manager (${home_target}) from ${flake_path}..." >&2
+        echo "${flake_path} から Home Manager (${home_target}) を適用します..." >&2
         nix run home-manager/master -- switch --flake "${flake_path}#${home_target}"
         ;;
     esac
