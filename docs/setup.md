@@ -61,6 +61,107 @@ which fish bat eza fd ripgrep tmux nvim git delta zoxide   # /home/<user>/.nix-p
 nix run home-manager -- generations                        # 世代履歴
 ```
 
+### 既存環境からのクリーン再インストール (Linux / WSL2)
+
+旧 zsh + zinit + Linuxbrew 構成や中途半端な状態から、現行 Nix Flakes 構成に乗り換える場合の手順。`~/.ssh` / `~/.gnupg` / `~/workspace/` 等は **このリポジトリの管理対象外** なので触れません。
+
+#### Step 1: chezmoi 状態を完全削除
+
+```sh
+rm -rf ~/.local/share/chezmoi   # ソースリポジトリ clone 先
+rm -rf ~/.config/chezmoi        # chezmoi.json / chezmoi.toml 設定
+```
+
+#### Step 2: 旧 dotfiles 残骸の削除
+
+```sh
+# zsh + zinit 時代の残骸
+rm -rf ~/.zinit ~/.zsh ~/.p10k.zsh
+rm -f  ~/.zshrc ~/.zsh_history
+
+# 旧 dotfiles を git clone していた場合
+rm -rf ~/.dotfiles
+
+# chezmoi が後で正しいテンプレートから作り直すため一旦削除
+rm -f ~/.gitconfig ~/.tmux.conf ~/.vimrc
+
+# tmux プラグイン (TPM) 残骸
+rm -rf ~/.tmux/plugins ~/.tmux
+
+# 古い fish 設定ディレクトリ (chezmoi が ~/.config/fish/ を再生成する)
+rm -rf ~/.config/fish
+```
+
+#### Step 3 (任意): Linuxbrew のアンインストール
+
+旧 Notion 手順で Linuxbrew を入れていた場合のみ:
+
+```sh
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/uninstall.sh)"
+sudo rm -rf /home/linuxbrew /opt/homebrew ~/.linuxbrew
+```
+
+`~/.bashrc` / `~/.profile` から `eval "$(brew shellenv)"` の行も削除。
+
+#### Step 4 (任意): Nix の完全リセット
+
+Nix 自体が壊れている場合のみ。健全なら飛ばす:
+
+```sh
+# Determinate Systems Installer 経由なら
+/nix/nix-installer uninstall
+
+# Home Manager の旧世代をクリーンアップだけしたい場合
+home-manager expire-generations '-1 days'
+nix-collect-garbage -d
+```
+
+#### Step 5: シェルを bash に戻す（再インストール前の安全策）
+
+```sh
+chsh -s /bin/bash
+# 一度ログアウト/ログインしてから次のステップへ
+```
+
+これで chezmoi が新しい fish 設定を配置する間、シェル不在で詰むのを回避。
+
+#### Step 6: クリーンインストール実行
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/ispern/dotfiles/main/install.sh | sh
+```
+
+`install.sh` が:
+1. Nix 未導入なら Determinate Installer で導入
+2. chezmoi 未導入なら導入
+3. `chezmoi init --apply ispern` で clean な状態から dotfiles 配置
+4. `nix run home-manager/master -- switch --flake ./nix#linux` (or `#wsl`) で CLI を Nix 管理化
+
+#### Step 7: シェルを fish に切替
+
+```sh
+echo "$(which fish)" | sudo tee -a /etc/shells
+chsh -s "$(which fish)"
+```
+
+#### Step 8: 動作確認
+
+```sh
+which fish bat eza fd ripgrep tmux nvim git delta zoxide
+# → /home/<user>/.nix-profile/bin/ 配下で揃う
+
+nix run home-manager -- generations
+# 直近の世代が出れば成功
+```
+
+#### ディスク領域の追加クリーンアップ (任意)
+
+```sh
+home-manager expire-generations '-7 days'   # 古い HM 世代を削除
+nix-collect-garbage -d                      # Nix store の不要 path を全削除
+nix-store --optimise                        # Nix store を最適化 (重複ハードリンク化)
+```
+
 ---
 
 ## WSL2 (Ubuntu 等)
