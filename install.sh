@@ -4,6 +4,13 @@
 # -u: exit on unset variables
 set -eu
 
+# 非対話シェル（コンテナ内 `bash -c`、sudo --preserve-env なし、cron 等）では
+# USER / LOGNAME が未設定のことがあり、home-manager が unbound variable で落ちる。
+# 実害が無い範囲で補完しておく。
+: "${USER:=$(id -un)}"
+: "${LOGNAME:=$USER}"
+export USER LOGNAME
+
 # Step 1: Install Nix via Determinate Systems Installer if missing.
 # macOS / Linux / WSL2 supported. Skipped on plain Windows (uname != Darwin/Linux).
 if ! command -v nix >/dev/null 2>&1; then
@@ -44,15 +51,44 @@ fi
 
 # Step 3: Apply dotfiles. This clones the repo to ~/.local/share/chezmoi/
 # and renders all chezmoi-managed files including the nix/ flake.
-"$chezmoi" init --apply ispern
+# テスト用の上書き:
+#   DOTFILES_REPO=/path/to/repo  ローカルの git リポジトリから clone（push 不要の検証用）
+#   DOTFILES_BRANCH=feature/xxx  GitHub の特定ブランチから clone
+if [ -n "${DOTFILES_REPO:-}" ]; then
+  echo "Initializing chezmoi from local repo '${DOTFILES_REPO}'" >&2
+  "$chezmoi" init --apply "${DOTFILES_REPO}"
+elif [ -n "${DOTFILES_BRANCH:-}" ]; then
+  echo "Initializing chezmoi from branch '${DOTFILES_BRANCH}'" >&2
+  "$chezmoi" init --apply --branch "${DOTFILES_BRANCH}" ispern
+else
+  "$chezmoi" init --apply ispern
+fi
 
-# Step 4: Bootstrap (and rebuild) nix-darwin on macOS. Recent nix-darwin
-# requires root for system activation, so sudo is needed every time.
-# `nix run nix-darwin -- switch` works whether or not darwin-rebuild exists.
-if [ "$(uname)" = "Darwin" ] && command -v nix >/dev/null 2>&1; then
+# Step 4: OS 別に Nix 構成を適用する。
+# - macOS: nix-darwin (sudo 必須、システム activation のため)
+# - Linux / WSL2: standalone Home Manager (sudo 不要)
+if command -v nix >/dev/null 2>&1; then
   flake_path="$("$chezmoi" source-path)/../nix"
   if [ -d "$flake_path" ]; then
-    echo "Applying nix-darwin from ${flake_path} (sudo required)..." >&2
-    sudo nix run nix-darwin -- switch --flake "${flake_path}#default"
+    case "$(uname)" in
+      Darwin)
+        echo "Applying nix-darwin from ${flake_path} (sudo required)..." >&2
+        sudo nix run nix-darwin -- switch --flake "${flake_path}#default"
+        ;;
+      Linux)
+        # /proc/version に "microsoft" を含めば WSL2。テスト時は DOTFILES_FORCE_WSL=1 で強制可。
+        if [ "${DOTFILES_FORCE_WSL:-}" = "1" ] || grep -qi microsoft /proc/version 2>/dev/null; then
+          home_target="wsl"
+        else
+          home_target="linux"
+        fi
+        # aarch64 WSL/Linux ホスト向けに -aarch64 bundle に切替
+        case "$(uname -m)" in
+          aarch64|arm64) home_target="${home_target}-aarch64" ;;
+        esac
+        echo "Applying Home Manager (${home_target}) from ${flake_path}..." >&2
+        nix run home-manager/master -- switch --flake "${flake_path}#${home_target}"
+        ;;
+    esac
   fi
 fi

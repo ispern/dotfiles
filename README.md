@@ -8,7 +8,7 @@ dotfiles
 | 環境 | パッケージ管理 | 設定ファイル |
 |---|---|---|
 | **macOS** | Nix (nix-darwin + Home Manager) — CLI<br>Homebrew — GUI cask + Font | chezmoi |
-| **Linux / WSL** | Nix (Home Manager standalone) — CLI<br>apt — システム依存のみ（Phase 2 予定） | chezmoi |
+| **Linux / WSL2** | Nix (Home Manager standalone) — CLI<br>apt — `socat` 等システム依存のみ | chezmoi |
 | **Windows ネイティブ** | winget | chezmoi |
 
 サプライチェーン耐性のため CLI ツールは `flake.lock` でハッシュ固定。GUI アプリは macOS App Store / Homebrew cask で管理し、宣言化は将来の課題（Phase 3）。
@@ -63,15 +63,38 @@ chsh -s "$(which fish)"
 
 `winget import winget.json` で一括インストール。dotfiles 本体は WSL2 経由で chezmoi 適用。
 
-### Linux / WSL2
+### Linux / WSL2（ワンライナー）
 
-Phase 2 で Nix Flakes 化予定。現状は chezmoi のスクリプトが apt + linuxbrew + 個別バイナリで bootstrap する。
+```sh
+curl -fsSL https://raw.githubusercontent.com/ispern/dotfiles/main/install.sh | sh
+```
+
+未マージのブランチを検証したい場合は `DOTFILES_BRANCH` を指定:
+
+```sh
+DOTFILES_BRANCH=feature/xxx sh install.sh
+```
+
+`install.sh` は `/proc/version` から WSL2 を検出して、適切な Home Manager 構成を自動選択します:
+
+- Linux ネイティブ → `nix run home-manager -- switch --flake ./nix#linux`
+- WSL2 → `nix run home-manager -- switch --flake ./nix#wsl`
+
+WSL2 では別途 `socat` (1Password ssh-agent 用) と `win32yank.exe` / `npiperelay.exe`（Windows 側バイナリ）が chezmoi スクリプトで配置されます。
+
+完了後の追加ステップ:
+
+```sh
+# fish をデフォルトシェルに（Nix 管理の fish パスを /etc/shells に追加してから）
+echo "$(which fish)" | sudo tee -a /etc/shells
+chsh -s "$(which fish)"
+```
 
 ## 移行ステータス
 
 - [x] **Phase 1**: macOS CLI を Nix へ移行
 - [ ] **Phase 1.x**: fish プラグイン (fisher → `programs.fish.plugins`)、tmux プラグイン (TPM → `programs.tmux.plugins`) を Home Manager 管理に移行
-- [ ] **Phase 2**: Linux / WSL の CLI を Nix へ移行
+- [x] **Phase 2**: Linux / WSL の CLI を Nix へ移行
 - [ ] **Phase 3**: macOS システム設定 (`defaults write`) と GUI cask を nix-darwin で宣言化
 
 ## ライセンス
