@@ -1,13 +1,3 @@
-# Global
-#set -gx TERM "xterm-256color"
-#set -gx COLORTERM "truecolor"
-if test -d "$HOME/.local/bin"
-  set -gx PATH "$HOME/bin" $PATH
-end
-
-if test -d "$HOME/.local/bin"
-  set -gx PATH "$HOME/.local/bin" $PATH
-end
-
-# Starship init is injected by Home Manager (programs.starship.enable).
-
+# Linux ネイティブ専用の追加設定。
+# 共通の PATH (~/bin, ~/.local/bin) と starship init は config-base.fish 側で設定済み。
+# 現状 Linux ネイティブで上乗せが必要な設定は無いが、将来分のために残置。
