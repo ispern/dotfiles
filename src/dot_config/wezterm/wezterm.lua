@@ -44,8 +44,9 @@ config.window_background_gradient = {
 ----------------------------------------------------
 -- Tab
 ----------------------------------------------------
--- タイトルバーを非表示
-config.window_decorations = "RESIZE"
+-- macOS / Linux はタイトルバー非表示でリサイズのみ。
+-- Windows はネイティブのタイトルバー (最小化 / 最大化 / 閉じるボタン) を表示。
+config.window_decorations = is_windows and "TITLE | RESIZE" or "RESIZE"
 -- タブバーの表示
 config.show_tabs_in_tab_bar = true
 -- タブが一つの時は非表示
