@@ -61,9 +61,12 @@ config.window_frame = {
 
 -- タブの追加ボタンを非表示
 config.show_new_tab_button_in_tab_bar = false
--- nightlyのみ使用可能
--- タブの閉じるボタンを非表示
-config.show_close_tab_button_in_tabs = false
+-- タブの閉じるボタンを非表示 (Wezterm nightly 限定オプション)。
+-- Windows winget で配布される安定版にはまだ無く "is not a valid config field"
+-- 警告になるため、Windows ではスキップ。
+if not is_windows then
+	config.show_close_tab_button_in_tabs = false
+end
 -- タブの境界線を非表示
 config.colors = {
 	tab_bar = {
