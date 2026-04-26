@@ -7,11 +7,11 @@ dotfiles
 
 | 環境 | パッケージ管理 | 設定ファイル |
 |---|---|---|
-| **macOS** | Nix (nix-darwin + Home Manager) — CLI<br>Homebrew — GUI cask + Font | chezmoi |
+| **macOS** | Nix (nix-darwin + Home Manager) — CLI<br>nix-darwin `homebrew` モジュール経由 — GUI cask + Font | chezmoi |
 | **Linux / WSL2** | Nix (Home Manager standalone) — CLI<br>apt — `socat` 等システム依存のみ | chezmoi |
 | **Windows ネイティブ** | winget | chezmoi |
 
-サプライチェーン耐性のため CLI ツールは `flake.lock` でハッシュ固定。GUI アプリは macOS App Store / Homebrew cask で管理し、宣言化は将来の課題（Phase 3）。
+サプライチェーン耐性のため CLI ツールも GUI cask も `flake.lock` + `nix/darwin/homebrew.nix` で宣言管理。`darwin-rebuild switch` 一発でマシン全体が再現可能です。
 
 ## ディレクトリ構成
 
@@ -25,7 +25,6 @@ dotfiles
 │   ├── dot_config/   # → ~/.config/
 │   ├── dot_*.tmpl    # マシン固有値を含むテンプレート
 │   └── .chezmoiscripts/
-├── Brewfile.darwin   # macOS GUI cask + Font
 └── winget.json       # Windows パッケージ
 ```
 
@@ -42,15 +41,13 @@ curl -fsSL https://raw.githubusercontent.com/ispern/dotfiles/main/install.sh | s
 1. Determinate Systems Installer で Nix を導入（既存ならスキップ）
 2. `chezmoi` をインストール（既存ならスキップ）
 3. `chezmoi init --apply ispern` でリポジトリを取得し dotfiles を適用
-4. `sudo nix run nix-darwin -- switch --flake ./nix#default` で CLI 環境を構築
+4. `sudo nix run nix-darwin -- switch --flake ./nix#default` で CLI 環境と GUI cask / Font を構築
+
+GUI cask / Font は `nix/darwin/homebrew.nix` に declarative 宣言され、`darwin-rebuild switch` の activation で `brew bundle` が自動実行されます (Homebrew 自体の bootstrap は chezmoi の `run_once_before_00_install-homebrew.sh` が担当)。
 
 完了後の追加ステップ:
 
 ```sh
-# GUI アプリ / Font
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-brew bundle --file=Brewfile.darwin
-
 # fish をデフォルトシェルに
 chsh -s "$(which fish)"
 ```
@@ -95,7 +92,9 @@ chsh -s "$(which fish)"
 - [x] **Phase 1**: macOS CLI を Nix へ移行
 - [ ] **Phase 1.x**: fish プラグイン (fisher → `programs.fish.plugins`)、tmux プラグイン (TPM → `programs.tmux.plugins`) を Home Manager 管理に移行
 - [x] **Phase 2**: Linux / WSL の CLI を Nix へ移行
-- [ ] **Phase 3**: macOS システム設定 (`defaults write`) と GUI cask を nix-darwin で宣言化
+- [x] **Phase 3a**: macOS システム設定 (`defaults write`) を nix-darwin に宣言化
+- [x] **Phase 3b**: GUI cask + Font を nix-darwin の `homebrew` モジュールで宣言化
+- [ ] **Phase 3c**: TouchID for sudo / LaunchAgents（任意）
 
 ## ライセンス
 

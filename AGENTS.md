@@ -25,8 +25,8 @@ chezmoi init --apply ispern
 
 ### 開発環境のセットアップ
 ```bash
-# 1. 依存関係のインストール（macOS）
-brew bundle install
+# 1. CLI / システム設定 / GUI cask を一括適用（macOS）
+darwin-rebuild switch --flake ./nix#default
 
 # 2. chezmoiの設定確認
 chezmoi status
@@ -134,8 +134,9 @@ nvim --headless -c 'lua print("Config OK")' -c 'quit' 2>/dev/null || true
 
 #### macOS環境（ホストで実行）
 ```bash
-# Homebrewパッケージの確認
-brew bundle check
+# nix-darwin で宣言済みの cask が揃っているか確認
+brew list --cask | sort
+# nix/darwin/homebrew.nix の casks リストと一致するはず
 
 # 設定ファイルの構文チェック
 fish -n ~/.config/fish/config.fish
