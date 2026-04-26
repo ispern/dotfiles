@@ -6,10 +6,15 @@
       autohide = true;
       orientation = "bottom";
       tilesize = 48;
-      magnification = false;
+      magnification = true;
+      largesize = 66;
       mineffect = "scale";
       show-recents = false;
-      static-only = true;
+      # static-only = false を明示。過去世代で誤って true を書き込んだため、
+      # nix-darwin が defaults delete してくれない以上、ここで明示的に
+      # false を書いて上書きする必要がある。
+      # (true にすると pinned 以外のアプリが Dock から消える挙動)
+      static-only = false;
       mru-spaces = false;
       expose-group-apps = true;
       wvous-br-corner = 14;

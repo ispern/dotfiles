@@ -45,6 +45,7 @@
       "raycast"
       "slack"
       "visual-studio-code"
+      "wezterm"
       "zoom"
 
       # Fonts
