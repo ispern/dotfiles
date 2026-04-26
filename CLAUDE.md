@@ -83,3 +83,12 @@ Chezmoiは初回実行時にこれらについて尋ねます：
 - **FZF統合**: git、tmux、ファイル操作でのインタラクティブな選択にfzfを多用
 - **シェル関数**: `src/dot_config/fish/functions/` 内の一般的なタスク用カスタム関数
 - **プラグイン管理**: tmuxはプラグインにgitサブモジュールを使用
+
+## 公開リポジトリ運用上の注意
+
+このリポジトリは **GitHub で公開 (public)** されています。新規ファイル追加・編集時は以下を毎回確認してください:
+
+- **シークレットを直接 commit しない**: API キー / トークン / パスワード等の認証情報、SSH 秘密鍵、メールアドレス・組織名・社内ホスト名の生値。マシン固有値は chezmoi テンプレート (`{{ .email }}`, `{{ .workspaceRoot }}` など) 経由でローカル展開すること
+- **`private_` プレフィックスは git 除外ではない**: `src/dot_config/private_*/` の `private_` は chezmoi が apply 時にファイル権限を 0700 にする指示。**中身は公開リポジトリ上で誰でも読める**。シークレットを置く場所ではない（例: `private_karabiner/karabiner.json.tmpl` のキーマップは公開されている）
+- **個人プロフィール露出は許容するが意識する**: `nix/darwin/homebrew.nix` の cask 一覧（インストール済 GUI アプリ）、`nix/darwin/system-defaults.nix` の UI/UX 好み設定は機密ではないが個人プロフィール情報。新規追加時に「公開して支障ないか」を判断する
+- **真にローカル限定にしたい場合**: `.chezmoiignore` (chezmoi 管理から除外) または `.gitignore` (git 管理から除外) を使う
