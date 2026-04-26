@@ -64,7 +64,37 @@ chezmoi init --apply ispern
    - `winget import winget.json` で GUI アプリを一括導入
    - 続けて `winget upgrade --all` で既存アプリを更新
 
-### 1-3. 導入される GUI アプリ (`winget.json`)
+### 1-3. `XDG_CONFIG_HOME` を設定して `~/.config/` を有効化
+
+chezmoi は `src/dot_config/` を `C:\Users\<user>\.config\` に展開しますが、Windows アプリの多くは既定でこのパスを探しません (Neovim は `%LOCALAPPDATA%\nvim\`、Lazygit は `%APPDATA%\lazygit\` を見る)。**`XDG_CONFIG_HOME` 環境変数を設定** すると、各アプリが `~/.config/...` を一括で探すようになります。
+
+```powershell
+[Environment]::SetEnvironmentVariable('XDG_CONFIG_HOME', "$env:USERPROFILE\.config", 'User')
+```
+
+新しい PowerShell / Wezterm / アプリを起動した瞬間から有効です (再ログイン不要)。GUI から設定する場合は `Win + R` → `sysdm.cpl` → 詳細設定 → 環境変数 → ユーザ環境変数 で `XDG_CONFIG_HOME=%USERPROFILE%\.config` を追加。
+
+#### 各アプリの挙動
+
+| アプリ | 既定の探索パス (Windows) | `XDG_CONFIG_HOME` 設定後 |
+|---|---|---|
+| **Wezterm** | `$XDG_CONFIG_HOME/wezterm/`, `~/.config/wezterm/` | 設定不要 — 元から `~/.config/wezterm/` を探す |
+| **Neovim** | `%LOCALAPPDATA%\nvim\` | `$XDG_CONFIG_HOME/nvim/` を読むようになる |
+| **Lazygit** | `%APPDATA%\lazygit\config.yml` | `$XDG_CONFIG_HOME/lazygit/config.yml` を読む |
+| **Starship** | `~/.config/starship.toml` | 設定不要 |
+| **Git** (`~/.gitconfig`) | `%USERPROFILE%\.gitconfig` | 設定不要 (Git for Windows が `~` を解決) |
+
+#### `XDG_CONFIG_HOME` を使わない代替: シンボリックリンク
+
+環境変数を増やしたくない場合は、アプリ別にシンボリックリンクを張る選択肢もあります (管理者 PowerShell or Windows の Developer Mode 必須):
+
+```powershell
+New-Item -ItemType SymbolicLink -Path "$env:LOCALAPPDATA\nvim" -Target "$env:USERPROFILE\.config\nvim"
+```
+
+ただし対象アプリ分のリンクを作る必要があるので、`XDG_CONFIG_HOME` を 1 つ設定するほうが運用は楽です。
+
+### 1-4. 導入される GUI アプリ (`winget.json`)
 
 | カテゴリ | アプリ |
 |---|---|
@@ -79,7 +109,7 @@ chezmoi init --apply ispern
 
 完全なリストは `winget.json` 参照。
 
-### 1-4. 1Password の SSH agent を有効化
+### 1-5. 1Password の SSH agent を有効化
 
 1Password デスクトップアプリを起動 → `Settings > Developer > Use the SSH agent` を ON にします。これで Windows 側に名前付きパイプ `\\.\pipe\openssh-ssh-agent` が公開され、WSL2 内から `npiperelay.exe` 経由で SSH agent をブリッジできます。
 
