@@ -68,11 +68,54 @@ chezmoi init --apply ispern
 
 chezmoi は `src/dot_config/` を `C:\Users\<user>\.config\` に展開しますが、Windows アプリの多くは既定でこのパスを探しません (Neovim は `%LOCALAPPDATA%\nvim\`、Lazygit は `%APPDATA%\lazygit\` を見る)。**`XDG_CONFIG_HOME` 環境変数を設定** すると、各アプリが `~/.config/...` を一括で探すようになります。
 
+#### 方法 A: ユーザ環境変数として恒久設定 (推奨)
+
+PowerShell から 1 行で全プロセス向けに設定:
+
 ```powershell
 [Environment]::SetEnvironmentVariable('XDG_CONFIG_HOME', "$env:USERPROFILE\.config", 'User')
 ```
 
-新しい PowerShell / Wezterm / アプリを起動した瞬間から有効です (再ログイン不要)。GUI から設定する場合は `Win + R` → `sysdm.cpl` → 詳細設定 → 環境変数 → ユーザ環境変数 で `XDG_CONFIG_HOME=%USERPROFILE%\.config` を追加。
+- 新しい PowerShell / Wezterm / アプリを起動した瞬間から有効 (再ログイン不要)
+- 既存プロセスには反映されない (再起動が必要)
+- 確認: `[Environment]::GetEnvironmentVariable('XDG_CONFIG_HOME', 'User')`
+- 削除: `[Environment]::SetEnvironmentVariable('XDG_CONFIG_HOME', $null, 'User')`
+
+GUI からなら `Win + R` → `sysdm.cpl` → 詳細設定 → 環境変数 → ユーザ環境変数 で `XDG_CONFIG_HOME=%USERPROFILE%\.config` を追加。`setx` コマンド (`setx XDG_CONFIG_HOME "%USERPROFILE%\.config"`) も同等。
+
+#### 方法 B: PowerShell プロファイルに追記 (PowerShell セッション内のみ)
+
+PowerShell 起動時に毎回 export したい場合は `$PROFILE` (`$HOME\Documents\PowerShell\Microsoft.PowerShell_profile.ps1`) に追記:
+
+```powershell
+# プロファイルが無ければ作成
+if (-not (Test-Path $PROFILE)) { New-Item -ItemType File -Path $PROFILE -Force }
+
+# 追記
+Add-Content -Path $PROFILE -Value '$env:XDG_CONFIG_HOME = "$env:USERPROFILE\.config"'
+
+# 即適用
+. $PROFILE
+```
+
+- PowerShell セッションを開いた時点で `$env:XDG_CONFIG_HOME` が seed される
+- **PowerShell から起動したアプリにのみ伝搬** (Wezterm を Start Menu からダブルクリック起動した場合は伝搬しない → 方法 A が必要)
+- PowerShell 7 (`pwsh`) を使う場合は `$HOME\Documents\PowerShell\` 配下、Windows PowerShell 5.1 を使う場合は `$HOME\Documents\WindowsPowerShell\` 配下なので注意
+
+#### 方法 C: 現在のセッションのみ (一時確認用)
+
+```powershell
+$env:XDG_CONFIG_HOME = "$env:USERPROFILE\.config"
+```
+
+PowerShell ウィンドウを閉じると消える。挙動確認や一時的に試したいときに。
+
+#### 確認
+
+```powershell
+echo $env:XDG_CONFIG_HOME           # 現在のセッションでの値
+nvim --version | Select-String "config" # Neovim が読む config パスを確認
+```
 
 #### 各アプリの挙動
 
