@@ -17,7 +17,12 @@
 
   outputs = inputs@{ self, nixpkgs, nix-darwin, home-manager, ... }:
     let
-      username = "h.matsuoka";
+      # マシン固有の username / hostname。
+      # nix/users.local.nix は git 管理だが chezmoi が apply 時に各マシンの
+      # whoami / hostname で上書きするため、別マシンで運用する場合は
+      # ローカルで dirty になる (commit しない)。詳細は users.local.nix 内コメント。
+      userConfig = import ./users.local.nix;
+      inherit (userConfig) username hostname;
 
       mkDarwin = { hostname, system ? "aarch64-darwin" }:
         nix-darwin.lib.darwinSystem {
@@ -49,13 +54,13 @@
         };
     in
     {
-      darwinConfigurations."ispern-mac-mini" = mkDarwin {
-        hostname = "ispern-mac-mini";
-      };
+      # users.local.nix の hostname を動的キーにする。
+      # → どのマシンでも `darwin-rebuild switch --flake .#default` で動作。
+      darwinConfigurations.${hostname} = mkDarwin { inherit hostname; };
 
       # Convenience alias for hostname-agnostic invocation:
       #   darwin-rebuild switch --flake .#default
-      darwinConfigurations.default = self.darwinConfigurations."ispern-mac-mini";
+      darwinConfigurations.default = self.darwinConfigurations.${hostname};
 
       # Standalone Home Manager configurations for Linux / WSL2.
       # Invoked via: nix run home-manager -- switch --flake ./nix#linux (or #wsl)

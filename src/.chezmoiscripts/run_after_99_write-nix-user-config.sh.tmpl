@@ -1,0 +1,20 @@
+{{- if or (eq .chezmoi.os "darwin") (eq .chezmoi.os "linux") -}}
+#!/bin/sh
+# 各マシンの whoami / hostname を nix/users.local.nix に書き出す。
+# flake.nix がこのファイルを import して darwinConfigurations の hostname や
+# home-manager の username を解決する。
+set -eu
+
+NIX_DIR="{{ .chezmoi.sourceDir }}/../nix"
+[ -d "$NIX_DIR" ] || exit 0
+
+cat > "$NIX_DIR/users.local.nix" <<'EOF'
+# このファイルは chezmoi の run_after_99_write-nix-user-config が自動生成します。
+# 手動編集しないでください。username / hostname を変えたい場合は
+# 該当マシンの OS ユーザ名 / hostname を変更してから `chezmoi apply` を再実行。
+{
+  username = "{{ .chezmoi.username }}";
+  hostname = "{{ .chezmoi.hostname }}";
+}
+EOF
+{{- end }}
