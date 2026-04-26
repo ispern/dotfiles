@@ -92,4 +92,17 @@
 
   # Let Home Manager track itself
   programs.home-manager.enable = true;
+
+  # darwin-rebuild の最後に chezmoi apply を自動実行して、Nix 管理 (CLI /
+  # programs.*) と chezmoi 管理 (~/.config/* 等の dotfiles) を 1 コマンドで
+  # 同期させる。chezmoi 設定がまだ無い初回 bootstrap では skip する。
+  home.activation.chezmoiApply =
+    lib.hm.dag.entryAfter [ "writeBoundary" ] ''
+      if [ -f "$HOME/.config/chezmoi/chezmoi.json" ] \
+         || [ -f "$HOME/.config/chezmoi/chezmoi.toml" ] \
+         || [ -d "$HOME/.local/share/chezmoi" ]; then
+        run --quiet ${pkgs.chezmoi}/bin/chezmoi apply --force \
+          || verboseEcho "chezmoi apply failed (non-fatal)"
+      fi
+    '';
 }
