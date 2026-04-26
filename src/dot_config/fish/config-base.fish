@@ -1,11 +1,7 @@
 set fish_greeting ""
 
-# theme
-set -g theme_color_scheme dracula-pro-buffy
-set -g fish_prompt_pwd_dir_length 1
-set -g theme_display_user yes
-set -g theme_hide_hostname no
-set -g theme_hostname always
+# プロンプトは Starship に集約 (programs.starship.enable で init 注入済み)。
+# bobthefish 時代の theme_* 変数 (dracula-pro-buffy 等) は撤去。
 
 set -gx XDG_CONFIG_HOME $HOME/.config
 
