@@ -1,6 +1,11 @@
 { pkgs, lib, username, hostname, ... }:
 
 {
+  imports = [
+    ./system-defaults.nix
+    ./homebrew.nix
+  ];
+
   # The Nix daemon is managed by the Determinate Systems Installer, so let
   # nix-darwin coexist without re-bootstrapping it.
   nix.enable = false;

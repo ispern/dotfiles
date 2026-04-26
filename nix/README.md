@@ -1,19 +1,21 @@
 # nix/ — Nix で管理する CLI 環境
 
-このディレクトリは **macOS / Linux / WSL の CLI ツール群を Nix Flakes で宣言管理** するための設定です。`flake.lock` でハッシュ固定し、サプライチェーンの再現性を確保します。
+このディレクトリは **macOS / Linux / WSL の CLI ツール群と、macOS の システム設定 / GUI cask を Nix Flakes で宣言管理** するための設定です。`flake.lock` でハッシュ固定し、サプライチェーンの再現性を確保します。
 
-GUI アプリ（cask）と Font は引き続き `Brewfile.darwin` (macOS) / winget (Windows) で管理します。chezmoi はこれまで通り dotfiles 本体を管理します。
+macOS では GUI アプリ（cask）と Font も `nix/darwin/homebrew.nix` 経由で nix-darwin に宣言化されており、`darwin-rebuild switch` の activation で `brew bundle` が自動実行されます。Windows ネイティブのみ `winget.json` で管理します。chezmoi はこれまで通り dotfiles 本体を管理します。
 
 ## 構成
 
 ```
 nix/
-├── flake.nix          # inputs: nixpkgs / nix-darwin / home-manager
+├── flake.nix              # inputs: nixpkgs / nix-darwin / home-manager
 ├── home/
-│   ├── default.nix    # 全環境共通の home.packages + programs.*
-│   └── darwin.nix     # macOS 固有 (GNU coreutils 等)
+│   ├── default.nix        # 全環境共通の home.packages + programs.*
+│   └── darwin.nix         # macOS 固有 (GNU coreutils 等)
 └── darwin/
-    └── default.nix    # nix-darwin: hostname / 共通システム設定
+    ├── default.nix        # nix-darwin: hostname / 共通システム設定
+    ├── system-defaults.nix # macOS UI/UX (Dock / Finder / Trackpad / Locale 等)
+    └── homebrew.nix       # GUI cask + Font (declarative `brew bundle`)
 ```
 
 `darwinConfigurations` のキーは LocalHostName。複数 Mac で使い回す場合は `flake.nix` の `mkDarwin` を再利用してエントリを追加します。
@@ -87,10 +89,10 @@ darwin-rebuild --list-generations
 | 対象 | 管理者 |
 |---|---|
 | CLI ツール（fish, tmux, neovim, eza, ripgrep など） | **Nix (Home Manager)** |
-| GUI アプリ・Font | **Homebrew (Brewfile.darwin)** |
+| GUI アプリ・Font (macOS) | **nix-darwin `homebrew` モジュール** (`nix/darwin/homebrew.nix`) |
+| macOS システム設定 (`defaults write` 等) | **nix-darwin `system.defaults`** (`nix/darwin/system-defaults.nix`) |
 | シェル / エディタの設定ファイル (`~/.config/fish/*.fish`, `~/.tmux.conf`, `~/.config/nvim/**`) | **chezmoi** |
 | マシン固有値（メールアドレス、ワークスペースパス等） | **chezmoi テンプレート** |
-| macOS システム設定 (`defaults write` 等) | 未管理（Phase 3 で nix-darwin に移行候補） |
 | 言語ツールチェーン (Python, Ruby, Java) | **per-project flake + direnv**（global 管理しない） |
 
 Nix が `~/.nix-profile/bin` 経由で CLI を提供し、chezmoi は `~/.config/...` のファイル群を管理します。両者のパスは重なりません。
