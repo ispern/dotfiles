@@ -87,6 +87,16 @@ echo "$(which fish)" | sudo tee -a /etc/shells
 chsh -s "$(which fish)"
 ```
 
+## 詳細ドキュメント
+
+リポジトリの内部設計・採用ソフトウェア・OS 別差分は [`docs/`](./docs/) に整備しています:
+
+- [`docs/setup.md`](./docs/setup.md) — OS 別セットアップ手順（macOS / Linux / WSL2 / Windows）と環境変数フラグ
+- [`docs/windows.md`](./docs/windows.md) — Windows 専用の二段構え (ネイティブ + WSL2) セットアップ詳細
+- [`docs/architecture.md`](./docs/architecture.md) — 仕組み・責務分担（Nix + chezmoi + Homebrew/winget のハイブリッド設計）
+- [`docs/stack.md`](./docs/stack.md) — 採用ソフトウェア・ライブラリの全体マップ
+- [`docs/keymapping.md`](./docs/keymapping.md) — Wezterm / Fish / Neovim キーマップリファレンス
+
 ## 移行ステータス
 
 - [x] **Phase 1**: macOS CLI を Nix へ移行
