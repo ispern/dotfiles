@@ -26,8 +26,8 @@
 
 | ソフトウェア | 経路 | 備考 |
 |---|---|---|
-| Wezterm | 🍺 (cask) | macOS の主力ターミナル。設定は `src/dot_config/wezterm/` |
-| Windows Terminal | 📦 (Microsoft Store) | Windows ネイティブ |
+| Wezterm | 🍺 (cask) / 📦 | macOS / Windows の主力ターミナル。設定は `src/dot_config/wezterm/` (Lua 内で OS 判定、Windows 起動時は `default_domain = "WSL:Ubuntu-24.04"` で自動的に WSL2 内 fish を開く) |
+| Windows Terminal | 📦 (Microsoft Store) | Windows ネイティブの代替 |
 
 > Alacritty は 2026-04 に GUI ライブラリのインストールエラー継続のため不採用化。
 

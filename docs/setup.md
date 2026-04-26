@@ -87,17 +87,22 @@ chsh -s "$(which fish)"
 
 ---
 
-## Windows ネイティブ
+## Windows
 
-CLI 開発作業は WSL2 経由を推奨。Windows 側は **GUI アプリ管理のみ** を `winget` で行います。
+`install.sh` は POSIX shell 依存のため Windows ネイティブ (PowerShell/cmd) では走りません。Windows は **「ネイティブ側 = chezmoi + winget」「WSL2 内 = install.sh で完全構築」の二段構え** になります。
 
 ```powershell
-winget import winget.json
+# Windows ネイティブ (PowerShell)
+winget install twpayne.chezmoi
+chezmoi init --apply ispern   # → 内部で winget import winget.json + winget upgrade --all を自動実行
 ```
 
-含まれるアプリ: 7zip, Docker Desktop, Firefox Developer Edition, Git for Windows, Google Chrome, 1Password, Notion, Claude, OBS Studio, AutoHotkey, Volta, Adobe CC 等（詳細は `winget.json`）。
+```sh
+# WSL2 内 (Ubuntu-24.04 等)
+curl -fsSL https://raw.githubusercontent.com/ispern/dotfiles/main/install.sh | sh
+```
 
-dotfiles 本体は WSL2 内で `chezmoi apply` するため、Windows 側で `chezmoi` を直接動かす必要はありません。
+詳細手順 (1Password SSH agent ブリッジ、Wezterm の WSL 既定起動、トラブルシューティング等) は **[`windows.md`](./windows.md) を参照**。
 
 ---
 

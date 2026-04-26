@@ -6,7 +6,8 @@
 
 | ドキュメント | 内容 |
 |---|---|
-| [setup.md](./setup.md) | OS 別セットアップ手順（macOS / Linux ネイティブ / WSL2 / Windows ネイティブ）。`install.sh` の挙動と環境変数フラグの解説 |
+| [setup.md](./setup.md) | OS 別セットアップ手順（macOS / Linux ネイティブ / WSL2 / Windows）。`install.sh` の挙動と環境変数フラグの解説 |
+| [windows.md](./windows.md) | Windows 専用の二段構えセットアップ詳細（ネイティブ chezmoi + WSL2 内 install.sh、SSH agent ブリッジ、Wezterm の WSL 既定起動） |
 | [architecture.md](./architecture.md) | 仕組み・責務分担（Nix Flakes + chezmoi + Homebrew/winget のハイブリッド設計）。OS 別の実行フローと差分 |
 | [stack.md](./stack.md) | 採用しているソフトウェア・ライブラリの全体マップ（カテゴリ別、各 OS でのインストール経路明記） |
 | [keymapping.md](./keymapping.md) | Wezterm / Fish Shell / Neovim のキーマップ・リファレンス |

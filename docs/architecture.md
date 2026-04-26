@@ -111,9 +111,15 @@ Linux ネイティブと共通基盤に **WSL 専用の追加要素**:
 
 ### Windows ネイティブ
 
-- **CLI 環境は WSL2 経由で完結** — Windows 側で chezmoi/Nix を直接動かさない
-- **GUI アプリのみ winget で管理**: `winget import winget.json`
-- 自動化スクリプト: `src/.chezmoiscripts/windows/run_once_before_00_install-packages.ps1.tmpl`
+- **Nix は使わない**: Nix は POSIX 前提（ストアパス `/nix/store/...`、シンボリックリンク多用、POSIX パーミッション、ハードリンク）で Windows ネイティブ NTFS と噛み合わず、`Determinate Systems Installer` も非対応。`install.sh` は `case "$(uname)" in Darwin|Linux)` で Windows をスキップする
+- **`install.sh` は走らない**: POSIX shell + `uname` 前提のため。代わりに **chezmoi のみを手動で導入** して使う
+- **chezmoi は Windows 上でも完全に動く**: `winget install twpayne.chezmoi` → `chezmoi init --apply ispern` で:
+  - `{{ if eq .chezmoi.os "windows" }}` 付きテンプレート (`~/.gitconfig` の Windows セクション、`~/.config/wezterm/wezterm.lua` 等) を `C:\Users\<user>\` 以下に配置
+  - `src/.chezmoiscripts/windows/run_once_before_00_install-packages.ps1.tmpl` が起動し `winget import winget.json` + `winget upgrade --all` を実行
+- **CLI 開発作業は WSL2 内で完結**: Windows 側はあくまで GUI 専用機。WSL2 内で `install.sh` を実行すれば Linux と同じ Nix 構成 (`homeConfigurations.wsl`) が組まれる
+- **Wezterm が Windows GUI と WSL2 の橋渡し**: `src/dot_config/wezterm/wezterm.lua` 内で `is_windows` 判定し、Windows 起動時は `default_domain = "WSL:Ubuntu-24.04"` で WSL2 シェルを既定オープン
+- **1Password ssh-agent ブリッジ**: Windows ネイティブの 1Password を WSL2 から `npiperelay.exe` 経由で参照
+- 詳細は [`windows.md`](./windows.md)
 
 ## chezmoi 命名規則と運用上の注意
 
