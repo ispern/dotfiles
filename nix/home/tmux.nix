@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ pkgs, lib, isWsl ? false, ... }:
 
 # tmux configuration ported from chezmoi-managed src/dot_tmux.conf.tmpl.
 # Plugins move from TPM (chezmoi-cloned src/dot_tmux/plugins/*) to
@@ -135,10 +135,15 @@
         bind-key -T copy-mode-vi y send-keys -X copy-pipe-and-cancel "pbcopy"
         bind-key -T copy-mode-vi MouseDragEnd1Pane send-keys -X copy-pipe-and-cancel "pbcopy"
       ''}
-      ${lib.optionalString pkgs.stdenv.isLinux ''
+      ${lib.optionalString (pkgs.stdenv.isLinux && !isWsl) ''
         # Linux clipboard integration (xclip)
         bind-key -T copy-mode-vi Enter send-keys -X copy-pipe-and-cancel "xclip -in -selection clipboard"
         bind-key -T copy-mode-vi y send-keys -X copy-pipe-and-cancel "xclip -in -selection clipboard"
+      ''}
+      ${lib.optionalString isWsl ''
+        # WSL2 clipboard integration (Windows 側 win32yank.exe を呼ぶ)
+        bind-key -T copy-mode-vi Enter send-keys -X copy-pipe-and-cancel "cat | win32yank.exe -i"
+        bind-key -T copy-mode-vi y send-keys -X copy-pipe-and-cancel "cat | win32yank.exe -i"
       ''}
 
       # s(split)

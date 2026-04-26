@@ -1,19 +1,26 @@
-# WSL2環境テスト用Dockerfile - Microsoftカーネルをシミュレート
+# WSL2 検証用 Dockerfile - install.sh のフル走行を WSL2 想定で行うための土台
+# WSL2 検出は実行時に DOTFILES_FORCE_WSL=1 を渡して強制する（procfs は書き換え不可なため）
 FROM ubuntu:24.04
 
-# 環境変数の設定
 ENV DEBIAN_FRONTEND=noninteractive
 
-# 最小限のパッケージのみインストール（install.shが依存するもの）
 RUN apt-get update && \
     apt-get install -y \
-    curl \
-    wget \
+      curl wget ca-certificates xz-utils sudo git \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
-# WSL2環境をシミュレートするため、カーネル情報を偽装
-RUN echo "5.10.102.1-microsoft-standard-WSL2" > /proc/version 2>/dev/null || true
+RUN curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix \
+    | sh -s -- install linux --init none --no-confirm
 
-# 作業ディレクトリの設定
+RUN useradd -m -s /bin/bash --badname h.matsuoka && \
+    echo "h.matsuoka ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/h.matsuoka && \
+    chmod 0440 /etc/sudoers.d/h.matsuoka && \
+    echo "extra-trusted-users = h.matsuoka root" >> /etc/nix/nix.conf && \
+    chown -R h.matsuoka:h.matsuoka /nix
+
+USER h.matsuoka
+ENV USER=h.matsuoka HOME=/home/h.matsuoka
+ENV PATH=/nix/var/nix/profiles/default/bin:/home/h.matsuoka/.nix-profile/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
 WORKDIR /workspace
