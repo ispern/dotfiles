@@ -23,7 +23,6 @@
       "atok"
       "chatgpt"
       "claude"
-      "claude-code"
       "cursor"
       "deepl"
       "dropbox"
@@ -45,7 +44,7 @@
       "raycast"
       "slack"
       "visual-studio-code"
-      "wezterm"
+      "wezterm@nightly"
       "zoom"
 
       # Fonts

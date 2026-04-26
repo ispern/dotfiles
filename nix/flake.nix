@@ -45,7 +45,10 @@
       # 共通モジュール (./home) + OS 固有モジュールを合成する。
       mkHome = { system ? "x86_64-linux", isWsl ? false }:
         home-manager.lib.homeManagerConfiguration {
-          pkgs = nixpkgs.legacyPackages.${system};
+          pkgs = import nixpkgs {
+            inherit system;
+            config.allowUnfree = true;
+          };
           extraSpecialArgs = { inherit username isWsl; };
           modules = [
             ./home
