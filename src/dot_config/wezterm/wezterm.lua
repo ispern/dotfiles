@@ -11,6 +11,10 @@ end
 if is_windows then
 	config.default_domain = "WSL:Ubuntu-24.04"
 	config.front_end = "WebGpu"
+else
+	-- macOS / Linux: launch Nix-provided fish directly so we don't depend on
+	-- the login shell (which can drift after brew uninstall / chsh).
+	config.default_prog = { "/run/current-system/sw/bin/fish", "-l" }
 end
 
 config.automatically_reload_config = true

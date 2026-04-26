@@ -9,8 +9,5 @@ if test -d "$HOME/.local/bin"
   set -gx PATH "$HOME/.local/bin" $PATH
 end
 
-# Starship
-if type -q starship
-  starship init fish | source
-end
+# Starship init is injected by Home Manager (programs.starship.enable).
 

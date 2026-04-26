@@ -2,3 +2,7 @@
 
 # Dropbox metadata
 *:com.dropbox.attrs
+
+# Nix build output
+result
+result-*

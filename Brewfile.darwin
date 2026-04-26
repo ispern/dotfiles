@@ -1,74 +1,8 @@
 # Homebrew packages for macOS
-
-# Taps
-tap "eth-p/software"
-
-# Development tools
-brew "act"
-brew "bat"
-brew "bat-extras"
-brew "curlie"
-brew "deno"
-brew "eza"
-brew "fd"
-brew "fzf"
-brew "gh"
-brew "ghq"
-brew "gibo"
-brew "git"
-brew "git-delta"
-brew "jq"
-brew "neovim"
-brew "ripgrep"
-brew "starship"
-brew "tig"
-brew "tmux"
-
-# Shell
-brew "fish"
-
-# GNU tools for macOS
-brew "coreutils"
-brew "gnu-sed"
-brew "gawk"
-brew "findutils"
-brew "grep"
-
-# Additional utilities
-brew "wget"
-brew "tree"
-brew "watch"
-brew "htop"
-brew "ncdu"
-brew "tldr"
-brew "glow"  # Markdown viewer
-brew "yq"    # YAML processor
-
-# Build tools and dependencies
-brew "autoconf"
-brew "ca-certificates"
-brew "gettext"
-brew "libunistring"
-brew "libuv"
-brew "lpeg"
-brew "luajit"
-brew "luv"
-brew "m4"
-brew "mpdecimal"
-brew "openssl@3"
-brew "pkgconf"
-brew "readline"
-brew "sqlite"
-brew "tree-sitter"
-brew "unibilium"
-brew "utf8proc"
-brew "xz"
-
-# Network tools
-brew "iperf3"
-
-# Version managers
-brew "pyenv"
+#
+# CLI tools are managed by Nix (Home Manager) — see nix/README.md.
+# Homebrew is retained only for GUI applications (cask) and fonts that are
+# either macOS-only or significantly easier to install via cask.
 
 # Cask applications
 cask "alacritty"
@@ -88,6 +22,7 @@ cask "jetbrains-toolbox"
 cask "karabiner-elements"
 cask "logi-options+"
 cask "microsoft-auto-update"
+cask "microsoft-edge"
 cask "microsoft-office-businesspro"
 cask "notion"
 cask "notion-calendar"
