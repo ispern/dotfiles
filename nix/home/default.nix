@@ -60,6 +60,10 @@
 
     # Fuzzy finder (programs.fzf.enable wires shell integration)
     fzf
+
+    # AI coding CLIs (Homebrew cask から移行)
+    claude-code-bin
+    codex
   ] ++ (with pkgs.bat-extras; [
     batdiff
     batgrep
