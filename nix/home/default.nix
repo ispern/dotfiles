@@ -61,6 +61,9 @@
     # Fuzzy finder (programs.fzf.enable wires shell integration)
     fzf
 
+    # Container
+    devcontainer
+
     # AI coding CLIs (Homebrew cask から移行)
     claude-code-bin
     codex
